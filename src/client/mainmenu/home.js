@@ -1,12 +1,4 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
-import User from './User'
-import Accounting from './accounting'
-import Banking from './banking'
 import 'css/main.css'
 import 'css/logo.css'
 
@@ -19,20 +11,15 @@ class Home extends React.Component {
   }
 
   render() {
-    const userData = this.props.userData;
     return (
       <div id="home-container">
-        <div id="logoBox"><img src={require('./../AppreciateLogo.png')} alt="Appreciate Logo"/></div> 
-        <User lname={userData.lname} />
-        <Router>
-        <div id="nav-pane">
-          <Link to="/accounting" id="accounting" className="nav">Accounting</Link>
-            <Route path="/accounting" component={Accounting}/>
-          <br/><Link to="/banking" id="banking" className="nav">Banking</Link>
-            <Route path="/banking" component={Banking}/>
-        
+        <div id="logoBox"><img src={require('./../AppreciateLogo.png')} alt="Appreciate Logo" /></div>
+        <div id="main-content">
+          <p>Solving Business Process Problems Through Software</p>
+          <p>You and your staff are probably doing a lot of things manually that can be automated.
+        <br/>Which means you have inefficiencies in your workflow that you are not aware of.
+        <br/>If you're not fully leveragng software, you are losing money. Let us help.</p>
         </div>
-        </Router>  
       </div>
     )
   }
