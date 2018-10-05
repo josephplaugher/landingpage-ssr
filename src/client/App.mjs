@@ -1,14 +1,9 @@
-import * as ReactForm from 'reactform-appco'
 import React from 'react'
 import EB from 'Util/EB'
 import checkLoginState from 'Util/CheckLoginState'
 import Home from './mainmenu/home'
 import 'css/main.css'
 import 'css/userNotify.css'
-
-const Form = ReactForm.Form;
-const Input = ReactForm.Input;
-const Button = ReactForm.Button;
 
 class AppreciateCo extends React.Component {
   constructor(props) {

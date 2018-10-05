@@ -2,7 +2,7 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: './src/client/index.js',
+  entry: './src/client/index.mjs',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'main.js'
@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|mjs)$/,
         exclude: /node_modules/,//keeping react files around, but we're not going to use them for now
         use: {
           loader: "babel-loader"

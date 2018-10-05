@@ -1,4 +1,13 @@
-const routes = require('express').Router();
+import express from 'express'
+import user from '../model/users/login'
+import newAccount from '../model/users/newUser'
+import session from 'express-session'
+
+const routes = express.Router();
+const login = user.login;
+const newUser = newAccount.newUser;
+const addUser = newAccount.newUser;
+/*const routes = require('express').Router();
 const user = require('./../model/users/login');
 const newAccount = require('./../model/users/newUser');
 const login = user.login;
@@ -7,7 +16,7 @@ const newUser = newAccount.newUser;
 const addUser = newAccount.newUser;
 
 const session = require('express-session');
-
+*/
 routes.post('/users/login', login);
 routes.get('/users/checkLoginState', (req, res) => {
     //console.log('user session:', req.session.userData);
@@ -29,4 +38,4 @@ routes.post('/user/logout', logout);
 routes.post('/user/newUser', newUser);
 routes.post('/user/addUser', addUser);
 */
-module.exports = routes;
+export default routes;
