@@ -1,12 +1,12 @@
 import ReactDOMServer from 'react-dom/server';
+import React from 'react';
 import express from 'express';
 import bodyParser from 'body-parser'
-import userCont from './controllers/userCont.mjs';
-import AppreciateCo from '../client/App.mjs';
+import App from './client/App'
 
 const app = express();
-
-app.use(express.static('public'));
+console.log(App);
+app.use(express.static('views'));
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.urlencoded({ extended: false })); // Parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // Parse application/json
 
-//use sessions for user login
+/*use sessions for user login
 app.set('trust proxy', 1) // trust first proxy
 app.use(session({
     store: new FileStore(),
@@ -36,11 +36,12 @@ app.use(session({
     maxAge: 60000,
     cookie:{secure: app.get('env') === 'production'}
 }));
-
+*/
 //app.use('/', userCont);
 
 app.all('/*', (req, res) => {
-  //console.log('sessionID: ', req.sessionID, 'userdata: ', req.session.userData);
-  const App = ReactDOMServer.renderToString(AppreciateCo);
-  res.render('index',{App: App});
+  //consolelog('sessionID: ', req.sessionID, 'userdata: ', req.session.userData);
+  const AppString = ReactDOMServer.renderToString(<App />);
+  console.log('ssr test', AppString);
+  res.render('index',{"App": AppString});
 });

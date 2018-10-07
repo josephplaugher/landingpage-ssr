@@ -2,7 +2,7 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  entry: './src/client/index.mjs',
+  entry: './src/client.mjs',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'main.js'

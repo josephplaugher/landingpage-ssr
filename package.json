@@ -8,8 +8,8 @@
     "build": "npm run build-client:prod && npm run start-server:prod",
     "build-client:dev": "webpack --config webpack-dev.config.js",
     "build-client:prod": "webpack --config webpack-prod.config.js",
-    "build:server": "rm -rf dist/* && babel src/server -d dist",
-    "start-server:dev": "NODE_ENV=development nodemon --exec 'node -r dotenv/config' --ignore sessions/ ./dist/index.js",
+    "build:server": "babel ./src -d ./ui",
+    "start-server:dev": "NODE_ENV=development nodemon --exec 'node -r dotenv/config' --ignore sessions/ ./ui/server.js",
     "start-server:prod": "NODE_ENV=production --experimental-modules forever start forever-config.json"
   },
   "dependencies": {
@@ -39,6 +39,7 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-transform-react-jsx": "^7.0.0",
