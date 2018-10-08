@@ -5,8 +5,8 @@ import bodyParser from 'body-parser'
 import App from './client/App'
 
 const app = express();
-console.log(App);
-app.use(express.static('views'));
+
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 
@@ -42,6 +42,5 @@ app.use(session({
 app.all('/*', (req, res) => {
   //consolelog('sessionID: ', req.sessionID, 'userdata: ', req.session.userData);
   const AppString = ReactDOMServer.renderToString(<App />);
-  console.log('ssr test', AppString);
   res.render('index',{"App": AppString});
 });

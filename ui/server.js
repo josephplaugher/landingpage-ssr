@@ -13,8 +13,7 @@ var _App = _interopRequireDefault(require("./client/App"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express.default)();
-console.log(_App.default);
-app.use(_express.default.static('views'));
+app.use(_express.default.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', './src/views');
 var port = process.env.PORT;
@@ -51,7 +50,6 @@ app.all('/*', function (req, res) {
   //consolelog('sessionID: ', req.sessionID, 'userdata: ', req.session.userData);
   var AppString = _server.default.renderToString(_react.default.createElement(_App.default, null));
 
-  console.log('ssr test', AppString);
   res.render('index', {
     "App": AppString
   });

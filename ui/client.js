@@ -10,4 +10,6 @@ require("./client/index.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+console.log('hydrate');
+
 _reactDom.default.hydrate(_react.default.createElement(_App.default, null), document.getElementById('root'));
