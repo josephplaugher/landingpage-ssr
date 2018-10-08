@@ -7,9 +7,7 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _home = _interopRequireDefault(require("./mainmenu/home"));
-
-require("./logo.png");
+require("css/form.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -31,39 +29,32 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-//import 'css/main.css'
-//import 'css/userNotify.css'
-var App =
+var Form =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(App, _React$Component);
+  _inherits(Form, _React$Component);
 
-  function App(props) {
-    var _this;
+  function Form() {
+    _classCallCheck(this, Form);
 
-    _classCallCheck(this, App);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
-    _this.state = {};
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(Form).apply(this, arguments));
   }
 
-  _createClass(App, [{
+  _createClass(Form, [{
     key: "render",
     value: function render() {
       return _react.default.createElement("div", {
-        id: "container"
-      }, _react.default.createElement("div", null, _react.default.createElement("div", {
-        id: "logoBox"
-      }, _react.default.createElement("img", {
-        src: logo,
-        alt: "Appreciate Logo"
-      })), _react.default.createElement(_home.default, null)));
+        id: "form-container"
+      }, _react.default.createElement("p", {
+        className: "formTitle"
+      }, this.props.formTitle), _react.default.createElement("form", {
+        onSubmit: this.props.onSubmit
+      }, this.props.children, " "));
     }
   }]);
 
-  return App;
+  return Form;
 }(_react.default.Component);
 
-var _default = App;
+var _default = Form;
 exports.default = _default;

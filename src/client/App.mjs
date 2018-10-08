@@ -1,7 +1,8 @@
 import React from 'react'
 //import EB from 'Util/EB'
 //import checkLoginState from 'Util/CheckLoginState'
-//import Home from './mainmenu/home'
+import Home from './mainmenu/home'
+
 //import 'css/main.css'
 //import 'css/userNotify.css'
 
@@ -16,7 +17,8 @@ class App extends React.Component {
     return (
       <div id="container">
         <div>
-            <p>Hello Isomorphic App!</p>
+        <div id="logoBox"><img src={logo} alt="Appreciate Logo" /></div>
+            <Home />
         </div>
       </div>
     )

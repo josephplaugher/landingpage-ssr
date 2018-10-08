@@ -3,9 +3,9 @@ import {
     Route,
     Link
   } from 'react-router-dom'
-import DepositsWithdrawals from './routes/DepositsWithdrawals'
-import Ledgers from './routes/Ledgers';
-import 'css/routes.css'
+//import DepositsWithdrawals from './routes/DepositsWithdrawals'
+//import Ledgers from './routes/Ledgers';
+//import 'css/routes.css'
 
 const Banking = ({ match }) => (
     <div id="routes">

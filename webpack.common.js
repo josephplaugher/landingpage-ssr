@@ -7,6 +7,10 @@ module.exports = {
     path: path.resolve(__dirname, 'public'),
     filename: 'main.js'
   },
+  plugins: [
+    new Dotenv(),
+    new IsomorphicLoaderPlugin()
+  ],
   module: {
     rules: [
       {
@@ -17,12 +21,12 @@ module.exports = {
         }
       },
       {
-        test:/\.css$/,
-        use:['style-loader','css-loader']
+        test:/\.(css|scss)$/,
+        use:['style-loader','css-loader','sass-loader']
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
+        use:['file-loader','file!isomorphic']
       }
     ]
   },
@@ -31,8 +35,5 @@ module.exports = {
       Util: path.resolve(__dirname, 'src/client/Util/'),
       css: path.resolve(__dirname, 'src/client/css/')
     }
-  },
-  plugins: [
-    new Dotenv()
-  ]
+  }
 };

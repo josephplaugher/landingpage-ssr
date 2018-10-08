@@ -1,9 +1,9 @@
 {
-    "uid": "appreciate-erp",
+    "uid": "landingpage-ssr",
     "max": 5,  
     "spinSleepTime": 1000, 
     "minUptime": 1000,
     "append": true,
     "watch": false,
-    "script": "src/server"
+    "script": "ui/server"
 }

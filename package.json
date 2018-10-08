@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run build-client:dev\" \"npm run build:server\" \"npm run start-server:dev\"",
-    "build": "npm run build-client:prod && npm run start-server:prod",
+    "start": "npm run build:server ; concurrently \"npm run build-client:dev\" \"npm run start-server:dev\" ",
+    "build:prod": "npm run build-client:prod ; run build:server ; npm run start-server:prod",
     "build-client:dev": "webpack --config webpack-dev.config.js",
     "build-client:prod": "webpack --config webpack-prod.config.js",
     "build:server": "babel ./src -d ./ui",
@@ -24,6 +24,7 @@
     "express-session": "^1.15.6",
     "forever": "^0.15.3",
     "install": "^0.12.1",
+    "isomorphic-loader": "^2.0.2",
     "jsonwebtoken": "^8.3.0",
     "moment": "^2.22.2",
     "node-sass": "^4.9.3",
@@ -36,7 +37,8 @@
     "reactform-appco": "^1.0.0",
     "router-express": "^1.5.2",
     "session-file-store": "^1.2.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "webpack-isomorphic-tools": "^3.0.6"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",

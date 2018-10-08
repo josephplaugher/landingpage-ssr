@@ -5,13 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-var _home = _interopRequireDefault(require("./mainmenu/home"));
-
-require("./logo.png");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -31,39 +27,28 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-//import 'css/main.css'
-//import 'css/userNotify.css'
-var App =
+var UserNotify =
 /*#__PURE__*/
-function (_React$Component) {
-  _inherits(App, _React$Component);
+function (_Component) {
+  _inherits(UserNotify, _Component);
 
-  function App(props) {
-    var _this;
+  function UserNotify() {
+    _classCallCheck(this, UserNotify);
 
-    _classCallCheck(this, App);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
-    _this.state = {};
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(UserNotify).apply(this, arguments));
   }
 
-  _createClass(App, [{
+  _createClass(UserNotify, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
-        id: "container"
-      }, _react.default.createElement("div", null, _react.default.createElement("div", {
-        id: "logoBox"
-      }, _react.default.createElement("img", {
-        src: logo,
-        alt: "Appreciate Logo"
-      })), _react.default.createElement(_home.default, null)));
+      return _react.default.createElement("p", {
+        className: "userNotify"
+      }, this.props.message);
     }
   }]);
 
-  return App;
-}(_react.default.Component);
+  return UserNotify;
+}(_react.Component);
 
-var _default = App;
+var _default = UserNotify;
 exports.default = _default;

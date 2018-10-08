@@ -7,10 +7,6 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _home = _interopRequireDefault(require("./mainmenu/home"));
-
-require("./logo.png");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -31,39 +27,33 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-//import 'css/main.css'
-//import 'css/userNotify.css'
-var App =
+var Button =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(App, _React$Component);
+  _inherits(Button, _React$Component);
 
-  function App(props) {
-    var _this;
+  function Button() {
+    _classCallCheck(this, Button);
 
-    _classCallCheck(this, App);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
-    _this.state = {};
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(Button).apply(this, arguments));
   }
 
-  _createClass(App, [{
+  _createClass(Button, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
-        id: "container"
-      }, _react.default.createElement("div", null, _react.default.createElement("div", {
-        id: "logoBox"
-      }, _react.default.createElement("img", {
-        src: logo,
-        alt: "Appreciate Logo"
-      })), _react.default.createElement(_home.default, null)));
+      return _react.default.createElement("input", {
+        className: "submit",
+        type: "submit",
+        name: "submit",
+        id: this.props.id,
+        value: this.props.value,
+        onClick: this.props.onClick
+      });
     }
   }]);
 
-  return App;
+  return Button;
 }(_react.default.Component);
 
-var _default = App;
+var _default = Button;
 exports.default = _default;

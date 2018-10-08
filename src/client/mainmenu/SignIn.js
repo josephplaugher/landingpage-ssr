@@ -1,7 +1,7 @@
 import * as ReactForm from 'reactform-appco'
 import React from 'react'
 import EB from 'Util/EB'
-import 'css/userNotify.css'
+//import 'css/userNotify.css'
 
 const Form = ReactForm.Form;
 const Input = ReactForm.Input;

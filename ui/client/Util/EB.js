@@ -7,10 +7,6 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _home = _interopRequireDefault(require("./mainmenu/home"));
-
-require("./logo.png");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -31,39 +27,47 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-//import 'css/main.css'
-//import 'css/userNotify.css'
-var App =
+var EB =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(App, _React$Component);
+  _inherits(EB, _React$Component);
 
-  function App(props) {
+  function EB(props) {
     var _this;
 
-    _classCallCheck(this, App);
+    _classCallCheck(this, EB);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
-    _this.state = {};
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(EB).call(this, props));
+    _this.state = {
+      hasError: false
+    };
     return _this;
   }
 
-  _createClass(App, [{
+  _createClass(EB, [{
+    key: "componentDidCatch",
+    value: function componentDidCatch(error, info) {
+      // Display fallback UI
+      this.setState({
+        hasError: true
+      });
+      console.log('rendering error: ', error, info); // You can also log the error to an error reporting service
+      //logErrorToMyService(error, info);
+    }
+  }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
-        id: "container"
-      }, _react.default.createElement("div", null, _react.default.createElement("div", {
-        id: "logoBox"
-      }, _react.default.createElement("img", {
-        src: logo,
-        alt: "Appreciate Logo"
-      })), _react.default.createElement(_home.default, null)));
+      if (this.state.hasError) {
+        // You can render any custom fallback UI
+        return _react.default.createElement("p", null, "Something went wrong in the ", this.props.comp, " component");
+      }
+
+      return this.props.children;
     }
   }]);
 
-  return App;
+  return EB;
 }(_react.default.Component);
 
-var _default = App;
+var _default = EB;
 exports.default = _default;

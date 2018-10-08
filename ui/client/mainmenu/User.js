@@ -5,13 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-var _home = _interopRequireDefault(require("./mainmenu/home"));
+var _reactformAppco = require("reactform-appco");
 
-require("./logo.png");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -31,39 +29,40 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-//import 'css/main.css'
-//import 'css/userNotify.css'
-var App =
+//import 'css/user.css';
+//import 'css/form.css';
+var User =
 /*#__PURE__*/
-function (_React$Component) {
-  _inherits(App, _React$Component);
+function (_Component) {
+  _inherits(User, _Component);
 
-  function App(props) {
+  function User(props) {
     var _this;
 
-    _classCallCheck(this, App);
+    _classCallCheck(this, User);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
-    _this.state = {};
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(User).call(this, props));
+    _this.state = {
+      error: null
+    };
     return _this;
   }
 
-  _createClass(App, [{
+  _createClass(User, [{
     key: "render",
     value: function render() {
       return _react.default.createElement("div", {
-        id: "container"
-      }, _react.default.createElement("div", null, _react.default.createElement("div", {
-        id: "logoBox"
-      }, _react.default.createElement("img", {
-        src: logo,
-        alt: "Appreciate Logo"
-      })), _react.default.createElement(_home.default, null)));
+        id: "user"
+      }, _react.default.createElement("p", null, "Logged in as ", this.props.lname), _react.default.createElement(_reactformAppco.Button, {
+        id: "sign out",
+        className: "submit",
+        value: "Sign Out"
+      }));
     }
   }]);
 
-  return App;
-}(_react.default.Component);
+  return User;
+}(_react.Component);
 
-var _default = App;
+var _default = User;
 exports.default = _default;

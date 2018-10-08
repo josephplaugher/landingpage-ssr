@@ -7,10 +7,6 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _home = _interopRequireDefault(require("./mainmenu/home"));
-
-require("./logo.png");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -32,38 +28,37 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 //import 'css/main.css'
-//import 'css/userNotify.css'
-var App =
+//import 'css/logo.css'
+var Home =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(App, _React$Component);
+  _inherits(Home, _React$Component);
 
-  function App(props) {
+  function Home(props) {
     var _this;
 
-    _classCallCheck(this, App);
+    _classCallCheck(this, Home);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
-    _this.state = {};
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this, props));
+    _this.state = {
+      error: null
+    };
     return _this;
   }
 
-  _createClass(App, [{
+  _createClass(Home, [{
     key: "render",
     value: function render() {
       return _react.default.createElement("div", {
-        id: "container"
-      }, _react.default.createElement("div", null, _react.default.createElement("div", {
-        id: "logoBox"
-      }, _react.default.createElement("img", {
-        src: logo,
-        alt: "Appreciate Logo"
-      })), _react.default.createElement(_home.default, null)));
+        id: "home-container"
+      }, _react.default.createElement("div", {
+        id: "main-content"
+      }, _react.default.createElement("p", null, "Solving Business Process Problems Through Software"), _react.default.createElement("p", null, "You and your staff are probably doing a lot of things manually that can be automated.", _react.default.createElement("br", null), "Which means you have inefficiencies in your workflow that you are not aware of.", _react.default.createElement("br", null), "If you're not fully leveragng software, you are losing money. Let us help.")));
     }
   }]);
 
-  return App;
+  return Home;
 }(_react.default.Component);
 
-var _default = App;
+var _default = Home;
 exports.default = _default;

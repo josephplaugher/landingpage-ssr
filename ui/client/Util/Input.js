@@ -7,10 +7,6 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _home = _interopRequireDefault(require("./mainmenu/home"));
-
-require("./logo.png");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -31,39 +27,53 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-//import 'css/main.css'
-//import 'css/userNotify.css'
-var App =
+var Input =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(App, _React$Component);
+  _inherits(Input, _React$Component);
 
-  function App(props) {
-    var _this;
+  function Input() {
+    _classCallCheck(this, Input);
 
-    _classCallCheck(this, App);
-
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
-    _this.state = {};
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(Input).apply(this, arguments));
   }
 
-  _createClass(App, [{
+  _createClass(Input, [{
     key: "render",
     value: function render() {
+      //make the password field type "password" so its contents are hidden
+      var type;
+
+      if (this.props.name === 'password') {
+        type = 'password';
+      } else {
+        type = '"text"';
+      }
+
+      var lsr = 'lsr' + this.props.name;
       return _react.default.createElement("div", {
-        id: "container"
-      }, _react.default.createElement("div", null, _react.default.createElement("div", {
-        id: "logoBox"
-      }, _react.default.createElement("img", {
-        src: logo,
-        alt: "Appreciate Logo"
-      })), _react.default.createElement(_home.default, null)));
+        className: "input-container"
+      }, _react.default.createElement("p", {
+        className: "label"
+      }, this.props.label, " "), _react.default.createElement("p", {
+        className: "input-error"
+      }, this.props.error, " "), _react.default.createElement("input", {
+        className: "textinput",
+        type: type,
+        id: this.props.name,
+        name: this.props.name,
+        value: this.props.value,
+        onChange: this.props.onChange,
+        autoComplete: "off"
+      }), _react.default.createElement("div", {
+        id: lsr,
+        className: "search-result"
+      }, this.props.lsr));
     }
   }]);
 
-  return App;
+  return Input;
 }(_react.default.Component);
 
-var _default = App;
+var _default = Input;
 exports.default = _default;
