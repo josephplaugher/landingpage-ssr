@@ -8,8 +8,7 @@ module.exports = {
     filename: 'main.js'
   },
   plugins: [
-    new Dotenv(),
-    new IsomorphicLoaderPlugin()
+    new Dotenv()
   ],
   module: {
     rules: [
@@ -26,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use:['file-loader','file!isomorphic']
+        use:['file-loader']
       }
     ]
   },

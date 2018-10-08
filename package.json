@@ -6,9 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run build:server ; concurrently \"npm run build-client:dev\" \"npm run start-server:dev\" ",
     "build:prod": "npm run build-client:prod ; run build:server ; npm run start-server:prod",
-    "build-client:dev": "webpack --config webpack-dev.config.js",
+    "build-client:dev": "webpack --config webpack.config.client.babel.js",
     "build-client:prod": "webpack --config webpack-prod.config.js",
-    "build:server": "babel ./src -d ./ui",
+    "build:server": "node src/start-server.js",
     "start-server:dev": "NODE_ENV=development nodemon --exec 'node -r dotenv/config' --ignore sessions/ ./ui/server.js",
     "start-server:prod": "NODE_ENV=production --experimental-modules forever start forever-config.json"
   },
@@ -37,6 +37,7 @@
     "reactform-appco": "^1.0.0",
     "router-express": "^1.5.2",
     "session-file-store": "^1.2.0",
+    "universal-webpack": "^0.6.6",
     "uuid": "^3.3.2",
     "webpack-isomorphic-tools": "^3.0.6"
   },

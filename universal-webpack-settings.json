@@ -1,0 +1,7 @@
+{
+    "server":
+    {
+        "input": "./src",
+        "output": "./ui/server.js"
+    }
+}
