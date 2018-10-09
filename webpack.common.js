@@ -15,9 +15,7 @@ module.exports = {
       {
         test: /\.(js|mjs)$/,
         exclude: /node_modules/,//keeping react files around, but we're not going to use them for now
-        use: {
-          loader: "babel-loader"
-        }
+        use: ["babel-loader"]
       },
       {
         test:/\.(css|scss)$/,
