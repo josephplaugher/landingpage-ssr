@@ -1,6 +1,6 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
-const IsomorphicLoaderPlugin = require("isomorphic-loader/lib/webpack-plugin");
+//const IsomorphicLoaderPlugin = require("isomorphic-loader/lib/webpack-plugin");
 
 module.exports = {
   entry: './src/client.mjs',
@@ -9,8 +9,8 @@ module.exports = {
     filename: 'main.js'
   },
   plugins: [
-    new Dotenv(),
-    new IsomorphicLoaderPlugin()
+    new Dotenv()
+   // new IsomorphicLoaderPlugin()
   ],
   module: {
     rules: [
