@@ -9,8 +9,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _home = _interopRequireDefault(require("./mainmenu/home"));
 
-require("./logo.png");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -53,12 +51,7 @@ function (_React$Component) {
     value: function render() {
       return _react.default.createElement("div", {
         id: "container"
-      }, _react.default.createElement("div", null, _react.default.createElement("div", {
-        id: "logoBox"
-      }, _react.default.createElement("img", {
-        src: logo,
-        alt: "Appreciate Logo"
-      })), _react.default.createElement(_home.default, null)));
+      }, _react.default.createElement("div", null, _react.default.createElement(_home.default, null)));
     }
   }]);
 

@@ -10,9 +10,16 @@ var _bodyParser = _interopRequireDefault(require("body-parser"));
 
 var _App = _interopRequireDefault(require("./client/App"));
 
+var _extendRequire = _interopRequireDefault(require("isomorphic-loader/lib/extend-require"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express.default)();
+(0, _extendRequire.default)().then(function () {
+  require("./server");
+}).catch(function (err) {
+  console.log(err);
+});
 app.use(_express.default.static('public'));
 app.set('view engine', 'ejs');
 app.set('views', './src/views');

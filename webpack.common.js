@@ -1,5 +1,6 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
+const IsomorphicLoaderPlugin = require("isomorphic-loader/lib/webpack-plugin");
 
 module.exports = {
   entry: './src/client.mjs',
@@ -26,7 +27,9 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use:['file-loader','file!isomorphic']
+        use: {
+          loader: "file-loader"
+        }
       }
     ]
   },

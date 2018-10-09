@@ -3,8 +3,14 @@ import React from 'react';
 import express from 'express';
 import bodyParser from 'body-parser'
 import App from './client/App'
-
+import extendRequire from 'isomorphic-loader/lib/extend-require';
 const app = express();
+
+extendRequire().then(function () {
+  require("./server");
+}).catch(function (err) {
+  console.log(err);
+});
 
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
