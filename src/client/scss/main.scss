@@ -1,0 +1,17 @@
+@import 'center.scss';
+@import 'fonts.scss';
+
+#main-content {
+    clear: both;
+    @include center;
+}
+
+#headline {
+    color: $main-font-color;
+    font-size: $header-font-size;
+}
+
+#subheadline {
+    color: $main-font-color;
+    font-size: $main-font-size;
+}

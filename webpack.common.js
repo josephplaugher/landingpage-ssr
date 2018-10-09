@@ -30,7 +30,7 @@ module.exports = {
   resolve: {
     alias: {
       Util: path.resolve(__dirname, 'src/client/Util/'),
-      css: path.resolve(__dirname, 'src/client/css/')
+      scss: path.resolve(__dirname, 'src/client/scss/')
     }
   }
 };

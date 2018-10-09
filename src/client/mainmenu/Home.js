@@ -1,6 +1,5 @@
 import React from 'react'
-//import 'css/main.css'
-//import 'css/logo.css'
+import './../scss/main.scss'
 
 class Home extends React.Component {
   constructor(props) {
@@ -14,10 +13,10 @@ class Home extends React.Component {
     return (
       <div id="home-container">
        <div id="main-content">
-          <p>Solving Business Process Problems Through Software</p>
-          <p>You and your staff are probably doing a lot of things manually that can be automated.
+          <h1 id="headline">Solving Business Process Problems Through Software</h1>
+          <h2 id="subheadline">You and your staff are probably doing a lot of things manually that can be automated.
         <br/>Which means you have inefficiencies in your workflow that you are not aware of.
-        <br/>If you're not fully leveragng software, you are losing money. Let us help.</p>
+        <br/>If you're not fully leveragng software, you are losing money. Let us help.</h2>
         </div>
       </div>
     )

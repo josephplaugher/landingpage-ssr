@@ -1,10 +1,9 @@
 import React from 'react'
 //import EB from 'Util/EB'
 //import checkLoginState from 'Util/CheckLoginState'
-import Home from './mainmenu/home'
+import Home from './mainmenu/Home'
 import logo from './logo.png'
-//import 'css/main.css'
-//import 'css/userNotify.css'
+import './scss/logo.scss'
 
 class App extends React.Component {
   constructor(props) {

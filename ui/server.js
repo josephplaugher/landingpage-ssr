@@ -97,8 +97,9 @@ module.exports =
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var _mainmenu_home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mainmenu/home */ "./src/client/mainmenu/home.js");
+/* harmony import */ var _mainmenu_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mainmenu/Home */ "./src/client/mainmenu/Home.js");
 /* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./logo.png */ "./src/client/logo.png");
+/* harmony import */ var _scss_logo_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/logo.scss */ "./src/client/scss/logo.scss");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -121,8 +122,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 //import checkLoginState from 'Util/CheckLoginState'
 
 
- //import 'css/main.css'
-//import 'css/userNotify.css'
+
+
 
 var App =
 /*#__PURE__*/
@@ -149,7 +150,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
         src: _logo_png__WEBPACK_IMPORTED_MODULE_2__,
         alt: "Appreciate Logo"
-      })), react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mainmenu_home__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
+      })), react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mainmenu_Home__WEBPACK_IMPORTED_MODULE_1__["default"], null)));
     }
   }]);
 
@@ -171,9 +172,9 @@ module.exports = __webpack_require__.p + "1621673115cf4327f3e3248a25246a20.png";
 
 /***/ }),
 
-/***/ "./src/client/mainmenu/home.js":
+/***/ "./src/client/mainmenu/Home.js":
 /*!*************************************!*\
-  !*** ./src/client/mainmenu/home.js ***!
+  !*** ./src/client/mainmenu/Home.js ***!
   \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -182,6 +183,8 @@ module.exports = __webpack_require__.p + "1621673115cf4327f3e3248a25246a20.png";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../scss/main.scss */ "./src/client/scss/main.scss");
+/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -200,8 +203,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
- //import 'css/main.css'
-//import 'css/logo.css'
+
+
 
 var Home =
 /*#__PURE__*/
@@ -227,7 +230,11 @@ function (_React$Component) {
         id: "home-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "main-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Solving Business Process Problems Through Software"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You and your staff are probably doing a lot of things manually that can be automated.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Which means you have inefficiencies in your workflow that you are not aware of.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "If you're not fully leveragng software, you are losing money. Let us help.")));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        id: "headline"
+      }, "Solving Business Process Problems Through Software"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        id: "subheadline"
+      }, "You and your staff are probably doing a lot of things manually that can be automated.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Which means you have inefficiencies in your workflow that you are not aware of.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "If you're not fully leveragng software, you are losing money. Let us help.")));
     }
   }]);
 
@@ -235,6 +242,28 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./src/client/scss/logo.scss":
+/*!***********************************!*\
+  !*** ./src/client/scss/logo.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./src/client/scss/main.scss":
+/*!***********************************!*\
+  !*** ./src/client/scss/main.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
