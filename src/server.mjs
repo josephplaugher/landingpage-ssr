@@ -1,8 +1,9 @@
-import ReactDOMServer from 'react-dom/server';
-import React from 'react';
-import express from 'express';
+import ReactDOMServer from 'react-dom/server'
+import React from 'react'
+import express from 'express'
 import bodyParser from 'body-parser'
 import App from './client/App'
+import InquiryCont from './server/controllers/InquiryCont'
 
 export default function() {
   const app = express();
@@ -39,6 +40,7 @@ export default function() {
   }));
   */
   //app.use('/', userCont);
+  app.use('/', InquiryCont);
 
   app.all('/*', (req, res) => {
     //consolelog('sessionID: ', req.sessionID, 'userdata: ', req.session.userData);

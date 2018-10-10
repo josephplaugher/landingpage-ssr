@@ -1,6 +1,6 @@
 import React from 'react';
-import 'css/lightbox.css'
-import 'css/form.css'
+import 'scss/lightbox.scss'
+import 'scss/form.scss'
 
 class LightBox extends React.Component {
     render() {
