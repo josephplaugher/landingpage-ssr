@@ -2,6 +2,9 @@ import ReactDOMServer from 'react-dom/server'
 import React from 'react'
 import express from 'express'
 import bodyParser from 'body-parser'
+import Routes from './client/Routes'
+import StaticRouter from 'react-router-dom'
+import matchPath from 'react-router-dom'
 import App from './client/App'
 import InquiryCont from './server/controllers/InquiryCont'
 
@@ -43,8 +46,22 @@ export default function() {
   app.use('/', InquiryCont);
 
   app.all('/*', (req, res) => {
-    //consolelog('sessionID: ', req.sessionID, 'userdata: ', req.session.userData);
-    const AppString = ReactDOMServer.renderToString(<App />);
-    res.render('index',{"App": AppString});
+    const activeRoute = Routes.find(
+      (Route) => matchPath(req.url, Route)
+    ) || {}
+    //check if route needs to fetch data
+    const promise = activeRoute.fetchInitialData
+    ? activeRoute.fetchInitialData(req.path)
+    //if it doesn't call it good.
+    : Promise.resolve()
+
+    promise.then((data) => {
+      const AppString = ReactDOMServer.renderToString(
+        <StaticRouter location={req.url} context={{}}>
+          <App data={data}/>
+        </StaticRouter>  
+        );
+      res.render('index',{"App": AppString});
+    }).catch(next)
   });
 }

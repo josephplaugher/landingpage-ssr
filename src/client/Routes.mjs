@@ -1,6 +1,7 @@
-import About from './endpoints/About'
-import Consulting from './endpoints/Consulting'
-import SpecDev from './endpoints/SpecDev'
+import Home from './mainmenu/endpoints/Home'
+import About from './mainmenu/endpoints/About'
+import Consulting from './mainmenu/endpoints/Consulting'
+import SpecDev from './mainmenu/endpoints/SpecDev'
 
 const routes =  [
     {
@@ -10,7 +11,6 @@ const routes =  [
       },
         {
         path: '/about',
-        exact: true,
         component: About,
       },
       {
@@ -22,3 +22,4 @@ const routes =  [
         component: SpecDev,
       }
     ]
+export default routes;

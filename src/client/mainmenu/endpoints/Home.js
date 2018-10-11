@@ -4,11 +4,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import About from './endpoints/About'
-import Consulting from './endpoints/Consulting'
-import SpecDev from './endpoints/SpecDev'
-import Request from './Request'
-import './../scss/main.scss'
+import 'scss/main.scss'
 
 class Home extends React.Component {
   constructor(props) {
@@ -28,7 +24,6 @@ class Home extends React.Component {
         <br/>If you're not fully leveragng software, you are losing money. Let us help.</h2>
           <div id="content">
           </div>
-        <div><Request formState={this.state.formState}/></div>
       </div>
     )
   }
