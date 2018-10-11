@@ -27,16 +27,6 @@ class Home extends React.Component {
         <br/>Which means you have inefficiencies in your workflow that you are not aware of.
         <br/>If you're not fully leveragng software, you are losing money. Let us help.</h2>
           <div id="content">
-          {/*<Router>
-            <div id="nav-pane">
-            <Link to="/about" className="nav">About</Link>
-              <Route path="/about" component={About}/>
-            <br/><Link to="/consulting" className="nav">Consulting</Link>
-              <Route path="/consulting" component={Consulting}/>
-            <br/><Link to="/specdev" className="nav">Spec Development</Link>
-              <Route path="/specdev" component={SpecDev}/>
-            </div>
-          </Router>  */}
           </div>
         <div><Request formState={this.state.formState}/></div>
       </div>
