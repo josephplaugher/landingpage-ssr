@@ -15,6 +15,10 @@ const routes =  [
       },
       {
         path: '/consulting',
-        component: Grid,
+        component: Consulting,
+      },
+      {
+        path: '/specdev',
+        component: SpecDev,
       }
     ]
