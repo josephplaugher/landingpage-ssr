@@ -1,10 +1,8 @@
 import React from 'react'
-//import EB from 'Util/EB'
-//import checkLoginState from 'Util/CheckLoginState'
-import Home from './mainmenu/home'
-import './scss/main.scss'
-//import 'css/main.css'
-//import 'css/userNotify.css'
+import EB from 'Util/EB'
+import Home from './mainmenu/Home'
+import logo from './logo.png'
+import './scss/logo.scss'
 
 class App extends React.Component {
   constructor(props) {
@@ -17,7 +15,10 @@ class App extends React.Component {
     return (
       <div id="container">
         <div>
-          <Home />
+        <div id="logoBox"><img src={logo} alt="Appreciate Logo" /></div>
+          <EB comp="Home in App.mjs">
+            <Home />
+          </EB>
         </div>
       </div>
     )

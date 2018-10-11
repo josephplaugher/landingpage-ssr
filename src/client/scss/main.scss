@@ -1,5 +1,17 @@
-@import 'center-element';
+@import 'center.scss';
+@import 'fonts.scss';
 
-#container {
-    @include center-element
+#home-container {
+    clear: both;
+    @include center;
+}
+
+#headline {
+    color: $main-font-color;
+    font-size: $header-font-size;
+}
+
+#subheadline {
+    color: $main-font-color;
+    font-size: $main-font-size;
 }

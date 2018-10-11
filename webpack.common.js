@@ -1,6 +1,5 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
-//const IsomorphicLoaderPlugin = require("isomorphic-loader/lib/webpack-plugin");
 
 module.exports = {
   entry: './src/client.mjs',
@@ -10,16 +9,13 @@ module.exports = {
   },
   plugins: [
     new Dotenv()
-   // new IsomorphicLoaderPlugin()
   ],
   module: {
     rules: [
       {
         test: /\.(js|mjs)$/,
         exclude: /node_modules/,//keeping react files around, but we're not going to use them for now
-        use: {
-          loader: "babel-loader"
-        }
+        use: ["babel-loader"]
       },
       {
         test:/\.(css|scss)$/,
@@ -27,16 +23,15 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: {
-          loader: "file-loader"
-        }
+        use:['file-loader']
       }
     ]
   },
   resolve: {
     alias: {
       Util: path.resolve(__dirname, 'src/client/Util/'),
-      css: path.resolve(__dirname, 'src/client/css/')
+      scss: path.resolve(__dirname, 'src/client/scss/'),
+      ServerUtil: path.resolve(__dirname, 'src/server/ServerUtil/')
     }
   }
 };

@@ -1,0 +1,7 @@
+{
+    "server":
+    {
+        "input": "./src/server.mjs",
+        "output": "./ui/server.js"
+    }
+}
