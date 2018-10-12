@@ -98,9 +98,11 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var Util_EB__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! Util/EB */ "./src/client/Util/EB.js");
-/* harmony import */ var _mainmenu_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mainmenu/Home */ "./src/client/mainmenu/Home.js");
-/* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./logo.png */ "./src/client/logo.png");
-/* harmony import */ var _scss_logo_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/logo.scss */ "./src/client/scss/logo.scss");
+/* harmony import */ var _mainmenu_Nav__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mainmenu/Nav */ "./src/client/mainmenu/Nav.mjs");
+/* harmony import */ var _mainmenu_Content__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mainmenu/Content */ "./src/client/mainmenu/Content.mjs");
+/* harmony import */ var _mainmenu_Request__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mainmenu/Request */ "./src/client/mainmenu/Request.js");
+/* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./logo.png */ "./src/client/logo.png");
+/* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! scss/logo.scss */ "./src/client/scss/logo.scss");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -111,13 +113,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
 
 
 
@@ -136,23 +142,72 @@ function (_React$Component) {
     _classCallCheck(this, App);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
-    _this.state = {};
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "switch", function (content, e) {
+      _this.hideAllContent();
+
+      _this.showSelectedContent(content);
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "hideAllContent", function () {
+      _this.setState({
+        content: {
+          home: false,
+          about: false,
+          consulting: false,
+          specdev: false
+        }
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "showSelectedContent", function (content) {
+      _this.setState({
+        content: _defineProperty({}, content, true)
+      });
+    });
+
+    _this.state = {
+      content: {
+        home: true,
+        about: false,
+        consulting: false,
+        specdev: false
+      }
+    };
+    _this.switch = _this.switch.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.hideAllContent = _this.hideAllContent.bind(_assertThisInitialized(_assertThisInitialized(_this)));
+    _this.showSelectedContent = _this.showSelectedContent.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     return _this;
   }
 
   _createClass(App, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        id: "logoBox"
+        id: "logoBox",
+        onClick: function onClick(e) {
+          return _this2.switch('home', e);
+        }
       }, react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-        src: _logo_png__WEBPACK_IMPORTED_MODULE_3__,
+        src: _logo_png__WEBPACK_IMPORTED_MODULE_5__,
         alt: "Appreciate Logo"
       })), react__WEBPACK_IMPORTED_MODULE_0__.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        comp: "Request in App.mjs"
+      }, react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mainmenu_Request__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        formState: this.state.formState
+      }))), react__WEBPACK_IMPORTED_MODULE_0__.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_1__["default"], {
+        comp: "Nav in App.mjs"
+      }, react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mainmenu_Nav__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        switch: this.switch
+      })), react__WEBPACK_IMPORTED_MODULE_0__.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_1__["default"], {
         comp: "Home in App.mjs"
-      }, react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mainmenu_Home__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
+      }, react__WEBPACK_IMPORTED_MODULE_0__.createElement(_mainmenu_Content__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        content: this.state.content
+      }))));
     }
   }]);
 
@@ -320,25 +375,22 @@ module.exports = __webpack_require__.p + "1621673115cf4327f3e3248a25246a20.png";
 
 /***/ }),
 
-/***/ "./src/client/mainmenu/Home.js":
-/*!*************************************!*\
-  !*** ./src/client/mainmenu/Home.js ***!
-  \*************************************/
+/***/ "./src/client/mainmenu/Content.mjs":
+/*!*****************************************!*\
+  !*** ./src/client/mainmenu/Content.mjs ***!
+  \*****************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "react-router-dom");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _endpoints_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./endpoints/About */ "./src/client/mainmenu/endpoints/About.mjs");
-/* harmony import */ var _endpoints_Consulting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./endpoints/Consulting */ "./src/client/mainmenu/endpoints/Consulting.mjs");
-/* harmony import */ var _endpoints_SpecDev__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./endpoints/SpecDev */ "./src/client/mainmenu/endpoints/SpecDev.mjs");
-/* harmony import */ var _Request__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Request */ "./src/client/mainmenu/Request.js");
-/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../scss/main.scss */ "./src/client/scss/main.scss");
-/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scss_main_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _endpoints_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./endpoints/Home */ "./src/client/mainmenu/endpoints/Home.mjs");
+/* harmony import */ var _endpoints_About__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./endpoints/About */ "./src/client/mainmenu/endpoints/About.mjs");
+/* harmony import */ var _endpoints_Consulting__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./endpoints/Consulting */ "./src/client/mainmenu/endpoints/Consulting.mjs");
+/* harmony import */ var _endpoints_SpecDev__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./endpoints/SpecDev */ "./src/client/mainmenu/endpoints/SpecDev.mjs");
+/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! scss/main.scss */ "./src/client/scss/main.scss");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -365,45 +417,122 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var Home =
+var Content =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Home, _React$Component);
+  _inherits(Content, _React$Component);
 
-  function Home(props) {
+  function Content(props) {
     var _this;
 
-    _classCallCheck(this, Home);
+    _classCallCheck(this, Content);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Home).call(this, props));
-    _this.state = {
-      formState: {},
-      error: null
-    };
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Content).call(this, props));
+    _this.state = {};
     return _this;
   }
 
-  _createClass(Home, [{
+  _createClass(Content, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      var content = this.props.content;
+      return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "home-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        id: "headline"
-      }, "Solving Business Process Problems Through Software"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-        id: "subheadline"
-      }, "You and your staff are probably doing a lot of things manually that can be automated.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Which means you have inefficiencies in your workflow that you are not aware of.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "If you're not fully leveragng software, you are losing money. Let us help."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         id: "content"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Request__WEBPACK_IMPORTED_MODULE_5__["default"], {
-        formState: this.state.formState
-      })));
+      }, content.home ? react__WEBPACK_IMPORTED_MODULE_0__.createElement(_endpoints_Home__WEBPACK_IMPORTED_MODULE_2__["default"], null) : null, content.about ? react__WEBPACK_IMPORTED_MODULE_0__.createElement(_endpoints_About__WEBPACK_IMPORTED_MODULE_3__["default"], null) : null, content.consulting ? react__WEBPACK_IMPORTED_MODULE_0__.createElement(_endpoints_Consulting__WEBPACK_IMPORTED_MODULE_4__["default"], null) : null, content.specdev ? react__WEBPACK_IMPORTED_MODULE_0__.createElement(_endpoints_SpecDev__WEBPACK_IMPORTED_MODULE_5__["default"], null) : null));
     }
   }]);
 
-  return Home;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+  return Content;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (Home);
+/* harmony default export */ __webpack_exports__["default"] = (Content);
+
+/***/ }),
+
+/***/ "./src/client/mainmenu/Nav.mjs":
+/*!*************************************!*\
+  !*** ./src/client/mainmenu/Nav.mjs ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var _scss_nav_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../scss/nav.scss */ "./src/client/scss/nav.scss");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var Nav =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Nav, _React$Component);
+
+  function Nav(props) {
+    var _this;
+
+    _classCallCheck(this, Nav);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Nav).call(this, props));
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Nav, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        id: "nav-container"
+      }, react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "nav",
+        onClick: function onClick(e) {
+          return _this2.props.switch('home', e);
+        }
+      }, "Home"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "nav",
+        onClick: function onClick(e) {
+          return _this2.props.switch('about', e);
+        }
+      }, "About"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "nav",
+        onClick: function onClick(e) {
+          return _this2.props.switch('consulting', e);
+        }
+      }, "Consulting"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+        className: "nav",
+        onClick: function onClick(e) {
+          return _this2.props.switch('specdev', e);
+        }
+      }, "Spec Development"));
+    }
+  }]);
+
+  return Nav;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Nav);
 
 /***/ }),
 
@@ -503,7 +632,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        id: "request"
+        id: "request-box"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "buttondiv"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
@@ -564,10 +693,16 @@ function (_React$Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! scss/main.scss */ "./src/client/scss/main.scss");
+
 
 
 var About = function About() {
-  return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Write something about my business"));
+  return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: "headline"
+  }, "About Appreciate Co"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "subheadline"
+  }, "Write something about my business"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -584,13 +719,45 @@ var About = function About() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! scss/main.scss */ "./src/client/scss/main.scss");
+
 
 
 var Consulting = function Consulting() {
-  return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "We will seek to understand you pain point, the part of your business processes that are ineffficient, expensive, or just a hassle, and we will seek to streamline and automate using software."));
+  return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: "headline"
+  }, "Consulting"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "subheadline"
+  }, "We will seek to understand you pain point, the part of your business processes that are ineffficient, expensive, or just a hassle, and we will seek to streamline and automate using software."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Consulting);
+
+/***/ }),
+
+/***/ "./src/client/mainmenu/endpoints/Home.mjs":
+/*!************************************************!*\
+  !*** ./src/client/mainmenu/endpoints/Home.mjs ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! scss/main.scss */ "./src/client/scss/main.scss");
+
+
+
+var Home = function Home() {
+  return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: "headline"
+  }, "We Solve Business Process Problems Through Software"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "subheadline"
+  }, "You and your staff are probably doing a lot of things manually that can be automated. Which means you have inefficiencies in your workflow that you are not aware of. If you're not fully leveragng software, you are losing money. Let us help."));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
@@ -604,10 +771,24 @@ var Consulting = function Consulting() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! scss/main.scss */ "./src/client/scss/main.scss");
+
 
 
 var SpecDev = function SpecDev() {
-  return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Do you already know what software you need built; what it should do what is should look like? We can do that."), react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "We have expertise in the following technologies:"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Vanilla JavaScript"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "React"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", null, "Node and Express")));
+  return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: "headline"
+  }, "Specification Development"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "subheadline"
+  }, "Do you already know what software you need built; what it should do what is should look like? We can do that."), react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+    className: "subheadline"
+  }, "We have expertise in the following technologies:"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "subheadline"
+  }, "Vanilla JavaScript"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "subheadline"
+  }, "React"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
+    className: "subheadline"
+  }, "Node and Express")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SpecDev);
@@ -651,6 +832,17 @@ var SpecDev = function SpecDev() {
 /*!***********************************!*\
   !*** ./src/client/scss/main.scss ***!
   \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./src/client/scss/nav.scss":
+/*!**********************************!*\
+  !*** ./src/client/scss/nav.scss ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 

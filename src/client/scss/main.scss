@@ -3,15 +3,21 @@
 
 #home-container {
     clear: both;
-    @include center;
+    @include center('column');
 }
 
-#headline {
+#request-box {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.headline {
     color: $main-font-color;
     font-size: $header-font-size;
 }
 
-#subheadline {
+.subheadline {
+    @include center('column');
     color: $main-font-color;
     font-size: $main-font-size;
 }
