@@ -1,5 +1,6 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: './src/client.mjs',
@@ -8,7 +9,8 @@ module.exports = {
     filename: 'main.js'
   },
   plugins: [
-    new Dotenv()
+    new Dotenv(),
+    new ExtractTextPlugin("styles.css"),
   ],
   module: {
     rules: [
@@ -19,7 +21,10 @@ module.exports = {
       },
       {
         test:/\.(css|scss)$/,
-        use:['style-loader','css-loader','sass-loader']
+        use: ExtractTextPlugin.extract({
+          fallback: ['style-loader','css-loader','sass-loader'],
+          use: ['css-loader','postcss-loader']
+        })
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
