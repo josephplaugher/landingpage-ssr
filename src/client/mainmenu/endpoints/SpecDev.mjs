@@ -5,7 +5,7 @@ const SpecDev = () => (
     <div>
     <h1 className="headline">Specification Development</h1>
     <h2 className="subheadline">Do you already know what software you need built; what it should do
-        what is should look like? We can do that.
+        and what it should look like? We can do that.
     </h2>
     <h2 className="subheadline" >We have expertise in the following technologies:</h2>
     <ul>
