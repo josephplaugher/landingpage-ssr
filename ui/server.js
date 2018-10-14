@@ -780,7 +780,7 @@ var SpecDev = function SpecDev() {
     className: "headline"
   }, "Specification Development"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
     className: "subheadline"
-  }, "Do you already know what software you need built; what it should do what is should look like? We can do that."), react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+  }, "Do you already know what software you need built; what it should do and what it should look like? We can do that."), react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
     className: "subheadline"
   }, "We have expertise in the following technologies:"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
     className: "subheadline"
@@ -800,9 +800,9 @@ var SpecDev = function SpecDev() {
   !*** ./src/client/scss/form.scss ***!
   \***********************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -811,9 +811,9 @@ var SpecDev = function SpecDev() {
   !*** ./src/client/scss/lightbox.scss ***!
   \***************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -822,9 +822,9 @@ var SpecDev = function SpecDev() {
   !*** ./src/client/scss/logo.scss ***!
   \***********************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -833,9 +833,9 @@ var SpecDev = function SpecDev() {
   !*** ./src/client/scss/main.scss ***!
   \***********************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -844,9 +844,9 @@ var SpecDev = function SpecDev() {
   !*** ./src/client/scss/nav.scss ***!
   \**********************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
