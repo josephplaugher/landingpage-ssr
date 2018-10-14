@@ -16,11 +16,7 @@
   cursor: pointer; }
 
 #home-container {
-  clear: both;
-  align-items: center;
-  display: flex;
-  flex-direction: "column";
-  justify-content: center; }
+  clear: both; }
 
 #request-box {
   position: absolute;
