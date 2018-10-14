@@ -1823,7 +1823,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "#home-container {\n  clear: both;\n  align-items: center;\n  display: flex;\n  flex-direction: \"column\";\n  justify-content: center; }\n\n#request-box {\n  position: absolute;\n  right: 10px;\n  top: 10px; }\n\n.headline {\n  color: #2665C4;\n  font-size: 22px; }\n\n.subheadline {\n  align-items: center;\n  display: flex;\n  flex-direction: \"column\";\n  justify-content: center;\n  color: #2665C4;\n  font-size: 15px; }\n", ""]);
+exports.push([module.i, "#home-container {\n  clear: both; }\n\n#request-box {\n  position: absolute;\n  right: 10px;\n  top: 10px; }\n\n.headline {\n  color: #2665C4;\n  font-size: 22px; }\n\n.subheadline {\n  align-items: center;\n  display: flex;\n  flex-direction: \"column\";\n  justify-content: center;\n  color: #2665C4;\n  font-size: 15px; }\n", ""]);
 
 // exports
 
