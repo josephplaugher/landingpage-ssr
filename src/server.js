@@ -33,26 +33,6 @@ export default function() {
   //app.use('/', InquiryCont);
 
   app.get('*', (req, res, next) => {
-    //console.log('routes', Routes)
-    //const activeRoute = Routes[1]
-    const activeRoute = Routes.find((Route) => matchPath(req.url, Route)) 
-    console.log('match', activeRoute);
-    //check if route needs to fetch data
-    /*
-    const promise = activeRoute.fetchInitialData
-    ? activeRoute.fetchInitialData(req.path)
-    //if it doesn't call it good.
-    : Promise.resolve()
-
-    promise.then((data) => {
-      const AppString = ReactDOMServer.renderToString(
-        <StaticRouter location={req.url} context={{}}>
-          <App />
-        </StaticRouter>  
-        );
-      res.render('index',{"App": AppString});
-    }).catch(next)
-    */
     const AppString = ReactDOMServer.renderToString(
       <StaticRouter location={req.url} context={{data: 'context'}}>
         <App />

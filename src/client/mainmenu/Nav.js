@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-//import './../scss/nav.scss'
+//import 'scss/nav.scss'
 
 class Nav extends React.Component {
     constructor(props) {
@@ -31,20 +31,9 @@ class Nav extends React.Component {
               </NavLink>
             </p>
         ))
+
         return (
-            
             NavBar
-
-
-            /*
-            <div id="nav-container">
-                <NavLink activeStyle={{ fontWeight: 'bold' }} to={`/${param}`}></NavLink>
-                <p className="nav" onClick={(e) => this.props.switch('home', e)} >Home</p>
-                <p className="nav" onClick={(e) => this.props.switch('about', e)} >About</p>
-                <p className="nav" onClick={(e) => this.props.switch('consulting', e)} >Consulting</p>
-                <p className="nav" onClick={(e) => this.props.switch('specdev', e)} >Spec Development</p>
-            </div>
-            */
         )
     }
 }

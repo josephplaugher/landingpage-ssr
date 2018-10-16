@@ -7,19 +7,19 @@ const Routes = [
       {
         path: '/',
         exact: true,
-        component: Home,
+        component: Home
       },
         {
         path: '/about',
-        component: About,
+        component: About
       },
       {
         path: '/consulting',
-        component: Consulting,
+        component: Consulting
       },
       {
         path: '/specdev',
-        component: SpecDev,
+        component: SpecDev
       }
     ]
 

@@ -2,7 +2,7 @@ import * as ReactForm from 'reactform-appco'
 import React from 'react'
 import LightBox from 'Util/LightBox'
 import EB from 'Util/EB'
-import 'scss/form.scss'
+//import './../scss/form.scss'
 
 const Form = ReactForm.Form;
 const Input = ReactForm.Input;

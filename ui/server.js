@@ -105,8 +105,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Routes */ "./src/client/Routes.js");
 /* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./logo.png */ "./src/client/logo.png");
 /* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_logo_png__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _scss_logo_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scss/logo.scss */ "./src/client/scss/logo.scss");
-/* harmony import */ var _scss_logo_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_scss_logo_scss__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -136,8 +134,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
-
+ //import 'scss/logo.scss'
 
 var App =
 /*#__PURE__*/
@@ -350,7 +347,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
- //import './../scss/nav.scss'
+ //import 'scss/nav.scss'
 
 var Nav =
 /*#__PURE__*/
@@ -396,17 +393,7 @@ function (_React$Component) {
           to: param
         }, name));
       });
-      return NavBar
-      /*
-      <div id="nav-container">
-          <NavLink activeStyle={{ fontWeight: 'bold' }} to={`/${param}`}></NavLink>
-          <p className="nav" onClick={(e) => this.props.switch('home', e)} >Home</p>
-          <p className="nav" onClick={(e) => this.props.switch('about', e)} >About</p>
-          <p className="nav" onClick={(e) => this.props.switch('consulting', e)} >Consulting</p>
-          <p className="nav" onClick={(e) => this.props.switch('specdev', e)} >Spec Development</p>
-      </div>
-      */
-      ;
+      return NavBar;
     }
   }]);
 
@@ -557,17 +544,6 @@ var SpecDev = function SpecDev() {
 
 /***/ }),
 
-/***/ "./src/client/scss/logo.scss":
-/*!***********************************!*\
-  !*** ./src/client/scss/logo.scss ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
 /***/ "./src/client/scss/main.scss":
 /*!***********************************!*\
   !*** ./src/client/scss/main.scss ***!
@@ -632,28 +608,6 @@ __webpack_require__.r(__webpack_exports__);
   //app.use('/', InquiryCont);
 
   app.get('*', function (req, res, next) {
-    //console.log('routes', Routes)
-    //const activeRoute = Routes[1]
-    var activeRoute = _client_Routes__WEBPACK_IMPORTED_MODULE_4__["default"].find(function (Route) {
-      return Object(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["matchPath"])(req.url, Route);
-    });
-    console.log('match', activeRoute); //check if route needs to fetch data
-
-    /*
-    const promise = activeRoute.fetchInitialData
-    ? activeRoute.fetchInitialData(req.path)
-    //if it doesn't call it good.
-    : Promise.resolve()
-     promise.then((data) => {
-      const AppString = ReactDOMServer.renderToString(
-        <StaticRouter location={req.url} context={{}}>
-          <App />
-        </StaticRouter>  
-        );
-      res.render('index',{"App": AppString});
-    }).catch(next)
-    */
-
     var AppString = react_dom_server__WEBPACK_IMPORTED_MODULE_0___default.a.renderToString(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["StaticRouter"], {
       location: req.url,
       context: {
