@@ -3,8 +3,8 @@ import About from './mainmenu/endpoints/About'
 import Consulting from './mainmenu/endpoints/Consulting'
 import SpecDev from './mainmenu/endpoints/SpecDev'
 
-const routes =  [
-    {
+const Routes = [
+      {
         path: '/',
         exact: true,
         component: Home,
@@ -22,4 +22,5 @@ const routes =  [
         component: SpecDev,
       }
     ]
-export default routes;
+
+export default Routes;

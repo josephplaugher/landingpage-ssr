@@ -5,5 +5,5 @@ module.exports = merge(common, {
   watch: false,
   mode: 'development',
   performance: { hints: false },
-  devtool: 'source-map'
+  devtool: 'inline-source-map'
 });

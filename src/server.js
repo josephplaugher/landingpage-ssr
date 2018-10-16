@@ -3,10 +3,9 @@ import React from 'react'
 import express from 'express'
 import bodyParser from 'body-parser'
 import Routes from './client/Routes'
-import StaticRouter from 'react-router-dom'
-import matchPath from 'react-router-dom'
+import {StaticRouter,matchPath} from 'react-router-dom'
 import App from './client/App'
-import InquiryCont from './server/controllers/InquiryCont'
+//import InquiryCont from './server/controllers/InquiryCont'
 
 export default function() {
   const app = express();
@@ -31,25 +30,15 @@ export default function() {
   app.use(bodyParser.urlencoded({ extended: false })); // Parse application/x-www-form-urlencoded
   app.use(bodyParser.json()); // Parse application/json
 
-  /*use sessions for user login
-  app.set('trust proxy', 1) // trust first proxy
-  app.use(session({
-      store: new FileStore(),
-      secret: uuid(),
-      resave: false,
-      saveUninitialized: false,
-      maxAge: 60000,
-      cookie:{secure: app.get('env') === 'production'}
-  }));
-  */
-  //app.use('/', userCont);
-  app.use('/', InquiryCont);
+  //app.use('/', InquiryCont);
 
-  app.all('/*', (req, res) => {
-    const activeRoute = Routes.find(
-      (Route) => matchPath(req.url, Route)
-    ) || {}
+  app.get('*', (req, res, next) => {
+    //console.log('routes', Routes)
+    //const activeRoute = Routes[1]
+    const activeRoute = Routes.find((Route) => matchPath(req.url, Route)) 
+    console.log('match', activeRoute);
     //check if route needs to fetch data
+    /*
     const promise = activeRoute.fetchInitialData
     ? activeRoute.fetchInitialData(req.path)
     //if it doesn't call it good.
@@ -58,10 +47,17 @@ export default function() {
     promise.then((data) => {
       const AppString = ReactDOMServer.renderToString(
         <StaticRouter location={req.url} context={{}}>
-          <App data={data}/>
+          <App />
         </StaticRouter>  
         );
       res.render('index',{"App": AppString});
     }).catch(next)
+    */
+    const AppString = ReactDOMServer.renderToString(
+      <StaticRouter location={req.url} context={{data: 'context'}}>
+        <App />
+      </StaticRouter>  
+      );
+    res.render('index',{"App": AppString});
   });
 }

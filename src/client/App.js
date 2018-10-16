@@ -1,5 +1,5 @@
 import React from 'react'
-import Route from 'react-router-dom'
+import {Route} from 'react-router-dom'
 import EB from 'Util/EB'
 import Routes from './Routes'
 import logo from './logo.png'
@@ -17,7 +17,7 @@ class App extends React.Component {
       <div id="container">
         <div>
           <div id="logoBox"><img src={logo} alt="Appreciate Logo" /></div>
-          <EB comp="Router in App.mjs">
+          <EB comp="Router in App.js">
             <div>
               {Routes.map(({ path, exact, component: C, ...rest }) => (
                 <Route
@@ -30,7 +30,6 @@ class App extends React.Component {
                 />
               ))}
             </div>
-            test
           </EB>
         </div>
       </div>
