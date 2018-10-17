@@ -1,20 +1,3 @@
-#nav-container {
-  align-items: center;
-  display: flex;
-  flex-direction: "row";
-  justify-content: center; }
-
-.nav {
-  border-top: 0.5px solid green;
-  border-right: 0px;
-  border-left: 0px;
-  border-bottom: 0.5px solid green;
-  border-radius: 10px;
-  padding: 15px;
-  color: #2665C4;
-  display: inline-block;
-  cursor: pointer; }
-
 #home-container {
   clear: both; }
 
@@ -34,6 +17,23 @@
   justify-content: center;
   color: #2665C4;
   font-size: 15px; }
+
+#nav-container {
+  align-items: center;
+  display: flex;
+  flex-direction: "row";
+  justify-content: center; }
+
+.nav {
+  border-top: 0.5px solid green;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 0.5px solid green;
+  border-radius: 10px;
+  padding: 15px;
+  color: #2665C4;
+  display: inline-block;
+  cursor: pointer; }
 
 .lightbox-background {
   position: fixed;
