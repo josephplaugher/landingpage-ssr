@@ -3,7 +3,7 @@ const Dotenv = require('dotenv-webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: './src/client.mjs',
+  entry: './src/client.js',
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'main.js'

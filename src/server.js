@@ -2,8 +2,10 @@ import ReactDOMServer from 'react-dom/server'
 import React from 'react'
 import express from 'express'
 import bodyParser from 'body-parser'
+import Routes from './client/Routes'
+import {StaticRouter,matchPath} from 'react-router-dom'
 import App from './client/App'
-import InquiryCont from './server/controllers/InquiryCont'
+//import InquiryCont from './server/controllers/InquiryCont'
 
 export default function() {
   const app = express();
@@ -28,23 +30,14 @@ export default function() {
   app.use(bodyParser.urlencoded({ extended: false })); // Parse application/x-www-form-urlencoded
   app.use(bodyParser.json()); // Parse application/json
 
-  /*use sessions for user login
-  app.set('trust proxy', 1) // trust first proxy
-  app.use(session({
-      store: new FileStore(),
-      secret: uuid(),
-      resave: false,
-      saveUninitialized: false,
-      maxAge: 60000,
-      cookie:{secure: app.get('env') === 'production'}
-  }));
-  */
-  //app.use('/', userCont);
-  app.use('/', InquiryCont);
+  //app.use('/', InquiryCont);
 
-  app.all('/*', (req, res) => {
-    //consolelog('sessionID: ', req.sessionID, 'userdata: ', req.session.userData);
-    const AppString = ReactDOMServer.renderToString(<App />);
+  app.get('*', (req, res, next) => {
+    const AppString = ReactDOMServer.renderToString(
+      <StaticRouter location={req.url} context={{data: 'context'}}>
+        <App />
+      </StaticRouter>  
+      );
     res.render('index',{"App": AppString});
   });
 }
