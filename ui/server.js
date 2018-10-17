@@ -848,7 +848,12 @@ __webpack_require__.r(__webpack_exports__);
   })); // Parse application/x-www-form-urlencoded
 
   app.use(body_parser__WEBPACK_IMPORTED_MODULE_3___default.a.json()); // Parse application/json
-  //app.use('/', InquiryCont);
+
+  app.get('/getInitialData', function (req, res) {
+    res.status(200).json({
+      text: 'test response'
+    });
+  }); //app.use('/', InquiryCont);
 
   app.get('*', function (req, res, next) {
     var AppString = react_dom_server__WEBPACK_IMPORTED_MODULE_0___default.a.renderToString(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["StaticRouter"], {

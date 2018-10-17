@@ -6,7 +6,8 @@ class Home extends React.Component {
     super(props);
     this.state = {
       formState: {},
-      error: null
+      error: null,
+      fromDB: {}
     };
   }
 
