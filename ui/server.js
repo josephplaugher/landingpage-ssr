@@ -105,6 +105,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Routes */ "./src/client/Routes.js");
 /* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./logo.png */ "./src/client/logo.png");
 /* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_logo_png__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! scss/logo.scss */ "./src/client/scss/logo.scss");
+/* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(scss_logo_scss__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -134,7 +136,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- //import 'scss/logo.scss'
+
+
 
 var App =
 /*#__PURE__*/
@@ -211,17 +214,23 @@ __webpack_require__.r(__webpack_exports__);
 
 var Routes = [{
   path: '/',
+  //this is the url and the link button path
   exact: true,
-  component: _mainmenu_endpoints_Home__WEBPACK_IMPORTED_MODULE_0__["default"]
+  component: _mainmenu_endpoints_Home__WEBPACK_IMPORTED_MODULE_0__["default"],
+  name: 'Home' //this is the link label
+
 }, {
   path: '/about',
-  component: _mainmenu_endpoints_About__WEBPACK_IMPORTED_MODULE_1__["default"]
+  component: _mainmenu_endpoints_About__WEBPACK_IMPORTED_MODULE_1__["default"],
+  name: 'About'
 }, {
   path: '/consulting',
-  component: _mainmenu_endpoints_Consulting__WEBPACK_IMPORTED_MODULE_2__["default"]
+  component: _mainmenu_endpoints_Consulting__WEBPACK_IMPORTED_MODULE_2__["default"],
+  name: 'Consulting'
 }, {
   path: '/specdev',
-  component: _mainmenu_endpoints_SpecDev__WEBPACK_IMPORTED_MODULE_3__["default"]
+  component: _mainmenu_endpoints_SpecDev__WEBPACK_IMPORTED_MODULE_3__["default"],
+  name: 'Spec Dev'
 }];
 /* harmony default export */ __webpack_exports__["default"] = (Routes);
 
@@ -328,6 +337,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "react-router-dom");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../Routes */ "./src/client/Routes.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -347,6 +357,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
+
  //import 'scss/nav.scss'
 
 var Nav =
@@ -361,36 +372,23 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Nav).call(this, props));
     _this.state = {};
-    _this.buttons = [{
-      name: 'Home',
-      param: '/'
-    }, {
-      name: 'About',
-      param: '/about'
-    }, {
-      name: 'Consulting',
-      param: '/consulting'
-    }, {
-      name: 'Spec Dev',
-      param: '/specdev'
-    }];
     return _this;
   }
 
   _createClass(Nav, [{
     key: "render",
     value: function render() {
-      var NavBar = this.buttons.map(function (_ref) {
+      var NavBar = _Routes__WEBPACK_IMPORTED_MODULE_2__["default"].map(function (_ref) {
         var name = _ref.name,
-            param = _ref.param;
+            path = _ref.path;
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
           className: "nav",
-          key: param
+          key: path
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
           activeStyle: {
             fontWeight: 'bold'
           },
-          to: param
+          to: path
         }, name));
       });
       return NavBar;
@@ -541,6 +539,17 @@ var SpecDev = function SpecDev() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SpecDev);
+
+/***/ }),
+
+/***/ "./src/client/scss/logo.scss":
+/*!***********************************!*\
+  !*** ./src/client/scss/logo.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 

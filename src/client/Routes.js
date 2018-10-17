@@ -5,21 +5,25 @@ import SpecDev from './mainmenu/endpoints/SpecDev'
 
 const Routes = [
       {
-        path: '/',
+        path: '/',//this is the url and the link button path
         exact: true,
-        component: Home
+        component: Home,
+        name: 'Home'//this is the link label
       },
         {
         path: '/about',
-        component: About
+        component: About,
+        name: 'About'
       },
       {
         path: '/consulting',
-        component: Consulting
+        component: Consulting,
+        name: 'Consulting'
       },
       {
         path: '/specdev',
-        component: SpecDev
+        component: SpecDev,
+        name: 'Spec Dev'
       }
     ]
 

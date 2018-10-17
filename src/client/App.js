@@ -4,7 +4,7 @@ import EB from 'Util/EB'
 import Nav from './mainmenu/Nav'
 import Routes from './Routes'
 import logo from './logo.png'
-//import 'scss/logo.scss'
+import 'scss/logo.scss'
 
 class App extends React.Component {
   constructor(props) {
