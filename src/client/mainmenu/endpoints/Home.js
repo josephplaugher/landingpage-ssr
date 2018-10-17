@@ -1,9 +1,4 @@
 import React from 'react'
-import {
-  ServerRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom'
 import 'scss/main.scss'
 
 class Home extends React.Component {
