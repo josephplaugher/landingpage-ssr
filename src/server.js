@@ -5,7 +5,7 @@ import bodyParser from 'body-parser'
 import Routes from './client/Routes'
 import {StaticRouter,matchPath} from 'react-router-dom'
 import App from './client/App'
-//import InquiryCont from './server/controllers/InquiryCont'
+import InquiryCont from './server/controllers/InquiryCont'
 
 export default function() {
   const app = express();
@@ -30,10 +30,7 @@ export default function() {
   app.use(bodyParser.urlencoded({ extended: false })); // Parse application/x-www-form-urlencoded
   app.use(bodyParser.json()); // Parse application/json
 
-  app.get('/getInitialData', (req, res) => {
-    res.status(200).json({ text: 'test response'})
-  })
-  //app.use('/', InquiryCont);
+  app.use('/', InquiryCont);
 
   app.get('*', (req, res, next) => {
     const AppString = ReactDOMServer.renderToString(

@@ -495,6 +495,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var Util_LightBox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Util/LightBox */ "./src/client/Util/LightBox.js");
 /* harmony import */ var Util_EB__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Util/EB */ "./src/client/Util/EB.js");
+/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! scss/form.scss */ "./src/client/scss/form.scss");
+/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(scss_form_scss__WEBPACK_IMPORTED_MODULE_4__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -518,7 +520,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
- //import './../scss/form.scss'
+
 
 var Form = reactform_appco__WEBPACK_IMPORTED_MODULE_0__["Form"];
 var Input = reactform_appco__WEBPACK_IMPORTED_MODULE_0__["Input"];
@@ -538,13 +540,11 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Request).call(this, props));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "response", function (res) {
-      if (typeof res.userData !== 'undefined') {
+      if (res.success) {
         _this.setState({
           userNotify: res.userNotify
         });
-      }
-
-      if (res.error !== 'undefined') {
+      } else {
         console.error('submit error: ', res.error);
       }
     });
@@ -585,7 +585,7 @@ function (_React$Component) {
         className: "lightbox-background"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Util_LightBox__WEBPACK_IMPORTED_MODULE_2__["default"], {
         close: this.closeLightBox
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
+      }, this.state.userNotify, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
         formTitle: "Request Consultation",
         action: "".concat("http://127.0.0.1:3011", "/requestConsult"),
         response: this.response
@@ -819,13 +819,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "react-router-dom");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _client_App__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./client/App */ "./src/client/App.js");
+/* harmony import */ var _server_controllers_InquiryCont__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./server/controllers/InquiryCont */ "./src/server/controllers/InquiryCont.js");
 
 
 
 
 
 
- //import InquiryCont from './server/controllers/InquiryCont'
+
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var app = express__WEBPACK_IMPORTED_MODULE_2___default()();
@@ -849,12 +850,7 @@ __webpack_require__.r(__webpack_exports__);
 
   app.use(body_parser__WEBPACK_IMPORTED_MODULE_3___default.a.json()); // Parse application/json
 
-  app.get('/getInitialData', function (req, res) {
-    res.status(200).json({
-      text: 'test response'
-    });
-  }); //app.use('/', InquiryCont);
-
+  app.use('/', _server_controllers_InquiryCont__WEBPACK_IMPORTED_MODULE_7__["default"]);
   app.get('*', function (req, res, next) {
     var AppString = react_dom_server__WEBPACK_IMPORTED_MODULE_0___default.a.renderToString(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["StaticRouter"], {
       location: req.url,
@@ -867,6 +863,140 @@ __webpack_require__.r(__webpack_exports__);
     });
   });
 });
+
+/***/ }),
+
+/***/ "./src/server/ServerUtil/BaseClass.mjs":
+/*!*********************************************!*\
+  !*** ./src/server/ServerUtil/BaseClass.mjs ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var BaseClass = function BaseClass() {
+  var _this = this;
+
+  _classCallCheck(this, BaseClass);
+
+  _defineProperty(this, "setError", function (error) {
+    _this.error.push(error);
+  });
+
+  _defineProperty(this, "getError", function () {
+    return _this.error;
+  });
+
+  _defineProperty(this, "respond", function (res, data, success, userNotify) {
+    res.status(200).json({
+      data: data,
+      success: success,
+      userNotify: userNotify
+    });
+  });
+
+  this.error = [];
+  this.response;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (BaseClass);
+
+/***/ }),
+
+/***/ "./src/server/controllers/InquiryCont.js":
+/*!***********************************************!*\
+  !*** ./src/server/controllers/InquiryCont.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ "express");
+/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _model_Inquiry_RequestConsult__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../model/Inquiry/RequestConsult */ "./src/server/model/Inquiry/RequestConsult.js");
+
+
+var routes = express__WEBPACK_IMPORTED_MODULE_0___default.a.Router();
+routes.post('/requestConsult', function (req, res) {
+  console.log(req.body);
+  var Request = new _model_Inquiry_RequestConsult__WEBPACK_IMPORTED_MODULE_1__["default"](req, res);
+  Request.logRequest();
+});
+/* harmony default export */ __webpack_exports__["default"] = (routes);
+
+/***/ }),
+
+/***/ "./src/server/model/Inquiry/RequestConsult.js":
+/*!****************************************************!*\
+  !*** ./src/server/model/Inquiry/RequestConsult.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var ServerUtil_BaseClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ServerUtil/BaseClass */ "./src/server/ServerUtil/BaseClass.mjs");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var RequestConsult =
+/*#__PURE__*/
+function (_BaseClass) {
+  _inherits(RequestConsult, _BaseClass);
+
+  function RequestConsult(req, res) {
+    var _this;
+
+    _classCallCheck(this, RequestConsult);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(RequestConsult).call(this));
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "logRequest", function () {
+      console.log('the inputs', _this.inputs);
+      console.log('logging consultation request: ', _this.inputs);
+
+      _this.emailRequester();
+    });
+
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "emailRequester", function () {
+      console.log('email requester');
+
+      _this.respond(_this.res, {
+        message: 'emailed requester'
+      }, true, "Thank you, we'll be in touch");
+    });
+
+    _this.inputs = req.body;
+    _this.req = req;
+    _this.res = res;
+    return _this;
+  }
+
+  return RequestConsult;
+}(ServerUtil_BaseClass__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (RequestConsult);
 
 /***/ }),
 

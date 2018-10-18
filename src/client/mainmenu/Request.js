@@ -2,7 +2,7 @@ import * as ReactForm from 'reactform-appco'
 import React from 'react'
 import LightBox from 'Util/LightBox'
 import EB from 'Util/EB'
-//import './../scss/form.scss'
+import 'scss/form.scss'
 
 const Form = ReactForm.Form;
 const Input = ReactForm.Input;
@@ -21,12 +21,12 @@ class Request extends React.Component {
   }
 
   response = (res) => {
-    if (typeof res.userData !== 'undefined') {
+    if (res.success) {
       this.setState({
         userNotify: res.userNotify,
       });
     }
-    if (res.error !== 'undefined') {
+    else {
       console.error('submit error: ', res.error)
     }
   }
@@ -49,6 +49,7 @@ class Request extends React.Component {
         {this.state.showForm ? (
           <div id="lightbox-container" className="lightbox-background">
             <LightBox close={this.closeLightBox} >
+            {this.state.userNotify}
               <Form formTitle="Request Consultation" action={`${process.env.BASE_URL}/requestConsult`} response={this.response} >
                 <Input name="fname" label="First Name" className="textinput" labelClass="label" errorClass="input-error" /><br />
                 <Input name="email" label="Email" className="textinput" labelClass="label" errorClass="input-error" /><br />

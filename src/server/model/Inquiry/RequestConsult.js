@@ -2,6 +2,7 @@ import BaseClass from 'ServerUtil/BaseClass'
 
 class RequestConsult extends BaseClass {
     constructor(req, res) {
+        super(  )
         this.inputs = req.body
         this.req = req
         this.res = res
@@ -15,7 +16,7 @@ class RequestConsult extends BaseClass {
 
     emailRequester = () => {
         console.log('email requester')
-        this.response(this.res, {message: 'emailed requester'}, true, {})
+        this.respond(this.res, {message: 'emailed requester'}, true, "Thank you, we'll be in touch")
     }
 }
 
