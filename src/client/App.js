@@ -2,6 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 import EB from 'Util/EB'
 import Request from './mainmenu/Request'
+import StripeView from './mainmenu/Stripe/StripeView'
 import Nav from './mainmenu/Nav'
 import Routes from './Routes'
 import logo from './logo.png'
@@ -21,6 +22,9 @@ class App extends React.Component {
           <div id="logoBox"><img src={logo} alt="Appreciate Logo" /></div>
           <EB comp="Request in App.mjs">
             <div><Request formState={this.state.formState}/></div>
+          </EB>
+          <EB comp="stripe in App.mjs">
+            <div><StripeView /></div>
           </EB>
           <EB comp="Nave in App.js">
             <div id="nav-container">
