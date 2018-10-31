@@ -40,6 +40,18 @@ class Request extends React.Component {
   }
 
   render() {
+    const validate = [
+    { name: 'fname', 
+      required: true,
+      match: 'alpha',
+      errorMsg: 'Your name is required'
+    },
+    { name: 'email',
+      required: true,
+      match: 'email',
+      errorMsg: 'You email is required'
+    }   
+    ]
 
     return (
       <div id="request-box">
@@ -50,7 +62,9 @@ class Request extends React.Component {
           <div id="lightbox-container" className="lightbox-background">
             <LightBox close={this.closeLightBox} >
             {this.state.userNotify}
-              <Form formTitle="Request Consultation" action={`${process.env.BASE_URL}/requestConsult`} response={this.response} >
+              <Form formTitle="Request Consultation" 
+              action={`${process.env.BASE_URL}/requestConsult`} 
+              response={this.response} >
                 <Input name="fname" label="First Name" className="textinput" labelClass="label" errorClass="input-error" /><br />
                 <Input name="email" label="Email" className="textinput" labelClass="label" errorClass="input-error" /><br />
                 <TextArea name="message"
