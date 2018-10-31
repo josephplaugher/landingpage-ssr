@@ -40,18 +40,6 @@ class Request extends React.Component {
   }
 
   render() {
-    const validate = [
-    { name: 'fname', 
-      required: true,
-      match: 'alpha',
-      errorMsg: 'Your name is required'
-    },
-    { name: 'email',
-      required: true,
-      match: 'email',
-      errorMsg: 'You email is required'
-    }   
-    ]
 
     return (
       <div id="request-box">
