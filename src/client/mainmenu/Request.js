@@ -2,6 +2,7 @@ import * as ReactForm from 'reactform-appco'
 import React from 'react'
 import LightBox from 'Util/LightBox'
 import EB from 'Util/EB'
+import ValRules from './ValRules'
 import 'scss/form.scss'
 
 const Form = ReactForm.Form;
@@ -52,14 +53,15 @@ class Request extends React.Component {
             {this.state.userNotify}
               <Form formTitle="Request Consultation" 
               action={`${process.env.BASE_URL}/requestConsult`} 
-              response={this.response} >
+              response={this.response}
+              valrules={ValRules} >
                 <Input name="fname" label="First Name" className="textinput" labelClass="label" errorClass="input-error" /><br />
                 <Input name="email" label="Email" className="textinput" labelClass="label" errorClass="input-error" /><br />
                 <TextArea name="message"
                   label="What brought you here?"
-                  className="textarea"
+                  className="textinput"
                   labelClass="label"
-                  errorClass="input-error"
+                  textAreaErrorClass="textarea-error"
                   rows="5"
                   cols="12"
                 />

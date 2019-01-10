@@ -72,6 +72,16 @@
   margin-left: 10px;
   font-size: 14px; }
 
+.input-error {
+  color: red;
+  font-size: 12px;
+  margin-left: 50px;
+  position: absolute; }
+
+.textarea-error {
+  color: red;
+  font-size: 12px; }
+
 .submit {
   margin: 0px;
   padding: 3px 18px 3px 18px;

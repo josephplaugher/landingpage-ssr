@@ -495,8 +495,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var Util_LightBox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Util/LightBox */ "./src/client/Util/LightBox.js");
 /* harmony import */ var Util_EB__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Util/EB */ "./src/client/Util/EB.js");
-/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! scss/form.scss */ "./src/client/scss/form.scss");
-/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(scss_form_scss__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ValRules__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ValRules */ "./src/client/mainmenu/ValRules.js");
+/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! scss/form.scss */ "./src/client/scss/form.scss");
+/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(scss_form_scss__WEBPACK_IMPORTED_MODULE_5__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -516,6 +517,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -573,17 +575,6 @@ function (_React$Component) {
   _createClass(Request, [{
     key: "render",
     value: function render() {
-      var validate = [{
-        name: 'fname',
-        required: true,
-        match: 'alpha',
-        errorMsg: 'Your name is required'
-      }, {
-        name: 'email',
-        required: true,
-        match: 'email',
-        errorMsg: 'You email is required'
-      }];
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         id: "request-box"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -599,7 +590,8 @@ function (_React$Component) {
       }, this.state.userNotify, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
         formTitle: "Request Consultation",
         action: "".concat("http://127.0.0.1:3011", "/requestConsult"),
-        response: this.response
+        response: this.response,
+        valrules: _ValRules__WEBPACK_IMPORTED_MODULE_4__["default"]
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
         name: "fname",
         label: "First Name",
@@ -615,9 +607,9 @@ function (_React$Component) {
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextArea, {
         name: "message",
         label: "What brought you here?",
-        className: "textarea",
+        className: "textinput",
         labelClass: "label",
-        errorClass: "input-error",
+        textAreaErrorClass: "textarea-error",
         rows: "5",
         cols: "12"
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -633,6 +625,46 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Request);
+
+/***/ }),
+
+/***/ "./src/client/mainmenu/ValRules.js":
+/*!*****************************************!*\
+  !*** ./src/client/mainmenu/ValRules.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var ValRules = [{
+  mode: 'development'
+}, {
+  log: {
+    dev: function dev(data) {
+      console.log(data);
+    },
+    prod: function prod(data) {
+      console.log(data);
+    }
+  }
+}, {
+  name: 'fname',
+  required: true,
+  alphanumeric: 'true',
+  errorMsg: 'Your name is required'
+}, {
+  name: 'email',
+  required: true,
+  email: true,
+  errorMsg: 'Must provide a valid email address'
+}, {
+  name: 'message',
+  required: true,
+  alphanumeric: true,
+  errorMsg: 'Please tell us a little about your business needs'
+}];
+/* harmony default export */ __webpack_exports__["default"] = (ValRules);
 
 /***/ }),
 

@@ -35,5 +35,5 @@ module.exports = {
       scss: path.resolve(__dirname, 'src/client/scss/'),
       ServerUtil: path.resolve(__dirname, 'src/server/ServerUtil/')
     }
-  },
+  }
 };
