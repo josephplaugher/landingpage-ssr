@@ -1,21 +1,22 @@
 const { Pool } = require('pg')
 
-const userConn = new Pool({
+var db_host;
+if(process.env.NODE_ENV === 'production') {
+    db_host = process.env.DB_HOST_PROD
+} else {
+    db_host = process.env.DB_HOST_DEV
+}
+const dbConn = new Pool({
     user: process.env.DB_USERNAME,
-    host: process.env.HOST,
-    database: '1000',
+    host: db_host,
+    database: 'appco',
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT
 })
-userConn.connect();
+dbConn    
+    .connect()
+    .catch( error => {
+        console.log('db conn error: ',error)
+    })
 
-const loginConn = new Pool({
-    user: process.env.DB_USERNAME,
-    host: process.env.HOST,
-    database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD,
-    port: process.env.DB_PORT
-})
-loginConn.connect();
-
-module.exports = { userConn, loginConn};
+export default dbConn;

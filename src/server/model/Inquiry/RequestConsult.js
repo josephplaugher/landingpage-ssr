@@ -1,4 +1,5 @@
 import BaseClass from 'ServerUtil/BaseClass'
+import dbConn from 'ServerUtil/postgres'
 
 class RequestConsult extends BaseClass {
     constructor(req, res) {
@@ -9,9 +10,21 @@ class RequestConsult extends BaseClass {
     }
 
     logRequest = () => {
-        console.log('the inputs', this.inputs)
         console.log('logging consultation request: ', this.inputs)
-        this.emailRequester()
+        const r = this.req.body;
+        const query = {
+            "text": `INSERT INTO clients
+                (fname, email) 
+                VALUES ($1,$2)`,
+            "values": [r.fname,
+                        r.email
+                      ]
+          }
+          dbConn.query(query)
+            .then(() => {
+                this.emailRequester()
+            })
+            .catch(e => console.error(e.stack))
     }
 
     emailRequester = () => {

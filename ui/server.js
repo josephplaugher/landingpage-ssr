@@ -406,6 +406,30 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./src/client/Util/SetUrl.js":
+/*!***********************************!*\
+  !*** ./src/client/Util/SetUrl.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var SetUrl = function SetUrl() {
+  //returns the correct url whether in dev or prod
+  var url;
+
+  if (true) {
+    url = "http://localhost:3011";
+  } else {}
+
+  return url;
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SetUrl);
+
+/***/ }),
+
 /***/ "./src/client/clock.jpg":
 /*!******************************!*\
   !*** ./src/client/clock.jpg ***!
@@ -524,9 +548,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var Util_LightBox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Util/LightBox */ "./src/client/Util/LightBox.js");
 /* harmony import */ var Util_EB__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Util/EB */ "./src/client/Util/EB.js");
-/* harmony import */ var _ValRules__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ValRules */ "./src/client/mainmenu/ValRules.js");
-/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! scss/form.scss */ "./src/client/scss/form.scss");
-/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(scss_form_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var Util_SetUrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Util/SetUrl */ "./src/client/Util/SetUrl.js");
+/* harmony import */ var _ValRules__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ValRules */ "./src/client/mainmenu/ValRules.js");
+/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! scss/form.scss */ "./src/client/scss/form.scss");
+/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(scss_form_scss__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -546,6 +571,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -618,9 +644,9 @@ function (_React$Component) {
         close: this.closeLightBox
       }, this.state.userNotify, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
         formTitle: "Request Consultation",
-        action: "".concat("http://127.0.0.1:3011", "/requestConsult"),
+        action: "".concat(Object(Util_SetUrl__WEBPACK_IMPORTED_MODULE_4__["default"])(), "/requestConsult"),
         response: this.response,
-        valrules: _ValRules__WEBPACK_IMPORTED_MODULE_4__["default"]
+        valrules: _ValRules__WEBPACK_IMPORTED_MODULE_5__["default"]
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
         name: "fname",
         label: "First Name",
@@ -980,6 +1006,38 @@ var BaseClass = function BaseClass() {
 
 /***/ }),
 
+/***/ "./src/server/ServerUtil/postgres.js":
+/*!*******************************************!*\
+  !*** ./src/server/ServerUtil/postgres.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var _require = __webpack_require__(/*! pg */ "pg"),
+    Pool = _require.Pool;
+
+var db_host;
+
+if (false) {} else {
+  db_host = "127.0.0.1";
+}
+
+var dbConn = new Pool({
+  user: "postgres",
+  host: db_host,
+  database: 'appco',
+  password: "tesla1985",
+  port: "5432"
+});
+dbConn.connect().catch(function (error) {
+  console.log('db conn error: ', error);
+});
+/* harmony default export */ __webpack_exports__["default"] = (dbConn);
+
+/***/ }),
+
 /***/ "./src/server/controllers/InquiryCont.js":
 /*!***********************************************!*\
   !*** ./src/server/controllers/InquiryCont.js ***!
@@ -1014,6 +1072,7 @@ routes.post('/requestConsult', function (req, res) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ServerUtil_BaseClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ServerUtil/BaseClass */ "./src/server/ServerUtil/BaseClass.mjs");
+/* harmony import */ var ServerUtil_postgres__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ServerUtil/postgres */ "./src/server/ServerUtil/postgres.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1032,6 +1091,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var RequestConsult =
 /*#__PURE__*/
 function (_BaseClass) {
@@ -1045,10 +1105,17 @@ function (_BaseClass) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(RequestConsult).call(this));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "logRequest", function () {
-      console.log('the inputs', _this.inputs);
       console.log('logging consultation request: ', _this.inputs);
-
-      _this.emailRequester();
+      var r = _this.req.body;
+      var query = {
+        "text": "INSERT INTO clients\n                (fname, email) \n                VALUES ($1,$2)",
+        "values": [r.fname, r.email]
+      };
+      ServerUtil_postgres__WEBPACK_IMPORTED_MODULE_1__["default"].query(query).then(function () {
+        _this.emailRequester();
+      }).catch(function (e) {
+        return console.error(e.stack);
+      });
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "emailRequester", function () {
@@ -1091,6 +1158,17 @@ module.exports = require("body-parser");
 /***/ (function(module, exports) {
 
 module.exports = require("express");
+
+/***/ }),
+
+/***/ "pg":
+/*!*********************!*\
+  !*** external "pg" ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("pg");
 
 /***/ }),
 

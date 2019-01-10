@@ -2,6 +2,7 @@ import * as ReactForm from 'reactform-appco'
 import React from 'react'
 import LightBox from 'Util/LightBox'
 import EB from 'Util/EB'
+import SetUrl from 'Util/SetUrl'
 import ValRules from './ValRules'
 import 'scss/form.scss'
 
@@ -52,7 +53,7 @@ class Request extends React.Component {
             <LightBox close={this.closeLightBox} >
             {this.state.userNotify}
               <Form formTitle="Request Consultation" 
-              action={`${process.env.BASE_URL}/requestConsult`} 
+              action={`${SetUrl()}/requestConsult`} 
               response={this.response}
               valrules={ValRules} >
                 <Input name="fname" label="First Name" className="textinput" labelClass="label" errorClass="input-error" /><br />
