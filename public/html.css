@@ -2,10 +2,3 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-
-img {
-	height: auto;
-	padding: 0;
-	width: 75%;
-	max-width: 350px;
-}

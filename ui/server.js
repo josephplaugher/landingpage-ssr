@@ -162,20 +162,24 @@ function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "container",
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
           backgroundImage: "url(".concat(_clock_jpg__WEBPACK_IMPORTED_MODULE_7___default.a, ")"),
-          width: "auto",
+          width: "100%",
           height: "100%",
+          position: "absolute",
           padding: 0,
           top: 0,
           left: 0,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundPosition: "center",
+          opacity: ".25",
+          zIndex: -1
         }
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        id: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "logoBox"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _logo_png__WEBPACK_IMPORTED_MODULE_6___default.a,
