@@ -5,7 +5,6 @@ import Request from './mainmenu/Request'
 import Nav from './mainmenu/Nav'
 import Routes from './Routes'
 import logo from './logo.png'
-import clock from './clock.jpg'
 import 'scss/logo.scss'
 
 class App extends React.Component {
@@ -17,21 +16,6 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>
-      <div style={{ 
-        backgroundImage: `url(${clock})`, 
-        width: "100%",
-        height: "100%", 
-        position: "absolute",
-        padding: 0,
-        top: 0,
-        left: 0,
-        backgroundRepeat: "no-repeat", 
-        backgroundSize: "cover", 
-        backgroundPosition: "center",
-        opacity: ".25" ,
-        zIndex: -1
-        }} ></div>
         <div id="container">
           <div id="logoBox"><img src={logo} alt="Appreciate Logo" /></div>
           <EB comp="Request in App.mjs">
@@ -57,7 +41,6 @@ class App extends React.Component {
             </div>
           </EB>
         </div>
-      </div>
     )
   }
 }

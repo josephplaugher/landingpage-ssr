@@ -106,10 +106,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Routes */ "./src/client/Routes.js");
 /* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./logo.png */ "./src/client/logo.png");
 /* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_logo_png__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _clock_jpg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./clock.jpg */ "./src/client/clock.jpg");
-/* harmony import */ var _clock_jpg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_clock_jpg__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! scss/logo.scss */ "./src/client/scss/logo.scss");
-/* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(scss_logo_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! scss/logo.scss */ "./src/client/scss/logo.scss");
+/* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(scss_logo_scss__WEBPACK_IMPORTED_MODULE_7__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -143,7 +141,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
 var App =
 /*#__PURE__*/
 function (_React$Component) {
@@ -162,22 +159,7 @@ function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        style: {
-          backgroundImage: "url(".concat(_clock_jpg__WEBPACK_IMPORTED_MODULE_7___default.a, ")"),
-          width: "100%",
-          height: "100%",
-          position: "absolute",
-          padding: 0,
-          top: 0,
-          left: 0,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: ".25",
-          zIndex: -1
-        }
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "logoBox"
@@ -208,7 +190,7 @@ function (_React$Component) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(C, _extends({}, props, rest));
           }
         });
-      })))));
+      }))));
     }
   }]);
 
@@ -427,17 +409,6 @@ var SetUrl = function SetUrl() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SetUrl);
-
-/***/ }),
-
-/***/ "./src/client/clock.jpg":
-/*!******************************!*\
-  !*** ./src/client/clock.jpg ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "73e5d962d4e3a864f1ba32ebe2db3667.jpg";
 
 /***/ }),
 
