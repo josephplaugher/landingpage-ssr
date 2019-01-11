@@ -18,10 +18,12 @@
 .headline {
     color: $main-font-color;
     font-size: $header-font-size;
+    font-family: sans-serif;
 }
 
 .subheadline {
     @include center('column');
     color: $main-font-color;
     font-size: $main-font-size;
+    font-family: sans-serif;
 }
