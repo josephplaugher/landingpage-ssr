@@ -1,8 +1,14 @@
 #container {
+  display: grid;
+  grid-template-columns: 20% 20% auto 20% 20%;
+  grid-template-rows: 30% auto 30%;
   padding: 10px; }
 
-#home-container {
-  clear: both; }
+.grid-child {
+  grid-column-start: 1;
+  grid-column-end: five;
+  grid-row-start: row1-start;
+  grid-row-end: 3; }
 
 #request-box {
   position: absolute;
@@ -117,15 +123,12 @@
   cursor: pointer; }
 
 img {
-  height: auto;
-  padding: 0;
-  width: 75%;
-  max-width: 350px;
-  mix-blend-mode: multiply; }
-
-#logobox {
-  float: left;
-  cursor: pointer; }
+  mix-blend-mode: multiply;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: 1;
+  grid-row-end: span 1;
+  width: 90%; }
 
 
 /*# sourceMappingURL=style.css.map*/

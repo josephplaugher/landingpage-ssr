@@ -17,16 +17,16 @@ class App extends React.Component {
 
     return (
         <div id="container">
-          <div id="logoBox"><img src={logo} alt="Appreciate Logo" /></div>
+          <div ><img src={logo} alt="Appreciate Logo" /></div>
           <EB comp="Request in App.mjs">
             <div><Request formState={this.state.formState}/></div>
           </EB>
           <EB comp="Nave in App.js">
-            <div id="nav-container">
+            <div className="grid-child" id="nav-container">
             <Nav />
             </div>
           </EB>
-          <EB comp="Router in App.js">
+          <EB className="grid-child" comp="Router in App.js">
             <div>
               {Routes.map(({ path, exact, component: C, ...rest }) => (
                 <Route

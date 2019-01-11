@@ -161,9 +161,7 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        id: "logoBox"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _logo_png__WEBPACK_IMPORTED_MODULE_6___default.a,
         alt: "Appreciate Logo"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -173,8 +171,10 @@ function (_React$Component) {
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
         comp: "Nave in App.js"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "grid-child",
         id: "nav-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_Nav__WEBPACK_IMPORTED_MODULE_4__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        className: "grid-child",
         comp: "Router in App.js"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, _Routes__WEBPACK_IMPORTED_MODULE_5__["default"].map(function (_ref) {
         var path = _ref.path,
@@ -210,7 +210,7 @@ function (_React$Component) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _mainmenu_endpoints_Home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mainmenu/endpoints/Home */ "./src/client/mainmenu/endpoints/Home.mjs");
+/* harmony import */ var _mainmenu_endpoints_Home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mainmenu/endpoints/Home */ "./src/client/mainmenu/endpoints/Home.js");
 /* harmony import */ var _mainmenu_endpoints_About__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mainmenu/endpoints/About */ "./src/client/mainmenu/endpoints/About.js");
 /* harmony import */ var _mainmenu_endpoints_Consulting__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mainmenu/endpoints/Consulting */ "./src/client/mainmenu/endpoints/Consulting.js");
 /* harmony import */ var _mainmenu_endpoints_SpecDev__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mainmenu/endpoints/SpecDev */ "./src/client/mainmenu/endpoints/SpecDev.js");
@@ -711,7 +711,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var About = function About() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "grid-child"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "headline"
   }, "About Appreciate Co"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
@@ -739,7 +741,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Consulting = function Consulting() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "grid-child"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "headline"
   }, "Consulting"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
@@ -750,24 +754,28 @@ var Consulting = function Consulting() {
 
 /***/ }),
 
-/***/ "./src/client/mainmenu/endpoints/Home.mjs":
-/*!************************************************!*\
-  !*** ./src/client/mainmenu/endpoints/Home.mjs ***!
-  \************************************************/
+/***/ "./src/client/mainmenu/endpoints/Home.js":
+/*!***********************************************!*\
+  !*** ./src/client/mainmenu/endpoints/Home.js ***!
+  \***********************************************/
 /*! exports provided: default */
-/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! scss/main.scss */ "./src/client/scss/main.scss");
+/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(scss_main_scss__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
 var Home = function Home() {
-  return react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "grid-child"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "headline"
-  }, "We Solve Business Process Problems Through Software"), react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+  }, "We Solve Business Process Problems Through Software"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "You and your staff are probably doing a lot of things manually that can be automated. Which means you have inefficiencies in your workflow that you are not aware of. If you're not fully leveragng software, you are losing money. Let us help."));
 };
@@ -793,7 +801,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SpecDev = function SpecDev() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "grid-child"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "headline"
   }, "Specification Development"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
