@@ -6,13 +6,12 @@
 }
 
 .nav {
-    border-top: .5px solid $logoGreen;;
+   /* border-top: .5px solid $logoGreen;; */
     border-right: 0px;
     border-left: 0px;
-    border-bottom: .5px solid $logoGreen;
+  /*  border-bottom: .5px solid $logoGreen;*/
     border-radius: 10px;
-    padding: 15px;
-    color: $main-font-color;
-    display: inline-block;
+    padding: 10px;
+    color:white;
     cursor: pointer;
 }

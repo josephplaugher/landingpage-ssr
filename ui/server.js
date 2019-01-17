@@ -161,22 +161,27 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "grid-header"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _logo_png__WEBPACK_IMPORTED_MODULE_6___default.a,
         alt: "Appreciate Logo"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
         comp: "Request in App.mjs"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_Request__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "request-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_Request__WEBPACK_IMPORTED_MODULE_3__["default"], {
         formState: this.state.formState
       }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
         comp: "Nave in App.js"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "grid-child",
+        className: "nav",
         id: "nav-container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_Nav__WEBPACK_IMPORTED_MODULE_4__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        className: "grid-child",
         comp: "Router in App.js"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, _Routes__WEBPACK_IMPORTED_MODULE_5__["default"].map(function (_ref) {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "content"
+      }, _Routes__WEBPACK_IMPORTED_MODULE_5__["default"].map(function (_ref) {
         var path = _ref.path,
             exact = _ref.exact,
             C = _ref.component,
@@ -214,6 +219,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mainmenu_endpoints_About__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mainmenu/endpoints/About */ "./src/client/mainmenu/endpoints/About.js");
 /* harmony import */ var _mainmenu_endpoints_Consulting__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mainmenu/endpoints/Consulting */ "./src/client/mainmenu/endpoints/Consulting.js");
 /* harmony import */ var _mainmenu_endpoints_SpecDev__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mainmenu/endpoints/SpecDev */ "./src/client/mainmenu/endpoints/SpecDev.js");
+/* harmony import */ var _mainmenu_endpoints_Portfolio__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mainmenu/endpoints/Portfolio */ "./src/client/mainmenu/endpoints/Portfolio.js");
+
 
 
 
@@ -237,6 +244,10 @@ var Routes = [{
   path: '/specdev',
   component: _mainmenu_endpoints_SpecDev__WEBPACK_IMPORTED_MODULE_3__["default"],
   name: 'Spec Dev'
+}, {
+  path: '/portfolio',
+  component: _mainmenu_endpoints_Portfolio__WEBPACK_IMPORTED_MODULE_4__["default"],
+  name: 'Portfolio'
 }];
 /* harmony default export */ __webpack_exports__["default"] = (Routes);
 
@@ -419,7 +430,7 @@ var SetUrl = function SetUrl() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "1621673115cf4327f3e3248a25246a20.png";
+module.exports = __webpack_require__.p + "37264060f0c7a723213c1d6b3fdfaa6b.png";
 
 /***/ }),
 
@@ -601,14 +612,10 @@ function (_React$Component) {
   _createClass(Request, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        id: "request-box"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "buttondiv"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
         value: "Find out what we can do for you",
         onClick: this.openLightBox
-      })), this.state.showForm ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }), this.state.showForm ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         id: "lightbox-container",
         className: "lightbox-background"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Util_LightBox__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -711,13 +718,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var About = function About() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grid-child"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "headline"
-  }, "About Appreciate Co"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "subheadline"
-  }, "Write something about my business"));
+  }, "About Appreciate Co"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text"
+  }, "Founder Joseph Plaugher repeatedly experienced ineffective, slow, and tedius processes being utilized at his own place of work and many others. Knowing the power of software to automation business processes, which has allowed companies such as Amazon, Ebay, Google, and many others to drastically cut costs and become superpowers in their industry, Joseph wanted to bring this competitive advantage to small businesses who can't neccessarily afford their own technology team."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text"
+  }, "That is precisely what we at Appreciate Corporation seek to do; help small companies become more effecient by harnessing the power of automation through software. Get in touch with us to start streamlining your business operations!"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -741,13 +748,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Consulting = function Consulting() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grid-child"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "headline"
-  }, "Consulting"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "subheadline"
-  }, "We will seek to understand you pain point, the part of your business processes that are ineffficient, expensive, or just a hassle, and we will seek to streamline and automate using software."));
+  }, "Consulting"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text"
+  }, "We will seek to understand your pain point, the part of your business process that is ineffficient, expensive, or just a hassle, and we will seek to streamline and automate using software."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text"
+  }, "Sometimes a desktop application is appropriate if only a couple of people need access to the application and only when at work. If more than a couple of people need access or there is shared data involved, a web-based application is usually a great option. We can do either one!"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Consulting);
@@ -771,16 +778,72 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Home = function Home() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grid-child"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "headline"
   }, "We Solve Business Process Problems Through Software"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
-  }, "You and your staff are probably doing a lot of things manually that can be automated. Which means you have inefficiencies in your workflow that you are not aware of. If you're not fully leveragng software, you are losing money. Let us help."));
+  }, "Improve Efficiencies"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p2", {
+    className: "text"
+  }, "You and your staff are probably doing a lot of things manually that can be automated. Which means you have inefficiencies in your workflow that you may not be aware of."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "subheadline"
+  }, "Cut Costs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p2", {
+    className: "text"
+  }, "If you're not fully leveragng software, you are losing money. You can empower your staff to work more effeciently and accomplish more in less time."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "subheadline"
+  }, "Expand Without Increasing Labor Costs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p2", {
+    className: "text"
+  }, "Wondering if you need to hire more staff to expand your business? Maybe you don't. If your staff's time was less consumed with routine, tedious tasks, there will be more time for effective and productive work. They will be happier, and your bottom line will benefit."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./src/client/mainmenu/endpoints/Portfolio.js":
+/*!****************************************************!*\
+  !*** ./src/client/mainmenu/endpoints/Portfolio.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! scss/main.scss */ "./src/client/scss/main.scss");
+/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(scss_main_scss__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var Portfolio = function Portfolio() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "headline"
+  }, "Portfolio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "subheadline"
+  }, "Curious what kind of work we've done? Take a look for yourself"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "subheadline"
+  }, "Enterprise Applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://erp.appreciateco.com"
+  }, "Appreciate Enterprise Accounting")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "Integrated Payment Processing"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "subheadline"
+  }, "Open Source Applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://hash.appco.tech"
+  }, "Hash Check Strong Password Generator"), "-", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, "Node and Express")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Portfolio);
 
 /***/ }),
 
@@ -801,21 +864,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SpecDev = function SpecDev() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "grid-child"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "headline"
-  }, "Specification Development"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "subheadline"
-  }, "Do you already know what software you need built; what it should do and what it should look like? We can do that."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "subheadline"
+  }, "Specification Development"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text"
+  }, "Do you already know what software you need built; what it should do and what it should look like? We can do that."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text"
   }, "We have expertise in the following technologies:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "subheadline"
-  }, "Vanilla JavaScript"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "subheadline"
-  }, "React"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "subheadline"
-  }, "Node and Express")));
+    className: "list"
+  }, "Vanilla JavaScript - for simple applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, "React - for dynamic, interactive, userfriendly applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, "Node - from simple to complex server side business logic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, "Electron - for building desktop applications")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SpecDev);

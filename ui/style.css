@@ -1,31 +1,82 @@
 #container {
   display: grid;
-  grid-template-columns: 20% 20% auto 20% 20%;
-  grid-template-rows: 30% auto 30%;
+  grid-template-columns: 15% 15% auto 15% 15%;
+  grid-template-rows: 10% 5% auto;
   padding: 10px; }
 
-.grid-child {
+.grid-header {
   grid-column-start: 1;
-  grid-column-end: five;
-  grid-row-start: row1-start;
-  grid-row-end: 3; }
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1; }
 
-#request-box {
-  position: absolute;
-  right: 10px;
-  top: 10px; }
+.nav {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #2665C4;
+  border-radius: 5px;
+  padding: 55px;
+  cursor: pointer;
+  margin-bottom: 20px; }
+
+.content {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  background-color: white;
+  border-radius: 5px;
+  padding: 55px; }
+  .content a:visited {
+    color: #2665C4; }
+  .content a:hover {
+    color: #03c203; }
+  .content a:active {
+    color: #2665C4; }
+
+.request-box {
+  grid-column-start: 5;
+  grid-column-end: span col5-end;
+  grid-row-start: 1;
+  grid-row-end: row1-end; }
 
 .headline {
+  font-family: sans-serif;
   color: #2665C4;
   font-size: 22px; }
 
 .subheadline {
-  align-items: center;
-  display: flex;
-  flex-direction: "column";
-  justify-content: center;
+  font-family: sans-serif;
   color: #2665C4;
   font-size: 15px; }
+
+.text {
+  font-family: sans-serif;
+  color: #2665C4;
+  font-size: 12px; }
+
+.list {
+  font-family: sans-serif;
+  color: #2665C4;
+  font-size: 15px; }
+
+a {
+  font-family: sans-serif;
+  color: #2665C4; }
+
+a:visited {
+  font-family: sans-serif;
+  color: white; }
+
+a:hover {
+  font-family: sans-serif;
+  color: #03c203; }
+
+a:active {
+  font-family: sans-serif;
+  color: #2665C4; }
 
 .lightbox-background {
   position: fixed;
@@ -39,6 +90,7 @@
   /*dim the background*/ }
 
 .lightbox {
+  font-family: sans-serif;
   z-index: 10;
   margin: auto;
   margin-top: 25px;
@@ -112,14 +164,13 @@
   justify-content: center; }
 
 .nav {
-  border-top: 0.5px solid green;
+  /* border-top: .5px solid $logoGreen;; */
   border-right: 0px;
   border-left: 0px;
-  border-bottom: 0.5px solid green;
+  /*  border-bottom: .5px solid $logoGreen;*/
   border-radius: 10px;
-  padding: 15px;
-  color: #2665C4;
-  display: inline-block;
+  padding: 10px;
+  color: white;
   cursor: pointer; }
 
 img {
@@ -128,7 +179,7 @@ img {
   grid-column-end: span 1;
   grid-row-start: 1;
   grid-row-end: span 1;
-  width: 90%; }
+  width: 70%; }
 
 
 /*# sourceMappingURL=style.css.map*/
