@@ -2,18 +2,19 @@ import React from 'react'
 import 'scss/main.scss'
 
 const SpecDev = () => (
-    <div>
+    <>
     <h1 className="headline">Specification Development</h1>
-    <h2 className="subheadline">Do you already know what software you need built; what it should do
+    <p className="text">Do you already know what software you need built; what it should do
         and what it should look like? We can do that.
-    </h2>
-    <h2 className="subheadline" >We have expertise in the following technologies:</h2>
+    </p>
+    <p className="text" >We have expertise in the following technologies:</p>
     <ul>
-        <li className="subheadline">Vanilla JavaScript</li>
-        <li className="subheadline">React</li>
-        <li className="subheadline">Node and Express</li>
+        <li className="list">Vanilla JavaScript - for simple applications</li>
+        <li className="list">React - for dynamic, interactive, userfriendly applications</li>
+        <li className="list">Node - from simple to complex server side business logic</li>
+        <li className="list">Electron - for building desktop applications</li>
     </ul>    
-    </div>
+    </>
 )
 
 export default SpecDev

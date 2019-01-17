@@ -44,10 +44,9 @@ class Request extends React.Component {
   render() {
 
     return (
-      <div id="request-box">
-      <div className="buttondiv">
+      <>
         <Button value="Find out what we can do for you" onClick={this.openLightBox}/>
-      </div>
+     
         {this.state.showForm ? (
           <div id="lightbox-container" className="lightbox-background">
             <LightBox close={this.closeLightBox} >
@@ -73,7 +72,7 @@ class Request extends React.Component {
             </LightBox>
           </div>
         ) : (null)}
-      </div>
+      </>
     )
   }
 }
