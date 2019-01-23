@@ -413,7 +413,7 @@ var SetUrl = function SetUrl() {
   var url;
 
   if (true) {
-    url = "http://localhost:3011";
+    url = "http://localhost:3022";
   } else {}
 
   return url;
@@ -975,7 +975,7 @@ __webpack_require__.r(__webpack_exports__);
   app.use(express__WEBPACK_IMPORTED_MODULE_2___default.a.static('public'));
   app.set('view engine', 'ejs');
   app.set('views', './src/views');
-  var port = "3011";
+  var port = "3022";
   app.listen(port, function () {
     console.log('server started in ' + "development" + ' mode on port ' + port);
   });
