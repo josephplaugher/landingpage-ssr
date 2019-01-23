@@ -29,12 +29,13 @@
   background-color: white;
   border-radius: 5px;
   padding: 55px; }
-  .content a:visited {
-    color: #2665C4; }
-  .content a:hover {
+  .content a, .content a:visited, .content a:hover, .content a:active {
+    color: #2665C4;
+    text-decoration: none; }
+  .content a:hover, .content a:active {
+    color: #03c203;
+    text-decoration: none;
     color: #03c203; }
-  .content a:active {
-    color: #2665C4; }
 
 .request-box {
   grid-column-start: 5;
@@ -62,21 +63,15 @@
   color: #2665C4;
   font-size: 15px; }
 
-a {
+a, a:visited {
   font-family: sans-serif;
-  color: #2665C4; }
-
-a:visited {
-  font-family: sans-serif;
+  text-decoration: none;
   color: white; }
 
-a:hover {
+a:active, a:hover {
   font-family: sans-serif;
+  text-decoration: none;
   color: #03c203; }
-
-a:active {
-  font-family: sans-serif;
-  color: #2665C4; }
 
 .lightbox-background {
   position: fixed;

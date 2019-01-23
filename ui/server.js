@@ -830,17 +830,39 @@ var Portfolio = function Portfolio() {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
-  }, "Integrated Payment Processing"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, "Integrated Payment Processing")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "Enterprise File Server"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "Open Source Applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://hash.appco.tech"
-  }, "Hash Check Strong Password Generator"), "-", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Hash Check Strong Password Generator. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
   }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, "Node and Express")));
+  }, "Blog Site"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, "Blog Administration Utility")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    className: "subheadline"
+  }, "NPM Modules"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://hash.appco.tech"
+  }, "ReactForm-Appco: a powerful, flexible forms and inputs module for React. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, "Form Validation module. From ReactForm-AppCo, but extracted for use on ordinary forms. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list"
+  }, "LightBox: a \"popup\" menu module. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: ""
+  }, "GitHub")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Portfolio);

@@ -35,16 +35,16 @@
     background-color: white;
     border-radius: 5px;
     padding: 55px;
-    a:visited {
+
+    a, a:visited, a:hover, a:active {
         color: $main-font-color;
+        text-decoration: none;
     }
-    
-    a:hover {
+
+    a:hover, a:active {
         color: $logoGreen;
-    }
-    
-    a:active {
-        color: $main-font-color;
+        text-decoration: none;
+        color: $logoGreen;
     }
 }
 
@@ -79,22 +79,14 @@
     font-size: $main-font-size;
 }
 
-a {
+a, a:visited {
     font-family: sans-serif;
-    color: $main-font-color;
+    text-decoration: none;
+    color: white;
 }
 
-a:visited {
+a:active, a:hover {
     font-family: sans-serif;
-    color:white;
-}
-
-a:hover {
-    font-family: sans-serif;
+    text-decoration: none;
     color: $logoGreen;
-}
-
-a:active {
-    font-family: sans-serif;
-    color: $main-font-color;
 }
