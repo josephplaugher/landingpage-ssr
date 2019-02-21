@@ -18,25 +18,26 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react","prettier"
     ],
     "rules": {
+        "prettier/prettier": "error",
         "react/jsx-uses-vars": "error",
         "no-unused-vars": "warn",
         "indent": [
-            "error",
+            "warn",
             "tab"
         ],
         "linebreak-style": [
-            "error",
+            "warn",
             "unix"
         ],
         "quotes": [
-            "error",
+            "warn",
             "single"
         ],
         "semi": [
-            "error",
+            "warn",
             "never"
         ],
         "no-console": "off"

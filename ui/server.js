@@ -1189,8 +1189,8 @@ function (_BaseClass) {
       console.log('logging consultation request: ', _this.inputs);
       var r = _this.req.body;
       var query = {
-        "text": "INSERT INTO clients\n                (fname, email) \n                VALUES ($1,$2)",
-        "values": [r.fname, r.email]
+        text: "INSERT INTO clients\n                (fname, email) \n                VALUES ($1,$2)",
+        values: [r.fname, r.email]
       };
       ServerUtil_postgres__WEBPACK_IMPORTED_MODULE_1__["default"].query(query).then(function () {
         _this.emailRequester();
