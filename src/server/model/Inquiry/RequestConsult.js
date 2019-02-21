@@ -29,7 +29,7 @@ class RequestConsult extends BaseClass {
 
     emailRequester = () => {
         console.log('email requester')
-        this.respond(this.res, {message: 'emailed requester'}, true, "Thank you, we'll be in touch")
+        this.respond(this.res, {message: 'emailed requester'}, true, {success:"Thank you, we'll be in touch"})
     }
 }
 

@@ -18,7 +18,7 @@ class App extends React.Component {
     return (
         <div id="container">
           <div className="grid-header"><img src={logo} alt="Appreciate Logo" /></div>
-          <EB comp="Request in App.mjs">
+          <EB comp="Request in App">
             <div className="request-box"><Request formState={this.state.formState}/></div>
           </EB>
           <EB comp="Nave in App.js">

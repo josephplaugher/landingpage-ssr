@@ -108,37 +108,37 @@ a:active, a:hover {
   font-size: 18px;
   text-align: left; }
 
-.textinput {
+.rfa_textinput {
   border-top: 0px;
   border-right: 0px;
   border-left: 0.5px solid #2665C4;
   border-bottom: 0.5px solid #2665C4;
   border-radius: 5px;
-  padding: 5px; }
+  padding: 8px; }
 
-.input-container {
+.rfa_input-container {
   display: inline-block;
   margin: 14px;
   clear: both; }
 
-.label {
+.rfa_label {
   color: #2665C4;
   position: absolute;
   margin-top: -9px;
   margin-left: 10px;
   font-size: 14px; }
 
-.input-error {
+.rfa_input-error {
   color: red;
   font-size: 12px;
   margin-left: 50px;
   position: absolute; }
 
-.textarea-error {
+.rfa_textarea-error {
   color: red;
   font-size: 12px; }
 
-.submit {
+.rfa_submit {
   margin: 0px;
   padding: 3px 18px 3px 18px;
   cursor: pointer;
@@ -151,6 +151,9 @@ a:active, a:hover {
 .buttondiv {
   clear: both;
   margin-left: 30px; }
+
+.userNotify-success {
+  color: green; }
 
 #nav-container {
   align-items: center;

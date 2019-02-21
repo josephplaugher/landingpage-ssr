@@ -167,7 +167,7 @@ function (_React$Component) {
         src: _logo_png__WEBPACK_IMPORTED_MODULE_6___default.a,
         alt: "Appreciate Logo"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        comp: "Request in App.mjs"
+        comp: "Request in App"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "request-box"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_Request__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -561,15 +561,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var Form = reactform_appco__WEBPACK_IMPORTED_MODULE_0__["Form"];
-var Input = reactform_appco__WEBPACK_IMPORTED_MODULE_0__["Input"];
-var TextArea = reactform_appco__WEBPACK_IMPORTED_MODULE_0__["TextArea"];
-var Button = reactform_appco__WEBPACK_IMPORTED_MODULE_0__["Button"];
 
 var Request =
 /*#__PURE__*/
-function (_React$Component) {
-  _inherits(Request, _React$Component);
+function (_FormClass) {
+  _inherits(Request, _FormClass);
 
   function Request(props) {
     var _this;
@@ -579,9 +575,9 @@ function (_React$Component) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Request).call(this, props));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "response", function (res) {
-      if (res.success) {
+      if (res.data.success) {
         _this.setState({
-          userNotify: res.userNotify
+          userNotify: res.data.userNotify
         });
       } else {
         console.error('submit error: ', res.error);
@@ -600,8 +596,24 @@ function (_React$Component) {
       });
     });
 
+    _this.useLiveSearch = false;
+    _this.route = Object(Util_SetUrl__WEBPACK_IMPORTED_MODULE_4__["default"])() + "/requestConsult";
+    _this.valRules = _ValRules__WEBPACK_IMPORTED_MODULE_5__["default"];
     _this.state = {
-      showForm: false
+      showForm: false,
+      fname: '',
+      email: '',
+      formData: {
+        fname: '',
+        email: '',
+        message: ''
+      },
+      userNotify: {
+        success: '',
+        fnam: '',
+        email: '',
+        message: ''
+      }
     };
     _this.response = _this.response.bind(_assertThisInitialized(_assertThisInitialized(_this)));
     _this.closeLightBox = _this.closeLightBox.bind(_assertThisInitialized(_assertThisInitialized(_this)));
@@ -612,7 +624,7 @@ function (_React$Component) {
   _createClass(Request, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactform_appco__WEBPACK_IMPORTED_MODULE_0__["Button"], {
         value: "Find out what we can do for you",
         onClick: this.openLightBox
       }), this.state.showForm ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -620,42 +632,43 @@ function (_React$Component) {
         className: "lightbox-background"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Util_LightBox__WEBPACK_IMPORTED_MODULE_2__["default"], {
         close: this.closeLightBox
-      }, this.state.userNotify, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Form, {
-        formTitle: "Request Consultation",
-        action: "".concat(Object(Util_SetUrl__WEBPACK_IMPORTED_MODULE_4__["default"])(), "/requestConsult"),
-        response: this.response,
-        valrules: _ValRules__WEBPACK_IMPORTED_MODULE_5__["default"]
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+        className: "formTitle"
+      }, "Request Consultation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
+        onSubmit: this.rfa_onSubmit
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactform_appco__WEBPACK_IMPORTED_MODULE_0__["Input"], {
         name: "fname",
         label: "First Name",
-        className: "textinput",
-        labelClass: "label",
-        errorClass: "input-error"
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Input, {
+        value: this.state.fname,
+        onChange: this.rfa_onChange,
+        error: this.state.userNotify.fname
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactform_appco__WEBPACK_IMPORTED_MODULE_0__["Input"], {
         name: "email",
         label: "Email",
-        className: "textinput",
-        labelClass: "label",
-        errorClass: "input-error"
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TextArea, {
+        value: this.state.email,
+        onChange: this.rfa_onChange,
+        error: this.state.userNotify.email
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactform_appco__WEBPACK_IMPORTED_MODULE_0__["TextArea"], {
         name: "message",
         label: "What brought you here?",
-        className: "textinput",
-        labelClass: "label",
-        textAreaErrorClass: "textarea-error",
         rows: "5",
-        cols: "12"
+        cols: "12",
+        value: this.state.message,
+        onChange: this.rfa_onChange,
+        error: this.state.userNotify.message
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "buttondiv"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Button, {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactform_appco__WEBPACK_IMPORTED_MODULE_0__["Button"], {
         id: "submit",
         value: "Request Consultation"
-      }))))) : null);
+      }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+        className: "userNotify-success"
+      }, this.state.userNotify.success))) : null);
     }
   }]);
 
   return Request;
-}(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
+}(reactform_appco__WEBPACK_IMPORTED_MODULE_0__["FormClass"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Request);
 
@@ -1189,7 +1202,9 @@ function (_BaseClass) {
 
       _this.respond(_this.res, {
         message: 'emailed requester'
-      }, true, "Thank you, we'll be in touch");
+      }, true, {
+        success: "Thank you, we'll be in touch"
+      });
     });
 
     _this.inputs = req.body;

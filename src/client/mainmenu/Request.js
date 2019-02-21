@@ -1,4 +1,4 @@
-import * as ReactForm from 'reactform-appco'
+import {FormClass,Input,TextArea,Button} from 'reactform-appco'
 import React from 'react'
 import LightBox from 'Util/LightBox'
 import EB from 'Util/EB'
@@ -6,26 +6,38 @@ import SetUrl from 'Util/SetUrl'
 import ValRules from './ValRules'
 import 'scss/form.scss'
 
-const Form = ReactForm.Form;
-const Input = ReactForm.Input;
-const TextArea = ReactForm.TextArea;
-const Button = ReactForm.Button;
-
-class Request extends React.Component {
+class Request extends FormClass {
   constructor(props) {
     super(props);
+    this.useLiveSearch = false
+    this.route = SetUrl() + "/requestConsult"
+    this.valRules = ValRules
     this.state = {
-      showForm: false
+      showForm: false,
+      fname: '',
+      email: '',
+      formData: {
+        fname: '',
+        email: '',
+        message: ''
+      },
+      userNotify: {
+        success: '',
+        fnam: '',
+        email: '',
+        message: ''
+      }
     }
+
     this.response = this.response.bind(this);
     this.closeLightBox = this.closeLightBox.bind(this)
     this.openLightBox = this.openLightBox.bind(this)
   }
 
   response = (res) => {
-    if (res.success) {
+    if (res.data.success) {
       this.setState({
-        userNotify: res.userNotify,
+        userNotify: res.data.userNotify,
       });
     }
     else {
@@ -50,25 +62,22 @@ class Request extends React.Component {
         {this.state.showForm ? (
           <div id="lightbox-container" className="lightbox-background">
             <LightBox close={this.closeLightBox} >
-            {this.state.userNotify}
-              <Form formTitle="Request Consultation" 
-              action={`${SetUrl()}/requestConsult`} 
-              response={this.response}
-              valrules={ValRules} >
-                <Input name="fname" label="First Name" className="textinput" labelClass="label" errorClass="input-error" /><br />
-                <Input name="email" label="Email" className="textinput" labelClass="label" errorClass="input-error" /><br />
-                <TextArea name="message"
+            <p className="formTitle">Request Consultation</p>
+              <form onSubmit={this.rfa_onSubmit}>
+                <Input name="fname" label="First Name" value={this.state.fname} onChange={this.rfa_onChange} error={this.state.userNotify.fname} /><br />
+                <Input name="email" label="Email" value={this.state.email} onChange={this.rfa_onChange} error={this.state.userNotify.email} /><br />
+                <TextArea 
+                  name="message"
                   label="What brought you here?"
-                  className="textinput"
-                  labelClass="label"
-                  textAreaErrorClass="textarea-error"
                   rows="5"
                   cols="12"
+                  value={this.state.message} onChange={this.rfa_onChange} error={this.state.userNotify.message}
                 />
                 <div className="buttondiv">
                   <Button id="submit" value="Request Consultation" />
                 </div>
-              </Form>
+              </form>
+              <p className="userNotify-success">{this.state.userNotify.success}</p>
             </LightBox>
           </div>
         ) : (null)}
