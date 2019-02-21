@@ -103,6 +103,7 @@ a:active, a:hover {
   padding: 25px;
   width: 400px;
   height: 70%;
+  overflow: auto;
   background-color: white;
   border-radius: 5px;
   border-color: #2665C4;
