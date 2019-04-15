@@ -1,6 +1,6 @@
 import { FormClass, Input, TextArea, Button } from 'reactform-appco'
 import React from 'react'
-import LightBox from 'Util/LightBox'
+import LightBox from 'lightbox-appco'
 import EB from 'Util/EB'
 import SetUrl from 'Util/SetUrl'
 import ValRules from './ValRules'
@@ -61,32 +61,43 @@ class Request extends FormClass {
                 />
                 {/* prettier-ignore */}
                 {this.state.showForm ? (
-                    <div
-                        id="lightbox-container"
-                        className="lightbox-background"
-                    >
-                        <LightBox close={this.closeLightBox}>
-                            <p className="formTitle">Request Consultation</p>
-                            {/* prettier-ignore */}
-                            <form onSubmit={this.rfa_onSubmit}>
+                    <>
+                        <LightBox
+                            close={this.closeLightBox}
+                            style={{
+                                backgroundColor: 'grey',
+                                borderColor: '#2665c4',
+                                borderRadius: '5px',
+                                borderStyle: 'solid',
+                                borderColor: '#2665c4',
+                                height: 'auto',
+                                width: '300px',
+                                left: '5',
+                            }}
+                        >
+                            <>
+                                <p className="formTitle">
+                                    Request Consultation
+                                </p>
+                                {/* prettier-ignore */}
+                                <form onSubmit={this.rfa_onSubmit}>
                 <Input name="fname" label="First Name" value={this.state.fname} onChange={this.rfa_onChange} error={this.state.userNotify.fname} /><br />
                 <Input name="email" label="Email" value={this.state.email} onChange={this.rfa_onChange} error={this.state.userNotify.email} /><br />
                 <TextArea 
                   name="message"
                   label="What brought you here?"
-                  rows={5}
-                  cols={12}
                   value={this.state.message} onChange={this.rfa_onChange} error={this.state.userNotify.message}
                 />
                 <div className="buttondiv">
                   <Button id="submit" value="Request Consultation" />
                 </div>
               </form>
-                            <p className="userNotify-success">
-                                {this.state.userNotify.success}
-                            </p>
+                                <p className="userNotify-success">
+                                    {this.state.userNotify.success}
+                                </p>
+                            </>
                         </LightBox>
-                    </div>
+                    </>
                 ) : null}
             </>
         )

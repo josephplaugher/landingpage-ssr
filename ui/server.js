@@ -330,77 +330,6 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./src/client/Util/LightBox.js":
-/*!*************************************!*\
-  !*** ./src/client/Util/LightBox.js ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var scss_lightbox_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! scss/lightbox.scss */ "./src/client/scss/lightbox.scss");
-/* harmony import */ var scss_lightbox_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(scss_lightbox_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! scss/form.scss */ "./src/client/scss/form.scss");
-/* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(scss_form_scss__WEBPACK_IMPORTED_MODULE_2__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-var LightBox =
-/*#__PURE__*/
-function (_React$Component) {
-  _inherits(LightBox, _React$Component);
-
-  function LightBox() {
-    _classCallCheck(this, LightBox);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(LightBox).apply(this, arguments));
-  }
-
-  _createClass(LightBox, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "lightbox-foundation"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "lightbox-background"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "lightbox"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "close",
-        onClick: this.props.close
-      }, "x"), this.props.children, " ")));
-    }
-  }]);
-
-  return LightBox;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (LightBox);
-
-/***/ }),
-
 /***/ "./src/client/Util/SetUrl.js":
 /*!***********************************!*\
   !*** ./src/client/Util/SetUrl.js ***!
@@ -530,7 +459,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var reactform_appco__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(reactform_appco__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var Util_LightBox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! Util/LightBox */ "./src/client/Util/LightBox.js");
+/* harmony import */ var lightbox_appco__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lightbox-appco */ "lightbox-appco");
+/* harmony import */ var lightbox_appco__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lightbox_appco__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var Util_EB__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! Util/EB */ "./src/client/Util/EB.js");
 /* harmony import */ var Util_SetUrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! Util/SetUrl */ "./src/client/Util/SetUrl.js");
 /* harmony import */ var _ValRules__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ValRules */ "./src/client/mainmenu/ValRules.js");
@@ -626,15 +556,20 @@ function (_FormClass) {
   _createClass(Request, [{
     key: "render",
     value: function render() {
+      var _ref;
+
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactform_appco__WEBPACK_IMPORTED_MODULE_0__["Button"], {
         value: "Find out what we can do for you",
         onClick: this.openLightBox
-      }), this.state.showForm ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        id: "lightbox-container",
-        className: "lightbox-background"
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Util_LightBox__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        close: this.closeLightBox
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+      }), this.state.showForm ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(lightbox_appco__WEBPACK_IMPORTED_MODULE_2___default.a, {
+        close: this.closeLightBox,
+        style: (_ref = {
+          backgroundColor: 'grey',
+          borderColor: '#2665c4',
+          borderRadius: '5px',
+          borderStyle: 'solid'
+        }, _defineProperty(_ref, "borderColor", '#2665c4'), _defineProperty(_ref, "height", 'auto'), _defineProperty(_ref, "width", '300px'), _defineProperty(_ref, "left", '5'), _ref)
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
         className: "formTitle"
       }, "Request Consultation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
         onSubmit: this.rfa_onSubmit
@@ -653,8 +588,6 @@ function (_FormClass) {
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactform_appco__WEBPACK_IMPORTED_MODULE_0__["TextArea"], {
         name: "message",
         label: "What brought you here?",
-        rows: 5,
-        cols: 12,
         value: this.state.message,
         onChange: this.rfa_onChange,
         error: this.state.userNotify.message
@@ -665,7 +598,7 @@ function (_FormClass) {
         value: "Request Consultation"
       }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
         className: "userNotify-success"
-      }, this.state.userNotify.success))) : null);
+      }, this.state.userNotify.success)))) : null);
     }
   }]);
 
@@ -956,17 +889,6 @@ var SpecDev = function SpecDev() {
 /*!***********************************!*\
   !*** ./src/client/scss/form.scss ***!
   \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "./src/client/scss/lightbox.scss":
-/*!***************************************!*\
-  !*** ./src/client/scss/lightbox.scss ***!
-  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1271,6 +1193,17 @@ module.exports = require("body-parser");
 /***/ (function(module, exports) {
 
 module.exports = require("express");
+
+/***/ }),
+
+/***/ "lightbox-appco":
+/*!*********************************!*\
+  !*** external "lightbox-appco" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("lightbox-appco");
 
 /***/ }),
 
