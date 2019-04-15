@@ -5,6 +5,7 @@ const Portfolio = () => (
     <>
         <h1 className="headline">Portfolio</h1>
         <p className="text">
+            Below is a list of web applications we build from the ground up.
             Typically our projects utilize an Express server with the EJS
             template engine. Usually there is a single script tag to include the
             React application bundled with Webpack. If the project is very
@@ -23,7 +24,7 @@ const Portfolio = () => (
             rendered on the server (until you click the navigation buttons) for
             SEO purposes.{' '}
         </p>
-        <h1 className="subheadline">Enterprise Applications</h1>
+        <h2 className="subheadline">Enterprise Applications</h2>
         <ul>
             <li className="list">
                 <p>
@@ -47,7 +48,7 @@ const Portfolio = () => (
                     <br />
                     Technologies Used: React, Webpack and Babel, Express; CRUD
                     operations in response to API calls from the client.
-                    PostgreSQL database
+                    PostgreSQL database.
                 </p>
             </li>
             <li className="list">
@@ -64,7 +65,7 @@ const Portfolio = () => (
                 </p>
             </li>
         </ul>
-        <h1 className="subheadline">Open Source Applications</h1>
+        <h2 className="subheadline">Open Source Applications</h2>
         <ul>
             <li className="list">
                 <p>
@@ -114,24 +115,26 @@ const Portfolio = () => (
                 </p>
             </li>
             <li className="list">
+                <h3>Pantry</h3>
                 <p>
-                    <a href="">Pantry. </a>
-                    <a href="">GitHub</a>
+                    ***Write something about Pantry***
+                    <br />
                     <br />
                     Technologies Used: React, JSON web token and cookie, Webpack
                     and Babel, Express backend; CRUD operations in response to
                     API calls from the client. PostgreSQL database.
+                    <br />
+                    <br />
+                    <a href="">GitHub</a>
                 </p>
             </li>
         </ul>
-        <h1 className="subheadline">NPM Modules</h1>
+        <h2 className="subheadline">NPM Modules</h2>
         <ul>
             <li className="list">
+                <h3>ReactForm-AppCo</h3>
                 <p>
-                    <a href="https://www.npmjs.com/package/reactform-appco">
-                        ReactForm-Appco
-                    </a>
-                    : A powerful, flexible forms and inputs module for React.
+                    A powerful, flexible forms and inputs module for React.
                     Includes "live search" that can be used similarly to a
                     select or dropdown menu, except the list of options change
                     with user input. The Form class does not render anything to
@@ -141,41 +144,58 @@ const Portfolio = () => (
                     an html input element but it is not required for use with
                     the Form class.
                     <br />
-                    <a href="">GitHub</a>
                     <br />
-                    Technologies uses: React, Webpack and Babel.
+                    Technologies used: React, Webpack and Babel.
+                    <br />
+                    <br />
+                    <a href="https://github.com/josephplaugher/ReactForm-AppCo">
+                        GitHub
+                    </a>{' '}
+                    |{' '}
+                    <a href="https://www.npmjs.com/package/reactform-appco">
+                        NPM
+                    </a>
                 </p>
             </li>
             <li className="list">
+                <h3>LightBox-AppCo</h3>
                 <p>
-                    <a href="https://www.npmjs.com/package/lightbox-appco">
-                        LightBox
-                    </a>
-                    : A "popup" window module.
+                    A fully stylable and customizable "popup" window component
+                    for React.
+                    <br />
+                    <br />
+                    Technologies used: React, Webpack and Babel. A module for
+                    making your markup draggable.
+                    <br />
                     <br />
                     <a href="https://github.com/josephplaugher/lightbox-appco">
                         GitHub
+                    </a>{' '}
+                    |{' '}
+                    <a href="https://www.npmjs.com/package/lightbox-appco">
+                        NPM
                     </a>
-                    <br />
-                    Technologies uses: React, Webpack and Babel. A module for
-                    making your markup draggable.
                 </p>
             </li>
             <li className="list">
+                <h3>Menu-AppCo</h3>
                 <p>
-                    <a href="https://www.npmjs.com/package/menu-appco">Menu</a>:
+                    {' '}
                     A closeable menu component for React.
+                    <br />
+                    <br />
+                    Technologies used: React, Webpack and Babel. A module for
+                    making your markup draggable.
+                    <br />
                     <br />
                     <a href="https://github.com/josephplaugher/Menu-AppCo">
                         GitHub
-                    </a>
-                    <br />
-                    Technologies uses: React, Webpack and Babel. A module for
-                    making your markup draggable.
+                    </a>{' '}
+                    | <a href="https://www.npmjs.com/package/menu-appco">NPM</a>
                 </p>
             </li>
         </ul>
-        <h1 className="subheadline">Other Skills.</h1>
+        <h2 className="subheadline">Other Skills.</h2>
         <ul>
             <li className="list">
                 <p>
@@ -205,9 +225,7 @@ const Portfolio = () => (
                 </p>
             </li>
             <li className="list">
-                <p className="text">
-                    I know PHP and jQuery and I am prepared to use them.
-                </p>
+                <p>I know PHP and jQuery and I am prepared to use them.</p>
             </li>
         </ul>
     </>

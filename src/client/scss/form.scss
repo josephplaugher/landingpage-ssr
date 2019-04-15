@@ -9,8 +9,17 @@
 .rfa_textinput {
     border-top: 0px;
     border-right: 0px;
-    border-left: .5px solid $main-font-color;
-    border-bottom: .5px solid $main-font-color;
+    border-left: 0.5px solid $main-font-color;
+    border-bottom: 0.5px solid $main-font-color;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.rfa_textarea {
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0.5px solid $main-font-color;
+    border-bottom: 0.5px solid $main-font-color;
     border-radius: 5px;
     padding: 8px;
 }
@@ -21,7 +30,8 @@
     clear: both;
 }
 
-.rfa_label {
+.rfa_label,
+.rfa_textarea-label {
     color: $main-font-color;
     position: absolute;
     margin-top: -9px;
@@ -37,7 +47,6 @@
 }
 
 .rfa_textarea-error {
- 
     color: red;
     font-size: 12px;
 }

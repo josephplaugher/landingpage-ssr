@@ -599,7 +599,7 @@ function (_FormClass) {
     });
 
     _this.useLiveSearch = false;
-    _this.route = Object(Util_SetUrl__WEBPACK_IMPORTED_MODULE_4__["default"])() + "/requestConsult";
+    _this.route = Object(Util_SetUrl__WEBPACK_IMPORTED_MODULE_4__["default"])() + '/requestConsult';
     _this.valRules = _ValRules__WEBPACK_IMPORTED_MODULE_5__["default"];
     _this.state = {
       showForm: false,
@@ -653,8 +653,8 @@ function (_FormClass) {
       }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactform_appco__WEBPACK_IMPORTED_MODULE_0__["TextArea"], {
         name: "message",
         label: "What brought you here?",
-        rows: "5",
-        cols: "12",
+        rows: 5,
+        cols: 12,
         value: this.state.message,
         onChange: this.rfa_onChange,
         error: this.state.userNotify.message
@@ -685,33 +685,35 @@ function (_FormClass) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var ValRules = [{
-  mode: 'development'
-}, {
-  log: {
-    dev: function dev(data) {
-      console.log(data);
-    },
-    prod: function prod(data) {
-      console.log(data);
+var ValRules = {
+  settings: {
+    mode: "development",
+    log: {
+      dev: function dev(data) {
+        console.log(data);
+      },
+      prod: function prod(data) {
+        console.log(data);
+      }
     }
-  }
-}, {
-  name: 'fname',
-  required: true,
-  alphanumeric: 'true',
-  errorMsg: 'Your name is required'
-}, {
-  name: 'email',
-  required: true,
-  email: true,
-  errorMsg: 'Must provide a valid email address'
-}, {
-  name: 'message',
-  required: true,
-  alphanumeric: true,
-  errorMsg: 'Please tell us a little about your business needs'
-}];
+  },
+  rules: [{
+    name: 'fname',
+    required: true,
+    alphanumeric: 'true',
+    errorMsg: 'Your name is required'
+  }, {
+    name: 'email',
+    required: true,
+    email: true,
+    errorMsg: 'Must provide a valid email address'
+  }, {
+    name: 'message',
+    required: true,
+    alphanumeric: true,
+    errorMsg: 'Please tell us a little about your business needs'
+  }]
+};
 /* harmony default export */ __webpack_exports__["default"] = (ValRules);
 
 /***/ }),
@@ -835,7 +837,7 @@ var Portfolio = function Portfolio() {
     className: "headline"
   }, "Portfolio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Typically our projects utilize an Express server with the EJS template engine. Usually there is a single script tag to include the React application bundled with Webpack. If the project is very simple, such as the strong password generator which still utilizes Webpack for transpilation and bundling, there is no framework (i.e. React). It is comprised of a couple of event handlers and functions interacting directly with the DOM.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Some of our projects use traditional prototype-based \"classes\" on the server side, some use ES6 syntax including classes. Most of the time we do not transpile the server side, except when both Search Engine Optimization (SEO) and user interactivity are important, such as the website you are reading now. On this site, the client and server sides are transpiled from ES6 syntax and all markup is rendered on the server (until you click the navigation buttons) for SEO purposes.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  }, "Below is a list of web applications we build from the ground up. Typically our projects utilize an Express server with the EJS template engine. Usually there is a single script tag to include the React application bundled with Webpack. If the project is very simple, such as the strong password generator which still utilizes Webpack for transpilation and bundling, there is no framework (i.e. React). It is comprised of a couple of event handlers and functions interacting directly with the DOM.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Some of our projects use traditional prototype-based \"classes\" on the server side, some use ES6 syntax including classes. Most of the time we do not transpile the server side, except when both Search Engine Optimization (SEO) and user interactivity are important, such as the website you are reading now. On this site, the client and server sides are transpiled from ES6 syntax and all markup is rendered on the server (until you click the navigation buttons) for SEO purposes.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "Enterprise Applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
@@ -845,11 +847,11 @@ var Portfolio = function Portfolio() {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://pay.appco.tech"
-  }, "Integrated Payment Processing"), ": Using Stripe, this provides a customizable invoice payment system for businesses.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express; CRUD operations in response to API calls from the client. PostgreSQL database")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Integrated Payment Processing"), ": Using Stripe, this provides a customizable invoice payment system for businesses.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express; CRUD operations in response to API calls from the client. PostgreSQL database.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://files.appco.tech"
-  }, "Enterprise File Server"), ": This is a work in progress but is functional. The intent is to functionally replace Google Drive.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, JSON web token and cookie, Webpack and Babel, Express; CRUD operations in response to API calls from the client. PostgreSQL database."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  }, "Enterprise File Server"), ": This is a work in progress but is functional. The intent is to functionally replace Google Drive.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, JSON web token and cookie, Webpack and Babel, Express; CRUD operations in response to API calls from the client. PostgreSQL database."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "Open Source Applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
@@ -862,7 +864,7 @@ var Portfolio = function Portfolio() {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://blog.appco.tech"
   }, "Blog Site. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
+    href: "https://github.com/josephplaugher/BlogSite"
   }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: Combination raw JavaScript and React, with Webpack and Babel. Express; CRUD operations in response to API calls from the client. PostgreSQL database.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "On this project, upon first visit, the latest blog post will be displayed a long with a menu of all the other available posts. This is all rendered server side for SEO purposes. Upon selected other blog posts, they are placed into the ready pane asynchronously. This is all done with raw JavaScript. The user authenication system (which allows users to create an account so they can leave comments) and the comments area itself are both written in React.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -871,31 +873,29 @@ var Portfolio = function Portfolio() {
     href: "https://github.com/josephplaugher/blog-admin-utility"
   }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, JSON web token and cookie, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Pantry"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "***Write something about Pantry***", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, JSON web token and cookie, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
-  }, "Pantry. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, JSON web token and cookie, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  }, "GitHub")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "NPM Modules"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "ReactForm-AppCo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A powerful, flexible forms and inputs module for React. Includes \"live search\" that can be used similarly to a select or dropdown menu, except the list of options change with user input. The Form class does not render anything to the UI. It simply attaches logic to your existing form to automate processing and submission using React state and Ajax. There is an optional Inputs componet which does render an html input element but it is not required for use with the Form class.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: React, Webpack and Babel.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/josephplaugher/ReactForm-AppCo"
+  }, "GitHub"), ' ', "|", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.npmjs.com/package/reactform-appco"
-  }, "ReactForm-Appco"), ": A powerful, flexible forms and inputs module for React. Includes \"live search\" that can be used similarly to a select or dropdown menu, except the list of options change with user input. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies uses: React, Webpack and Babel.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "NPM"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "LightBox-AppCo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A fully stylable and customizable \"popup\" window component for React.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: React, Webpack and Babel. A module for making your markup draggable.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/josephplaugher/lightbox-appco"
+  }, "GitHub"), ' ', "|", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.npmjs.com/package/lightbox-appco"
-  }, "LightBox"), ": A \"popup\" window module.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies uses: React, Webpack and Babel. A module for making your markup draggable.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "NPM"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Menu-AppCo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, ' ', "A closeable menu component for React.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: React, Webpack and Babel. A module for making your markup draggable.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/josephplaugher/Menu-AppCo"
+  }, "GitHub"), ' ', "| ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.npmjs.com/package/menu-appco"
-  }, "Menu"), ": A closeable menu module.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies uses: React, Webpack and Babel. A module for making your markup draggable."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  }, "NPM")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "Other Skills."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
@@ -907,9 +907,7 @@ var Portfolio = function Portfolio() {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently all my web applications are hosted on AWS within a EC2 instance running Red Hat Enterprise Linux. However, I also maintain my own physical server running CentOS 7.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text"
-  }, "I know PHP and jQuery and I am prepared to use them."))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I know PHP and jQuery and I am prepared to use them."))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Portfolio);

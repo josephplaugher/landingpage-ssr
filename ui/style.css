@@ -128,12 +128,21 @@ a:active, a:hover {
   border-radius: 5px;
   padding: 8px; }
 
+.rfa_textarea {
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0.5px solid #2665C4;
+  border-bottom: 0.5px solid #2665C4;
+  border-radius: 5px;
+  padding: 8px; }
+
 .rfa_input-container {
   display: inline-block;
   margin: 14px;
   clear: both; }
 
-.rfa_label {
+.rfa_label,
+.rfa_textarea-label {
   color: #2665C4;
   position: absolute;
   margin-top: -9px;
