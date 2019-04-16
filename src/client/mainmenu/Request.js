@@ -57,7 +57,7 @@ class Request extends FormClass {
         return (
             <>
                 <button id="request-info-button" onClick={this.openLightBox}>
-                    Find out what we can do for you
+                    Request a free consultation
                 </button>
 
                 {this.state.showForm ? (

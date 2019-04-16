@@ -7,8 +7,8 @@
 .grid-header {
   grid-column-start: 1;
   grid-column-end: 1;
-  grid-row-start: 1;
-  grid-row-end: 1; }
+  grid-row-start: 2;
+  grid-row-end: 4; }
 
 .nav {
   grid-column-start: 3;
@@ -18,6 +18,7 @@
   background-color: #2665C4;
   border-radius: 5px;
   padding: 55px;
+  margin-bottom: 10px;
   cursor: pointer; }
 
 .content {
@@ -27,7 +28,7 @@
   grid-row-end: 3;
   background-color: white;
   border-radius: 5px;
-  padding: 55px; }
+  padding: 25px 55px 55px 55px; }
   .content a,
   .content a:visited,
   .content a:hover,
@@ -41,24 +42,27 @@
     color: #03c203; }
 
 .request-box {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  bottom: 0; }
+  grid-column-start: 5;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 4; }
 
 .headline {
   font-family: sans-serif;
   color: #2665C4;
-  font-size: 22px; }
+  font-size: 22px;
+  margin-bottom: 50px; }
 
 .subheadline {
   font-family: sans-serif;
   color: #2665C4;
-  font-size: 15px; }
+  font-size: 15px;
+  margin: 25px 0px 5px 0px; }
 
 .text {
   font-family: sans-serif;
   color: #2665C4;
-  font-size: 12px; }
+  font-size: 15px; }
 
 .list {
   font-family: sans-serif;
@@ -105,7 +109,7 @@ a:hover {
   margin: auto;
   margin-top: 25px;
   padding: 25px;
-  width: 400px;
+  width: 300px;
   height: 70%;
   overflow: auto;
   background-color: white;
@@ -117,7 +121,8 @@ a:hover {
 .close {
   float: right;
   padding: 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  color: #2665C4; }
 
 .formTitle {
   color: #2665C4;
@@ -181,12 +186,10 @@ a:hover {
   color: green; }
 
 #request-info-button {
-  font-size: 20px;
+  font-size: 22px;
   color: #2665C4;
-  margin: 0px;
-  padding: 3px 18px 3px 18px;
   cursor: pointer;
-  height: 70px;
+  height: 150px;
   width: 100%;
   background-color: white;
   border-radius: 5px;
@@ -213,10 +216,10 @@ a:hover {
 img {
   mix-blend-mode: multiply;
   grid-column-start: 1;
-  grid-column-end: span 1;
+  grid-column-end: span 3;
   grid-row-start: 1;
   grid-row-end: span 1;
-  width: 70%; }
+  width: 100%; }
 
 
 /*# sourceMappingURL=style.css.map*/
