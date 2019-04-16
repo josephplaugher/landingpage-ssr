@@ -167,12 +167,6 @@ function (_React$Component) {
         src: _logo_png__WEBPACK_IMPORTED_MODULE_6___default.a,
         alt: "Appreciate Logo"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        comp: "Request in App"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "request-box"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_Request__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        formState: this.state.formState
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
         comp: "Nave in App.js"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nav",
@@ -195,6 +189,12 @@ function (_React$Component) {
             return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(C, _extends({}, props, rest));
           }
         });
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        comp: "Request in App"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "request-box"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_Request__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        formState: this.state.formState
       }))));
     }
   }]);
@@ -536,6 +536,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ValRules__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ValRules */ "./src/client/mainmenu/ValRules.js");
 /* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! scss/form.scss */ "./src/client/scss/form.scss");
 /* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(scss_form_scss__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var scss_request_info_button_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! scss/request-info-button.scss */ "./src/client/scss/request-info-button.scss");
+/* harmony import */ var scss_request_info_button_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(scss_request_info_button_scss__WEBPACK_IMPORTED_MODULE_7__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -555,6 +557,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -626,10 +629,10 @@ function (_FormClass) {
   _createClass(Request, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactform_appco__WEBPACK_IMPORTED_MODULE_0__["Button"], {
-        value: "Find out what we can do for you",
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("button", {
+        id: "request-info-button",
         onClick: this.openLightBox
-      }), this.state.showForm ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+      }, "Find out what we can do for you"), this.state.showForm ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         id: "lightbox-container",
         className: "lightbox-background"
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Util_LightBox__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -739,7 +742,7 @@ var About = function About() {
     className: "headline"
   }, "About Appreciate Co"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Founder Joseph Plaugher repeatedly experienced ineffective, slow, and tedius processes being utilized at his own place of work and many others. Knowing the power of software to automation business processes, which has allowed companies such as Amazon, Ebay, Google, and many others to drastically cut costs and become superpowers in their industry, Joseph wanted to bring this competitive advantage to small businesses who can't neccessarily afford their own technology team."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Founder Joseph Plaugher repeatedly experienced ineffective, slow, and tedius processes being utilized at his own place of work and many others. Knowing the power of software to automate business processes, which has allowed companies such as Amazon, Ebay, Google, and many others to drastically cut costs and become superpowers in their industry, Joseph wanted to bring this competitive advantage to small businesses who can't neccessarily afford their own technology team."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
   }, "That is precisely what we at Appreciate Corporation seek to do; help small companies become more effecient by harnessing the power of automation through software. Get in touch with us to start streamlining your business operations!"));
 };
@@ -1000,6 +1003,17 @@ var SpecDev = function SpecDev() {
 /*!**********************************!*\
   !*** ./src/client/scss/nav.scss ***!
   \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ "./src/client/scss/request-info-button.scss":
+/*!**************************************************!*\
+  !*** ./src/client/scss/request-info-button.scss ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

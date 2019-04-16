@@ -19,11 +19,6 @@ class App extends React.Component {
                 <div className="grid-header">
                     <img src={logo} alt="Appreciate Logo" />
                 </div>
-                <EB comp="Request in App">
-                    <div className="request-box">
-                        <Request formState={this.state.formState} />
-                    </div>
-                </EB>
                 <EB comp="Nave in App.js">
                     <div className="nav" id="nav-container">
                         <Nav />
@@ -41,6 +36,11 @@ class App extends React.Component {
                                 />
                             )
                         )}
+                    </div>
+                </EB>
+                <EB comp="Request in App">
+                    <div className="request-box">
+                        <Request formState={this.state.formState} />
                     </div>
                 </EB>
             </div>

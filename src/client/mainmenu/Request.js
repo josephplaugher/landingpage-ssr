@@ -5,6 +5,7 @@ import EB from 'Util/EB'
 import SetUrl from 'Util/SetUrl'
 import ValRules from './ValRules'
 import 'scss/form.scss'
+import 'scss/request-info-button.scss'
 
 class Request extends FormClass {
     constructor(props) {
@@ -55,10 +56,9 @@ class Request extends FormClass {
     render() {
         return (
             <>
-                <Button
-                    value="Find out what we can do for you"
-                    onClick={this.openLightBox}
-                />
+                <button id="request-info-button" onClick={this.openLightBox}>
+                    Find out what we can do for you
+                </button>
 
                 {this.state.showForm ? (
                     <div
