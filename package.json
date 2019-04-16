@@ -11,7 +11,7 @@
         "start-server:dev": "nodemon './src/start-server.js' --watch './ui/server.js' ",
         "build-webpack-server:prod": "webpack --config './webpack.config.server.prod.js' --colors --display-error-details",
         "build-webpack-client:prod": "webpack --config './webpack.config.client.prod.js' --colors --display-error-details",
-        "start-server:prod": "NODE_ENV=production forever -o forever-out.log -e forever-error.log start './src/start-server-prod.js' "
+        "start-server:prod": "NODE_ENV=production forever -o forever-out.log -e forever-error.log start forever-config.json "
     },
     "dependencies": {
         "axios": "^0.18.0",
