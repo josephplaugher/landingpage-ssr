@@ -87,8 +87,8 @@ class Request extends FormClass {
                                 <TextArea
                                     name="message"
                                     label="What brought you here?"
-                                    rows="5"
-                                    cols="12"
+                                    rows={5}
+                                    cols={25}
                                     value={this.state.message}
                                     onChange={this.rfa_onChange}
                                     error={this.state.userNotify.message}

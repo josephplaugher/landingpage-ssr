@@ -1,5 +1,7 @@
 import React from 'react'
 import 'scss/main.scss'
+import 'scss/main-desktop.scss'
+import 'scss/main-mobile.scss'
 
 const Home = () => (
     <>

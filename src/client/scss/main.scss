@@ -1,41 +1,8 @@
 @import 'center.scss';
 @import 'fonts.scss';
 
-#container {
-    display: grid;
-    grid-template-columns: 15% 15% auto 15% 15%;
-    grid-template-rows: 10% 5% auto 5%;
-    padding: 10px;
-}
-
-.grid-header {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    grid-row-start: 2;
-    grid-row-end: 4;
-}
-
-.nav {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    background-color: $main-font-color;
-    border-radius: 5px;
-    padding: 55px;
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
+// common to desktop and mobile
 .content {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    background-color: white;
-    border-radius: 5px;
-    padding: 25px 55px 55px 55px;
-
     a,
     a:visited,
     a:hover,
@@ -50,20 +17,6 @@
         text-decoration: none;
         color: $logoGreen;
     }
-}
-
-.request-box {
-    grid-column-start: 5;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 4;
-}
-
-.headline {
-    font-family: sans-serif;
-    color: $main-font-color;
-    font-size: $header-font-size;
-    margin-bottom: 50px;
 }
 
 .subheadline {
