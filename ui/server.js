@@ -965,15 +965,15 @@ var Home = function Home() {
     className: "headline"
   }, "We Solve Business Process Problems Through Software"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
-  }, "Improve Efficiency"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p1", {
+  }, "Improve Efficiency"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
   }, "You and your staff are probably doing a lot of things manually that can be automated. Which means you have inefficiencies in your workflow that you may not be aware of."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
-  }, "Cut Costs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p1", {
+  }, "Cut Costs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
   }, "If you're not fully leveragng software, you are losing money. You can empower your staff to work more effeciently and accomplish more in less time."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
-  }, "Expand Without Increasing Labor Costs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p1", {
+  }, "Expand Without Increasing Labor Costs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
   }, "Wondering if you need to hire more staff to expand your business? Maybe you don't. If your staff's time was less consumed with routine, tedious tasks, there will be more time for effective and productive work. They will be happier, and your bottom line will benefit."));
 };
