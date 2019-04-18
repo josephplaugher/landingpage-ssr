@@ -26,28 +26,28 @@ class App extends React.Component {
     render() {
         return (
             <div id="container">
-                {this.state.viewport > 701 ? (
+                {this.state.viewport < 701 ? (
                     <>
-                        <div id="image-header-desktop">
-                            <img src={logo} alt="Appreciate Logo" />
+                        <div id="image-header-mobile">
+                            <img src={logo_mobile} alt="Appreciate Logo" />
                         </div>
                         <EB comp="Nave in App.js">
                             <div className="nav" id="nav-container">
-                                <Nav />
+                                <NavMobile />
                             </div>
                         </EB>
                     </>
                 ) : (
                     <>
-                        <div id="image-header-mobile">
-                            <img src={logo_mobile} alt="Appreciate Logo" />
+                        <div id="image-header-desktop">
+                            <img src={logo} alt="Appreciate Logo" />
                         </div>
                         <EB comp="Nave in App.js">
                             <div
                                 className="nav-mobile"
                                 id="nav-container-mobile"
                             >
-                                <NavMobile />
+                                <Nav />
                             </div>
                         </EB>
                     </>
