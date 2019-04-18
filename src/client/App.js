@@ -32,7 +32,10 @@ class App extends React.Component {
                             <img src={logo_mobile} alt="Appreciate Logo" />
                         </div>
                         <EB comp="Nave in App.js">
-                            <div className="nav" id="nav-container">
+                            <div
+                                className="nav-mobile"
+                                id="nav-container-mobile"
+                            >
                                 <NavMobile />
                             </div>
                         </EB>
@@ -43,10 +46,7 @@ class App extends React.Component {
                             <img src={logo} alt="Appreciate Logo" />
                         </div>
                         <EB comp="Nave in App.js">
-                            <div
-                                className="nav-mobile"
-                                id="nav-container-mobile"
-                            >
+                            <div className="nav" id="nav-container">
                                 <Nav />
                             </div>
                         </EB>
