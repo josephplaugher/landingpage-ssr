@@ -5,9 +5,7 @@ const ValRules = {
             dev: function(data) {
                 console.log(data)
             },
-            prod: function(data) {
-                console.log(data)
-            },
+            prod: null,
         },
     },
     rules: [

@@ -19,6 +19,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
+        console.log('testing env: ', process.env.NODE_ENV)
         let viewport = window.innerWidth
         this.setState({ viewport: viewport })
     }
