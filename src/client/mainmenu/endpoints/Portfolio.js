@@ -27,14 +27,15 @@ const Portfolio = () => (
         <ul>
             <li className="list">
                 <p>
-                    <a href="https://erp.appco.tech">
-                        Appreciate Enterprise Accounting
+                    <a>
+                        Appreciate Enterprise Accounting <br />
+                        (in development)
                     </a>
                     : A scalable, sophisticated double-entry accounting system.
                     <br />
-                    Technologies Used: React, JSON web token and cookie, Webpack
-                    and Babel, Express backend; CRUD operations in response to
-                    API calls from the client. PostgreSQL database.
+                    Technologies Used: React, Webpack and Babel, Express
+                    backend; CRUD operations in response to API calls from the
+                    client. PostgreSQL database.
                 </p>
             </li>
             <li className="list">
@@ -48,19 +49,6 @@ const Portfolio = () => (
                     Technologies Used: React, Webpack and Babel, Express; CRUD
                     operations in response to API calls from the client.
                     PostgreSQL database.
-                </p>
-            </li>
-            <li className="list">
-                <p>
-                    <a href="https://files.appco.tech">
-                        Enterprise File Server
-                    </a>
-                    : This is a work in progress but is functional. The intent
-                    is to functionally replace Google Drive.
-                    <br />
-                    Technologies Used: React, JSON web token and cookie, Webpack
-                    and Babel, Express; CRUD operations in response to API calls
-                    from the client. PostgreSQL database.
                 </p>
             </li>
         </ul>
@@ -108,20 +96,26 @@ const Portfolio = () => (
                         GitHub
                     </a>
                     <br />
-                    Technologies Used: React, JSON web token and cookie, Webpack
-                    and Babel, Express backend; CRUD operations in response to
-                    API calls from the client. PostgreSQL database.
+                    Technologies Used: React, Webpack and Babel, Express
+                    backend; CRUD operations in response to API calls from the
+                    client. PostgreSQL database.
                 </p>
             </li>
             <li className="list">
-                <h3>Pantry</h3>
+                <a href="https://pantry.appco.tech">
+                    Personal Pantry Management System.{' '}
+                </a>
                 <p>
-                    ***Write something about Pantry***
+                    Simple inventory management system for home use. Keeps a
+                    running inventory of food items and related supplies, adding
+                    as you shop, subtracting as you use things. Includes a
+                    shopping list tool that automatically builds a shopping list
+                    as you use items based on your preferences.
                     <br />
                     <br />
-                    Technologies Used: React, JSON web token and cookie, Webpack
-                    and Babel, Express backend; CRUD operations in response to
-                    API calls from the client. PostgreSQL database.
+                    Technologies Used: React, Webpack and Babel, Express
+                    backend; CRUD operations in response to API calls from the
+                    client. PostgreSQL database.
                     <br />
                     <br />
                     <a href="">GitHub</a>

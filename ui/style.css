@@ -1,16 +1,3 @@
-.content a,
-.content a:visited,
-.content a:hover,
-.content a:active {
-  color: #2665C4;
-  text-decoration: none; }
-
-.content a:hover,
-.content a:active {
-  color: #03c203;
-  text-decoration: none;
-  color: #03c203; }
-
 .subheadline {
   font-family: sans-serif;
   color: #2665C4;
@@ -27,17 +14,29 @@
   color: #2665C4;
   font-size: 15px; }
 
-a,
-a:visited {
+.nav a,
+.nav a:visited {
   font-family: sans-serif;
   text-decoration: none;
   color: white; }
 
-a:active,
-a:hover {
+.nav a:active,
+.nav a:hover {
   font-family: sans-serif;
   text-decoration: none;
   color: #03c203; }
+
+.list a,
+.list a:visited,
+.list a:active {
+  font-family: sans-serif;
+  color: #2665C4;
+  text-decoration: none; }
+
+.list a:hover {
+  font-family: sans-serif;
+  color: #03c203;
+  text-decoration: none; }
 
 @media screen and (min-width: 701px) {
   #container {

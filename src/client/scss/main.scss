@@ -2,22 +2,6 @@
 @import 'fonts.scss';
 
 // common to desktop and mobile
-.content {
-    a,
-    a:visited,
-    a:hover,
-    a:active {
-        color: $main-font-color;
-        text-decoration: none;
-    }
-
-    a:hover,
-    a:active {
-        color: $logoGreen;
-        text-decoration: none;
-        color: $logoGreen;
-    }
-}
 
 .subheadline {
     font-family: sans-serif;
@@ -38,16 +22,34 @@
     font-size: $main-font-size;
 }
 
-a,
-a:visited {
-    font-family: sans-serif;
-    text-decoration: none;
-    color: white;
+.nav {
+    a,
+    a:visited {
+        font-family: sans-serif;
+        text-decoration: none;
+        color: white;
+    }
+
+    a:active,
+    a:hover {
+        font-family: sans-serif;
+        text-decoration: none;
+        color: $logoGreen;
+    }
 }
 
-a:active,
-a:hover {
-    font-family: sans-serif;
-    text-decoration: none;
-    color: $logoGreen;
+.list {
+    a,
+    a:visited,
+    a:active {
+        font-family: sans-serif;
+        color: $main-font-color;
+        text-decoration: none;
+    }
+
+    a:hover {
+        font-family: sans-serif;
+        color: $logoGreen;
+        text-decoration: none;
+    }
 }
