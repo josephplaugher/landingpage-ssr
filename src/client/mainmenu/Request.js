@@ -5,7 +5,6 @@ import EB from 'Util/EB'
 import SetUrl from 'Util/SetUrl'
 import ValRules from './ValRules'
 import 'scss/form.scss'
-import 'scss/request-info-button.scss'
 
 class Request extends FormClass {
     constructor(props) {

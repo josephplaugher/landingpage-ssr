@@ -41,7 +41,7 @@ class Nav extends React.Component {
                     style={{
                         backgroundColor: '#2665C4',
                         height: 'auto',
-                        width: '90%',
+                        width: '85%',
                     }}
                     closeStyle={{ color: 'white', fontSize: '25px' }}
                 >

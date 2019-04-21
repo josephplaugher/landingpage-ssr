@@ -150,7 +150,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- // import 'scss/request-info-button.scss'
+
 
 var App =
 /*#__PURE__*/
@@ -649,7 +649,7 @@ function (_React$Component) {
         style: {
           backgroundColor: '#2665C4',
           height: 'auto',
-          width: '90%'
+          width: '85%'
         },
         closeStyle: {
           color: 'white',
@@ -685,8 +685,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ValRules__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ValRules */ "./src/client/mainmenu/ValRules.js");
 /* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! scss/form.scss */ "./src/client/scss/form.scss");
 /* harmony import */ var scss_form_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(scss_form_scss__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var scss_request_info_button_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! scss/request-info-button.scss */ "./src/client/scss/request-info-button.scss");
-/* harmony import */ var scss_request_info_button_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(scss_request_info_button_scss__WEBPACK_IMPORTED_MODULE_7__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -706,7 +704,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -1141,17 +1138,6 @@ var SpecDev = function SpecDev() {
 /*!***********************************!*\
   !*** ./src/client/scss/main.scss ***!
   \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "./src/client/scss/request-info-button.scss":
-/*!**************************************************!*\
-  !*** ./src/client/scss/request-info-button.scss ***!
-  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

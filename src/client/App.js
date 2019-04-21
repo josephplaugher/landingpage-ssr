@@ -10,7 +10,6 @@ import 'scss/logo.scss'
 import 'scss/main.scss'
 import 'scss/main-desktop.scss'
 import 'scss/main-mobile.scss'
-// import 'scss/request-info-button.scss'
 
 class App extends React.Component {
     constructor(props) {
