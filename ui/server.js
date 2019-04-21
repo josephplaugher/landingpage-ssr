@@ -107,16 +107,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Routes */ "./src/client/Routes.js");
 /* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./logo.png */ "./src/client/logo.png");
 /* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_logo_png__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _logo_mobile_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./logo_mobile.png */ "./src/client/logo_mobile.png");
-/* harmony import */ var _logo_mobile_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_logo_mobile_png__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! scss/logo.scss */ "./src/client/scss/logo.scss");
-/* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(scss_logo_scss__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! scss/main.scss */ "./src/client/scss/main.scss");
-/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(scss_main_scss__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var scss_main_desktop_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! scss/main-desktop.scss */ "./src/client/scss/main-desktop.scss");
-/* harmony import */ var scss_main_desktop_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(scss_main_desktop_scss__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var scss_main_mobile_scss__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! scss/main-mobile.scss */ "./src/client/scss/main-mobile.scss");
-/* harmony import */ var scss_main_mobile_scss__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(scss_main_mobile_scss__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! scss/logo.scss */ "./src/client/scss/logo.scss");
+/* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(scss_logo_scss__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! scss/main.scss */ "./src/client/scss/main.scss");
+/* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(scss_main_scss__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var scss_main_desktop_scss__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! scss/main-desktop.scss */ "./src/client/scss/main-desktop.scss");
+/* harmony import */ var scss_main_desktop_scss__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(scss_main_desktop_scss__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var scss_main_mobile_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! scss/main-mobile.scss */ "./src/client/scss/main-mobile.scss");
+/* harmony import */ var scss_main_mobile_scss__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(scss_main_mobile_scss__WEBPACK_IMPORTED_MODULE_11__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
@@ -152,8 +150,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
-
+ // import 'scss/request-info-button.scss'
 
 var App =
 /*#__PURE__*/
@@ -188,7 +185,7 @@ function (_React$Component) {
       }, this.state.viewport < 701 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "image-header-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _logo_mobile_png__WEBPACK_IMPORTED_MODULE_8___default.a,
+        src: _logo_png__WEBPACK_IMPORTED_MODULE_7___default.a,
         alt: "Appreciate Logo"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
         comp: "Nave in App.js"
@@ -463,17 +460,6 @@ var SetUrl = function SetUrl() {
 /*!*****************************!*\
   !*** ./src/client/logo.png ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "37264060f0c7a723213c1d6b3fdfaa6b.png";
-
-/***/ }),
-
-/***/ "./src/client/logo_mobile.png":
-/*!************************************!*\
-  !*** ./src/client/logo_mobile.png ***!
-  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -902,7 +888,7 @@ var About = function About() {
     className: "headline"
   }, "About Appreciate Co"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Founder Joseph Plaugher repeatedly experienced ineffective, slow, and tedius processes being utilized at his own place of work and many others. Knowing the power of software to automate business processes, which has allowed companies such as Amazon, Ebay, Google, and many others to drastically cut costs and become superpowers in their industry, Joseph wanted to bring this competitive advantage to small businesses who can't neccessarily afford their own technology team."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Founder Joseph Plaugher repeatedly experienced ineffective, slow, and tedius processes being utilized at a variety of organizations. Knowing the power of software to automate business processes, which has allowed companies such as Amazon, Ebay, Google, and many others to drastically cut costs and become superpowers in their industry, Joseph wanted to bring this competitive advantage to small businesses who can't neccessarily afford their own technology team."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
   }, "That is precisely what we at Appreciate Corporation seek to do; help small companies become more effecient by harnessing the power of automation through software. Get in touch with us to start streamlining your business operations!"));
 };
@@ -971,11 +957,11 @@ var Home = function Home() {
     className: "subheadline"
   }, "Cut Costs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "If you're not fully leveragng software, you are losing money. You can empower your staff to work more effeciently and accomplish more in less time."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, "If you're not fully leveraging software, you are losing money. You can empower your staff to work more effeciently and accomplish more in less time."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "Expand Without Increasing Labor Costs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Wondering if you need to hire more staff to expand your business? Maybe you don't. If your staff's time was less consumed with routine, tedious tasks, there will be more time for effective and productive work. They will be happier, and your bottom line will benefit."));
+  }, "Wondering if you need to hire more staff to expand your business? Maybe you don't. If your staff's time was less consumed with routine, tedious tasks, there will be more time for effective and productive work. They would be happier, and your bottom line will benefit."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -1000,11 +986,11 @@ var Portfolio = function Portfolio() {
     className: "headline"
   }, "Portfolio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Below is a list of web applications we build from the ground up. Typically our projects utilize an Express server with the EJS template engine. Usually there is a single script tag to include the React application bundled with Webpack. If the project is very simple, such as the strong password generator which still utilizes Webpack for transpilation and bundling, there is no framework (i.e. React). It is comprised of a couple of event handlers and functions interacting directly with the DOM.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Some of our projects use traditional prototype-based \"classes\" on the server side, some use ES6 syntax including classes. Most of the time we do not transpile the server side, except when both Search Engine Optimization (SEO) and user interactivity are important, such as the website you are reading now. On this site, the client and server sides are transpiled from ES6 syntax and all markup is rendered on the server (until you click the navigation buttons) for SEO purposes.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, "We predominantly develope software using JavaScript, though we have experise in PHP as well. Below is a list of web applications we built from the ground up. Typically our projects utilize an Express server with the EJS template engine. Usually there is a single script tag to include the React application bundled with Webpack. If the project is very simple, such as the strong password generator which still utilizes Webpack for transpilation and bundling, there is no framework (i.e. React). It is comprised of a couple of event handlers and functions interacting directly with the DOM.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Some of our projects use traditional prototype-based \"classes\" on the server side, some use ES6 syntax including classes. Most of the time we do not transpile the server side, except when both Search Engine Optimization (SEO) and user interactivity are important, such as the website you are reading now. On this site, the client and server sides are transpiled from ES6 syntax and all markup is rendered on the server (until you click the navigation buttons) for SEO purposes.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "Enterprise Applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Appreciate Enterprise Accounting ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "(in development)"), ": A scalable, sophisticated double-entry accounting system.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Appreciate Enterprise Accounting (in development)"), ": A scalable, sophisticated double-entry accounting system.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://pay.appco.tech"
@@ -1054,19 +1040,7 @@ var Portfolio = function Portfolio() {
     href: "https://github.com/josephplaugher/Menu-AppCo"
   }, "GitHub"), ' ', "| ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.npmjs.com/package/menu-appco"
-  }, "NPM")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "subheadline"
-  }, "Other Skills."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I have plenty of experience using various versions of Linux and Windows, as well as Mac OSX. My operating system of choice is CentOS 7 which I use on my laptop and my personal server at home.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I am an intermediate user of the Linux Command Line interface and am expanding my skills in its use everyday", ' ')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "As noted above, I use PostgreSQL for all my database needs. I write intermediate-level SQL to manipulate data.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Currently all my web applications are hosted on AWS within a EC2 instance running Red Hat Enterprise Linux. However, I also maintain my own physical server running CentOS 7.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I know PHP and jQuery and I am prepared to use them."))));
+  }, "NPM")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Portfolio);
@@ -1091,7 +1065,7 @@ var SpecDev = function SpecDev() {
     className: "headline"
   }, "Specification Development"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Do you already know what software you need built; what it should do and what it should look like? We can do that."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Do you already know what software you need built; what it should do and what the user experience should be? We can do that."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
   }, "We have expertise in the following technologies:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
@@ -1423,7 +1397,7 @@ function (_BaseClass) {
       console.log('logging consultation request: ', _this.inputs);
       var r = _this.req.body;
       var query = {
-        text: "INSERT INTO clients\n                (fname, email, lead_source) \n                VALUES ($1,$2)",
+        text: "INSERT INTO clients\n                (fname, email, lead_source) \n                VALUES ($1,$2,$3)",
         values: [r.fname, r.email, r.message]
       };
       ServerUtil_postgres__WEBPACK_IMPORTED_MODULE_1__["default"].query(query).then(function () {

@@ -15,7 +15,7 @@ class RequestConsult extends BaseClass {
         const query = {
             text: `INSERT INTO clients
                 (fname, email, lead_source) 
-                VALUES ($1,$2)`,
+                VALUES ($1,$2,$3)`,
             values: [r.fname, r.email, r.message],
         }
         dbConn

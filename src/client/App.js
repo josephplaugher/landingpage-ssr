@@ -6,11 +6,11 @@ import Nav from './mainmenu/Nav'
 import NavMobile from './mainmenu/NavMobile'
 import Routes from './Routes'
 import logo from './logo.png'
-import logo_mobile from './logo_mobile.png'
 import 'scss/logo.scss'
 import 'scss/main.scss'
 import 'scss/main-desktop.scss'
 import 'scss/main-mobile.scss'
+// import 'scss/request-info-button.scss'
 
 class App extends React.Component {
     constructor(props) {
@@ -29,7 +29,7 @@ class App extends React.Component {
                 {this.state.viewport < 701 ? (
                     <>
                         <div id="image-header-mobile">
-                            <img src={logo_mobile} alt="Appreciate Logo" />
+                            <img src={logo} alt="Appreciate Logo" />
                         </div>
                         <EB comp="Nave in App.js">
                             <div

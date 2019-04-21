@@ -4,14 +4,15 @@ const Portfolio = () => (
     <>
         <h1 className="headline">Portfolio</h1>
         <p className="text">
-            Below is a list of web applications we build from the ground up.
-            Typically our projects utilize an Express server with the EJS
-            template engine. Usually there is a single script tag to include the
-            React application bundled with Webpack. If the project is very
-            simple, such as the strong password generator which still utilizes
-            Webpack for transpilation and bundling, there is no framework (i.e.
-            React). It is comprised of a couple of event handlers and functions
-            interacting directly with the DOM.
+            We predominantly develope software using JavaScript, though we have
+            experise in PHP as well. Below is a list of web applications we
+            built from the ground up. Typically our projects utilize an Express
+            server with the EJS template engine. Usually there is a single
+            script tag to include the React application bundled with Webpack. If
+            the project is very simple, such as the strong password generator
+            which still utilizes Webpack for transpilation and bundling, there
+            is no framework (i.e. React). It is comprised of a couple of event
+            handlers and functions interacting directly with the DOM.
             <br />
             <br />
             Some of our projects use traditional prototype-based "classes" on
@@ -27,10 +28,7 @@ const Portfolio = () => (
         <ul>
             <li className="list">
                 <p>
-                    <a>
-                        Appreciate Enterprise Accounting <br />
-                        (in development)
-                    </a>
+                    <a>Appreciate Enterprise Accounting (in development)</a>
                     : A scalable, sophisticated double-entry accounting system.
                     <br />
                     Technologies Used: React, Webpack and Babel, Express
@@ -186,39 +184,6 @@ const Portfolio = () => (
                     </a>{' '}
                     | <a href="https://www.npmjs.com/package/menu-appco">NPM</a>
                 </p>
-            </li>
-        </ul>
-        <h2 className="subheadline">Other Skills.</h2>
-        <ul>
-            <li className="list">
-                <p>
-                    I have plenty of experience using various versions of Linux
-                    and Windows, as well as Mac OSX. My operating system of
-                    choice is CentOS 7 which I use on my laptop and my personal
-                    server at home.
-                </p>
-            </li>
-            <li className="list">
-                <p>
-                    I am an intermediate user of the Linux Command Line
-                    interface and am expanding my skills in its use everyday{' '}
-                </p>
-            </li>
-            <li className="list">
-                <p>
-                    As noted above, I use PostgreSQL for all my database needs.
-                    I write intermediate-level SQL to manipulate data.
-                </p>
-            </li>
-            <li className="list">
-                <p>
-                    Currently all my web applications are hosted on AWS within a
-                    EC2 instance running Red Hat Enterprise Linux. However, I
-                    also maintain my own physical server running CentOS 7.
-                </p>
-            </li>
-            <li className="list">
-                <p>I know PHP and jQuery and I am prepared to use them.</p>
             </li>
         </ul>
     </>

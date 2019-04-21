@@ -16,7 +16,7 @@ const Home = () => (
         </p>
         <h2 className="subheadline">Cut Costs</h2>
         <p className="text">
-            If you're not fully leveragng software, you are losing money. You
+            If you're not fully leveraging software, you are losing money. You
             can empower your staff to work more effeciently and accomplish more
             in less time.
         </p>
@@ -25,7 +25,7 @@ const Home = () => (
             Wondering if you need to hire more staff to expand your business?
             Maybe you don't. If your staff's time was less consumed with
             routine, tedious tasks, there will be more time for effective and
-            productive work. They will be happier, and your bottom line will
+            productive work. They would be happier, and your bottom line will
             benefit.
         </p>
     </>
