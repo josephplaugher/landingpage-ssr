@@ -1,5 +1,6 @@
 import BaseClass from 'ServerUtil/BaseClass'
 import dbConn from 'ServerUtil/postgres'
+import Email from './Email'
 
 class RequestConsult extends BaseClass {
     constructor(req, res) {
@@ -10,10 +11,9 @@ class RequestConsult extends BaseClass {
     }
 
     logRequest = () => {
-        console.log('logging consultation request: ', this.inputs)
         const r = this.req.body
         const query = {
-            text: `INSERT INTO clients
+            text: `INSERT INTO webpageinquiries
                 (fname, email, lead_source) 
                 VALUES ($1,$2,$3)`,
             values: [r.fname, r.email, r.message],
@@ -27,7 +27,7 @@ class RequestConsult extends BaseClass {
     }
 
     emailRequester = () => {
-        console.log('email requester')
+        Email(this.inputs)
         this.respond(this.res, { message: 'emailed requester' }, true, {
             success: "Thank you, we'll be in touch",
         })

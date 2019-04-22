@@ -1321,6 +1321,56 @@ routes.post('/requestConsult', function (req, res) {
 
 /***/ }),
 
+/***/ "./src/server/model/Inquiry/Email.js":
+/*!*******************************************!*\
+  !*** ./src/server/model/Inquiry/Email.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var nodemailer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! nodemailer */ "nodemailer");
+/* harmony import */ var nodemailer__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nodemailer__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Email = function Email(formData) {
+  // create reusable transporter object using the default SMTP transport
+  var transporter = nodemailer__WEBPACK_IMPORTED_MODULE_0___default.a.createTransport({
+    service: 'gmail',
+    secure: "development" === 'production',
+    // true for 465, false for other ports
+    auth: {
+      user: "joseph@appreciateco.com",
+      pass: "Tesla0328$%"
+    }
+  });
+  var body = "New email from landing page: <br/><br/>\n    Name: ".concat(formData.fname, ".<br/>\n    Email: ").concat(formData.email, ". <br/>\n    Message: ").concat(formData.message); // setup email data with unicode symbols
+
+  var mailOptions = {
+    from: '"AppCo Landing Page" <joseph@appreciateco.com>',
+    // sender address
+    to: '"Joseph Plaugher" <joseph@appreciateco.com>',
+    // list of receivers
+    subject: "New email from landing page:",
+    // Subject line
+    text: body,
+    // plain text body
+    html: '<p>' + body + '</p>' // html body
+    // send mail with defined transport object
+
+  };
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.error(error, 'email.js');
+    }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Email);
+
+/***/ }),
+
 /***/ "./src/server/model/Inquiry/RequestConsult.js":
 /*!****************************************************!*\
   !*** ./src/server/model/Inquiry/RequestConsult.js ***!
@@ -1332,6 +1382,7 @@ routes.post('/requestConsult', function (req, res) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ServerUtil_BaseClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ServerUtil/BaseClass */ "./src/server/ServerUtil/BaseClass.mjs");
 /* harmony import */ var ServerUtil_postgres__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ServerUtil/postgres */ "./src/server/ServerUtil/postgres.js");
+/* harmony import */ var _Email__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Email */ "./src/server/model/Inquiry/Email.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1351,6 +1402,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var RequestConsult =
 /*#__PURE__*/
 function (_BaseClass) {
@@ -1364,10 +1416,9 @@ function (_BaseClass) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(RequestConsult).call(this));
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "logRequest", function () {
-      console.log('logging consultation request: ', _this.inputs);
       var r = _this.req.body;
       var query = {
-        text: "INSERT INTO clients\n                (fname, email, lead_source) \n                VALUES ($1,$2,$3)",
+        text: "INSERT INTO webpageinquiries\n                (fname, email, lead_source) \n                VALUES ($1,$2,$3)",
         values: [r.fname, r.email, r.message]
       };
       ServerUtil_postgres__WEBPACK_IMPORTED_MODULE_1__["default"].query(query).then(function () {
@@ -1378,7 +1429,7 @@ function (_BaseClass) {
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "emailRequester", function () {
-      console.log('email requester');
+      Object(_Email__WEBPACK_IMPORTED_MODULE_2__["default"])(_this.inputs);
 
       _this.respond(_this.res, {
         message: 'emailed requester'
@@ -1430,6 +1481,17 @@ module.exports = require("express");
 /***/ (function(module, exports) {
 
 module.exports = require("menu-appco");
+
+/***/ }),
+
+/***/ "nodemailer":
+/*!*****************************!*\
+  !*** external "nodemailer" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("nodemailer");
 
 /***/ }),
 
