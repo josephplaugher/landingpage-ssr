@@ -43,6 +43,9 @@
   text-decoration: none; }
 
 @media screen and (min-width: 701px) {
+  .nav-mobile,
+  #image-header-mobile {
+    display: none; }
   #container {
     display: grid;
     grid-template-columns: 15% 15% auto 15% 15%;
@@ -87,7 +90,7 @@
     color: #2665C4;
     cursor: pointer;
     height: 100px;
-    margin-top: -8px;
+    margin-top: -9px;
     line-height: 25px;
     grid-column-start: 4;
     grid-column-end: 5;
@@ -106,6 +109,9 @@
     margin-bottom: 50px; } }
 
 @media screen and (max-width: 700px) {
+  .nav,
+  #image-header-desktop {
+    display: none; }
   .nav-mobile {
     color: white;
     font-size: 20px;

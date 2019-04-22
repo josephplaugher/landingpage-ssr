@@ -4,22 +4,22 @@ const Portfolio = () => (
     <>
         <h1 className="headline">Portfolio</h1>
         <p className="text">
-            We predominantly develope software using JavaScript, though we have
+            We predominantly develop software using JavaScript, though we have
             experise in PHP as well. Below is a list of web applications we
             built from the ground up. Typically our projects utilize an Express
             server with the EJS template engine. Usually there is a single
             script tag to include the React application bundled with Webpack. If
             the project is very simple, such as the strong password generator
-            which still utilizes Webpack for transpilation and bundling, there
-            is no framework (i.e. React). It is comprised of a couple of event
-            handlers and functions interacting directly with the DOM.
+            below, which still utilizes Webpack for transpilation and bundling,
+            there is no framework (i.e. React). It is comprised of a couple of
+            event handlers and functions interacting directly with the DOM.
             <br />
             <br />
             Some of our projects use traditional prototype-based "classes" on
-            the server side, some use ES6 syntax including classes. Most of the
+            the server side, some use ES6 syntax, including classes. Most of the
             time we do not transpile the server side, except when both Search
             Engine Optimization (SEO) and user interactivity are important, such
-            as the website you are reading now. On this site, the client and
+            as on the website you're reading now. On this site, the client and
             server sides are transpiled from ES6 syntax and all markup is
             rendered on the server (until you click the navigation buttons) for
             SEO purposes.{' '}
@@ -29,7 +29,8 @@ const Portfolio = () => (
             <li className="list">
                 <p>
                     <a>Appreciate Enterprise Accounting (in development)</a>
-                    : A scalable, sophisticated double-entry accounting system.
+                    : A scaleable, sophisticated, double-entry accounting
+                    system.
                     <br />
                     Technologies Used: React, Webpack and Babel, Express
                     backend; CRUD operations in response to API calls from the
@@ -74,11 +75,12 @@ const Portfolio = () => (
                     with Webpack and Babel. Express; CRUD operations in response
                     to API calls from the client. PostgreSQL database.
                     <br />
+                    <br />
                     On this project, upon first visit, the latest blog post will
-                    be displayed a long with a menu of all the other available
+                    be displayed along with a menu of all the other available
                     posts. This is all rendered server side for SEO purposes.
-                    Upon selected other blog posts, they are placed into the
-                    ready pane asynchronously. This is all done with raw
+                    Upon selecting other blog posts, they are placed into the
+                    reading pane asynchronously. This is all done with raw
                     JavaScript. The user authenication system (which allows
                     users to create an account so they can leave comments) and
                     the comments area itself are both written in React.
@@ -100,23 +102,21 @@ const Portfolio = () => (
                 </p>
             </li>
             <li className="list">
-                <a href="https://pantry.appco.tech">
-                    Personal Pantry Management System.{' '}
-                </a>
                 <p>
+                    <a href="https://pantry.appco.tech">
+                        Personal Pantry Management System. <a href="">GitHub</a>
+                    </a>
+                    <br />
+                    Technologies Used: React, Webpack and Babel, Express
+                    backend; CRUD operations in response to API calls from the
+                    client. PostgreSQL database.
+                    <br />
                     Simple inventory management system for home use. Keeps a
                     running inventory of food items and related supplies, adding
                     as you shop, subtracting as you use things. Includes a
                     shopping list tool that automatically builds a shopping list
                     as you use items based on your preferences.
                     <br />
-                    <br />
-                    Technologies Used: React, Webpack and Babel, Express
-                    backend; CRUD operations in response to API calls from the
-                    client. PostgreSQL database.
-                    <br />
-                    <br />
-                    <a href="">GitHub</a>
                 </p>
             </li>
         </ul>
@@ -131,9 +131,9 @@ const Portfolio = () => (
                     with user input. The Form class does not render anything to
                     the UI. It simply attaches logic to your existing form to
                     automate processing and submission using React state and
-                    Ajax. There is an optional Inputs componet which does render
-                    an html input element but it is not required for use with
-                    the Form class.
+                    Ajax. There is an optional Inputs component which does
+                    render an html input element, but it is not required for use
+                    with the Form class.
                     <br />
                     <br />
                     Technologies used: React, Webpack and Babel.
@@ -151,7 +151,7 @@ const Portfolio = () => (
             <li className="list">
                 <h3>LightBox-AppCo</h3>
                 <p>
-                    A fully stylable and customizable "popup" window component
+                    A fully styleable and customizable "popup" window component
                     for React.
                     <br />
                     <br />

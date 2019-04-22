@@ -158,31 +158,17 @@ function (_React$Component) {
   _inherits(App, _React$Component);
 
   function App(props) {
-    var _this;
-
     _classCallCheck(this, App);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
-    _this.state = {
-      viewport: 0
-    };
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
   }
 
   _createClass(App, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var viewport = window.innerWidth;
-      this.setState({
-        viewport: viewport
-      });
-    }
-  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "container"
-      }, this.state.viewport < 701 ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "image-header-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _logo_png__WEBPACK_IMPORTED_MODULE_7___default.a,
@@ -192,7 +178,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nav-mobile",
         id: "nav-container-mobile"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_NavMobile__WEBPACK_IMPORTED_MODULE_5__["default"], null)))) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_NavMobile__WEBPACK_IMPORTED_MODULE_5__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "image-header-desktop"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: _logo_png__WEBPACK_IMPORTED_MODULE_7___default.a,
@@ -202,7 +188,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "nav",
         id: "nav-container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_Nav__WEBPACK_IMPORTED_MODULE_4__["default"], null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_Nav__WEBPACK_IMPORTED_MODULE_4__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
         comp: "Router in App.js"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "content"
@@ -224,9 +210,7 @@ function (_React$Component) {
         comp: "Request in App"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "request-box"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_Request__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        formState: this.state.formState
-      }))));
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_Request__WEBPACK_IMPORTED_MODULE_3__["default"], null))));
     }
   }]);
 
@@ -883,11 +867,11 @@ __webpack_require__.r(__webpack_exports__);
 var About = function About() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "headline"
-  }, "About Appreciate Co"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "About Appreciate Co."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Founder Joseph Plaugher repeatedly experienced ineffective, slow, and tedius processes being utilized at a variety of organizations. Knowing the power of software to automate business processes, which has allowed companies such as Amazon, Ebay, Google, and many others to drastically cut costs and become superpowers in their industry, Joseph wanted to bring this competitive advantage to small businesses who can't neccessarily afford their own technology team."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Founder Joseph Plaugher spent years repeatedly experiencing ineffective, slow, and tedious processes being utilized at a variety of organizations of all sizes. Knowing the power of software to automate business processes (which has allowed companies such as Amazon, Ebay, Google, and many others to drastically cut costs and become superpowers in their industry), Joseph wanted to bring this competitive advantage to small businesses who can't neccessarily afford their own technology team."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "That is precisely what we at Appreciate Corporation seek to do; help small companies become more effecient by harnessing the power of automation through software. Get in touch with us to start streamlining your business operations!"));
+  }, "Enter Appreciate Corporation - we do precisely the above: help small companies become more effecient by harnessing the power of automation through software. Get in touch with us to learn how you can streamline your business operations!"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (About);
@@ -912,7 +896,7 @@ var Consulting = function Consulting() {
     className: "headline"
   }, "Consulting"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "We will seek to understand your pain point, the part of your business process that is ineffficient, expensive, or just a hassle, and we will seek to streamline and automate using software."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "We seek to understand your pain point - the part of your business process that is ineffficient, expensive, or just a hassle - and we will work to alleviate the \"pain\" and automate it using software."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
   }, "Sometimes a desktop application is appropriate if only a couple of people need access to the application and only when at work. If more than a couple of people need access or there is shared data involved, a web-based application is usually a great option. We can do either one!"));
 };
@@ -950,15 +934,15 @@ var Home = function Home() {
     className: "subheadline"
   }, "Improve Efficiency"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "You and your staff are probably doing a lot of things manually that can be automated. Which means you have inefficiencies in your workflow that you may not be aware of."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, "You and your staff are probably doing a lot of things manually that can be automated. Let us help you reduce these inefficiencies in your workflow to improve upon your existing processes."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "Cut Costs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "If you're not fully leveraging software, you are losing money. You can empower your staff to work more effeciently and accomplish more in less time."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, "If you're not fully leveraging software, you're losing money. You can empower your staff to streamline their work and accomplish more in less time."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "Expand Without Increasing Labor Costs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Wondering if you need to hire more staff to expand your business? Maybe you don't. If your staff's time was less consumed with routine, tedious tasks, there will be more time for effective and productive work. They would be happier, and your bottom line will benefit."));
+  }, "Do you need to hire more staff to expand your business? Maybe not! With your staff's days less consumed by routine, tedious tasks, they'll have more time for effective and productive work. They'll be happier, and your bottom line will benefit."));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
@@ -983,11 +967,11 @@ var Portfolio = function Portfolio() {
     className: "headline"
   }, "Portfolio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "We predominantly develope software using JavaScript, though we have experise in PHP as well. Below is a list of web applications we built from the ground up. Typically our projects utilize an Express server with the EJS template engine. Usually there is a single script tag to include the React application bundled with Webpack. If the project is very simple, such as the strong password generator which still utilizes Webpack for transpilation and bundling, there is no framework (i.e. React). It is comprised of a couple of event handlers and functions interacting directly with the DOM.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Some of our projects use traditional prototype-based \"classes\" on the server side, some use ES6 syntax including classes. Most of the time we do not transpile the server side, except when both Search Engine Optimization (SEO) and user interactivity are important, such as the website you are reading now. On this site, the client and server sides are transpiled from ES6 syntax and all markup is rendered on the server (until you click the navigation buttons) for SEO purposes.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, "We predominantly develop software using JavaScript, though we have experise in PHP as well. Below is a list of web applications we built from the ground up. Typically our projects utilize an Express server with the EJS template engine. Usually there is a single script tag to include the React application bundled with Webpack. If the project is very simple, such as the strong password generator below, which still utilizes Webpack for transpilation and bundling, there is no framework (i.e. React). It is comprised of a couple of event handlers and functions interacting directly with the DOM.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Some of our projects use traditional prototype-based \"classes\" on the server side, some use ES6 syntax, including classes. Most of the time we do not transpile the server side, except when both Search Engine Optimization (SEO) and user interactivity are important, such as on the website you're reading now. On this site, the client and server sides are transpiled from ES6 syntax and all markup is rendered on the server (until you click the navigation buttons) for SEO purposes.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "Enterprise Applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Appreciate Enterprise Accounting (in development)"), ": A scalable, sophisticated double-entry accounting system.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Appreciate Enterprise Accounting (in development)"), ": A scaleable, sophisticated, double-entry accounting system.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://pay.appco.tech"
@@ -1005,7 +989,7 @@ var Portfolio = function Portfolio() {
     href: "https://blog.appco.tech"
   }, "Blog Site. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://github.com/josephplaugher/BlogSite"
-  }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: Combination raw JavaScript and React, with Webpack and Babel. Express; CRUD operations in response to API calls from the client. PostgreSQL database.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "On this project, upon first visit, the latest blog post will be displayed a long with a menu of all the other available posts. This is all rendered server side for SEO purposes. Upon selected other blog posts, they are placed into the ready pane asynchronously. This is all done with raw JavaScript. The user authenication system (which allows users to create an account so they can leave comments) and the comments area itself are both written in React.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: Combination raw JavaScript and React, with Webpack and Babel. Express; CRUD operations in response to API calls from the client. PostgreSQL database.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "On this project, upon first visit, the latest blog post will be displayed along with a menu of all the other available posts. This is all rendered server side for SEO purposes. Upon selecting other blog posts, they are placed into the reading pane asynchronously. This is all done with raw JavaScript. The user authenication system (which allows users to create an account so they can leave comments) and the comments area itself are both written in React.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://blogadmin.appco.tech"
@@ -1013,21 +997,21 @@ var Portfolio = function Portfolio() {
     href: "https://github.com/josephplaugher/blog-admin-utility"
   }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://pantry.appco.tech"
-  }, "Personal Pantry Management System.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Simple inventory management system for home use. Keeps a running inventory of food items and related supplies, adding as you shop, subtracting as you use things. Includes a shopping list tool that automatically builds a shopping list as you use items based on your preferences.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Personal Pantry Management System. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: ""
-  }, "GitHub")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Simple inventory management system for home use. Keeps a running inventory of food items and related supplies, adding as you shop, subtracting as you use things. Includes a shopping list tool that automatically builds a shopping list as you use items based on your preferences.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "NPM Modules"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "ReactForm-AppCo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A powerful, flexible forms and inputs module for React. Includes \"live search\" that can be used similarly to a select or dropdown menu, except the list of options change with user input. The Form class does not render anything to the UI. It simply attaches logic to your existing form to automate processing and submission using React state and Ajax. There is an optional Inputs componet which does render an html input element but it is not required for use with the Form class.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: React, Webpack and Babel.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "ReactForm-AppCo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A powerful, flexible forms and inputs module for React. Includes \"live search\" that can be used similarly to a select or dropdown menu, except the list of options change with user input. The Form class does not render anything to the UI. It simply attaches logic to your existing form to automate processing and submission using React state and Ajax. There is an optional Inputs component which does render an html input element, but it is not required for use with the Form class.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: React, Webpack and Babel.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://github.com/josephplaugher/ReactForm-AppCo"
   }, "GitHub"), ' ', "|", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.npmjs.com/package/reactform-appco"
   }, "NPM"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "LightBox-AppCo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A fully stylable and customizable \"popup\" window component for React.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: React, Webpack and Babel. A module for making your markup draggable.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "LightBox-AppCo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A fully styleable and customizable \"popup\" window component for React.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: React, Webpack and Babel. A module for making your markup draggable.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://github.com/josephplaugher/lightbox-appco"
   }, "GitHub"), ' ', "|", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.npmjs.com/package/lightbox-appco"
@@ -1062,15 +1046,15 @@ var SpecDev = function SpecDev() {
     className: "headline"
   }, "Specification Development"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Do you already know what software you need built; what it should do and what the user experience should be? We can do that."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Do you already know what software you need built; what it should do and what the user experience should be? We can make it happen for you."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
   }, "We have expertise in the following technologies:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, "Vanilla JavaScript - for simple applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, "React - for dynamic, interactive, userfriendly applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "React - for dynamic, interactive, user-friendly applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, "Node - from simple to complex server side business logic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Node - from simple to complex server-side business logic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, "Electron - for building desktop applications")));
 };

@@ -14,43 +14,28 @@ import 'scss/main-mobile.scss'
 class App extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { viewport: 0 }
-    }
-
-    componentDidMount() {
-        let viewport = window.innerWidth
-        this.setState({ viewport: viewport })
     }
 
     render() {
         return (
             <div id="container">
-                {this.state.viewport < 701 ? (
-                    <>
-                        <div id="image-header-mobile">
-                            <img src={logo} alt="Appreciate Logo" />
-                        </div>
-                        <EB comp="Nave in App.js">
-                            <div
-                                className="nav-mobile"
-                                id="nav-container-mobile"
-                            >
-                                <NavMobile />
-                            </div>
-                        </EB>
-                    </>
-                ) : (
-                    <>
-                        <div id="image-header-desktop">
-                            <img src={logo} alt="Appreciate Logo" />
-                        </div>
-                        <EB comp="Nave in App.js">
-                            <div className="nav" id="nav-container">
-                                <Nav />
-                            </div>
-                        </EB>
-                    </>
-                )}
+                <div id="image-header-mobile">
+                    <img src={logo} alt="Appreciate Logo" />
+                </div>
+                <EB comp="Nave in App.js">
+                    <div className="nav-mobile" id="nav-container-mobile">
+                        <NavMobile />
+                    </div>
+                </EB>
+
+                <div id="image-header-desktop">
+                    <img src={logo} alt="Appreciate Logo" />
+                </div>
+                <EB comp="Nave in App.js">
+                    <div className="nav" id="nav-container">
+                        <Nav />
+                    </div>
+                </EB>
 
                 <EB comp="Router in App.js">
                     <div id="content">
@@ -68,7 +53,7 @@ class App extends React.Component {
                 </EB>
                 <EB comp="Request in App">
                     <div id="request-box">
-                        <Request formState={this.state.formState} />
+                        <Request />
                     </div>
                 </EB>
             </div>

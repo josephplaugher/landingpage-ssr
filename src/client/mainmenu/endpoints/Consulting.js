@@ -4,9 +4,9 @@ const Consulting = () => (
     <>
         <h1 className="headline">Consulting</h1>
         <p className="text">
-            We will seek to understand your pain point, the part of your
-            business process that is ineffficient, expensive, or just a hassle,
-            and we will seek to streamline and automate using software.
+            We seek to understand your pain point - the part of your business
+            process that is ineffficient, expensive, or just a hassle - and we
+            will work to alleviate the "pain" and automate it using software.
         </p>
         <p className="text">
             Sometimes a desktop application is appropriate if only a couple of

@@ -5,7 +5,8 @@ const SpecDev = () => (
         <h1 className="headline">Specification Development</h1>
         <p className="text">
             Do you already know what software you need built; what it should do
-            and what the user experience should be? We can do that.
+            and what the user experience should be? We can make it happen for
+            you.
         </p>
         <p className="text">We have expertise in the following technologies:</p>
         <ul>
@@ -13,10 +14,10 @@ const SpecDev = () => (
                 Vanilla JavaScript - for simple applications
             </li>
             <li className="list">
-                React - for dynamic, interactive, userfriendly applications
+                React - for dynamic, interactive, user-friendly applications
             </li>
             <li className="list">
-                Node - from simple to complex server side business logic
+                Node - from simple to complex server-side business logic
             </li>
             <li className="list">
                 Electron - for building desktop applications
