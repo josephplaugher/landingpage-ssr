@@ -20,7 +20,7 @@ class App extends React.Component {
         return (
             <div id="container">
                 <div id="image-header-mobile">
-                    <img src={logo} alt="Appreciate Logo" />
+                    <img src={logo} alt="Appreciate Logo" id="image-mobile" />
                 </div>
                 <EB comp="Nave in App.js">
                     <div className="nav-mobile" id="nav-container-mobile">
@@ -29,7 +29,7 @@ class App extends React.Component {
                 </EB>
 
                 <div id="image-header-desktop">
-                    <img src={logo} alt="Appreciate Logo" />
+                    <img src={logo} alt="Appreciate Logo" id="image-desktop" />
                 </div>
                 <EB comp="Nave in App.js">
                     <div className="nav" id="nav-container">
