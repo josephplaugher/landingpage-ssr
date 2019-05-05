@@ -32,7 +32,7 @@ class App extends React.Component {
                     <img src={logo} alt="Appreciate Logo" id="image-desktop" />
                 </div>
                 <EB comp="Nave in App.js">
-                    <div className="nav" id="nav-container">
+                    <div id="nav-container">
                         <Nav />
                     </div>
                 </EB>

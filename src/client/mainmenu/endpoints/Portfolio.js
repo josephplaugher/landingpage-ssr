@@ -39,9 +39,7 @@ const Portfolio = () => (
             </li>
             <li className="list">
                 <p>
-                    <a href="https://pay.appco.tech">
-                        Integrated Payment Processing
-                    </a>
+                    <a>Integrated Payment Processing (in developement)</a>
                     : Using Stripe, this provides a customizable invoice payment
                     system for businesses.
                     <br />
@@ -58,7 +56,9 @@ const Portfolio = () => (
                     <a href="https://hash.appco.tech">
                         Hash Check Strong Password Generator.{' '}
                     </a>
-                    <a href="">GitHub</a>
+                    <a href="https://github.com/josephplaugher/HashCheck">
+                        GitHub
+                    </a>
                     <br />
                     Technologies used: Raw JavaScript with Webpack and Babel,
                     bcrypt password hashing and salting library. Express.

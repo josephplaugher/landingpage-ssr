@@ -11,18 +11,16 @@
     #container {
         display: grid;
         grid-template-columns: 15% 15% auto 15% 15%;
-        grid-template-rows: 30% 10% auto 5%;
-    }
-
-    #image-header-desktop {
-        grid-column-start: 1;
-        grid-column-end: 1;
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-template-rows: 5% 30% auto 5%;
     }
 
     #nav-container {
-        @include center('row');
+        @include center(row);
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background-color: $main-font-color;
     }
 
     .nav {
@@ -44,7 +42,6 @@
         grid-column-end: 6;
         grid-row-start: 3;
         grid-row-end: 3;
-        background-color: white;
         border-radius: 5px;
         padding: 25px 55px 55px 55px;
     }
@@ -60,7 +57,7 @@
         font-size: $header-font-size;
         color: $main-font-color;
         cursor: pointer;
-        height: 100px;
+        height: 90px;
         margin-top: -9px;
         line-height: 25px;
         grid-column-start: 4;

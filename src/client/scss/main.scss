@@ -2,6 +2,14 @@
 @import 'fonts.scss';
 
 // common to desktop and mobile
+#container {
+    background-color: #cddceb;
+}
+
+#content {
+    background-color: white;
+    margin: 30px;
+}
 
 .subheadline {
     font-family: sans-serif;
