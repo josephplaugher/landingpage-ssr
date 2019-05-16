@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer'
+import Log from 'ServerUtil/Log'
 
 const Email = formData => {
     // create reusable transporter object using the default SMTP transport
@@ -10,14 +11,14 @@ const Email = formData => {
             pass: process.env.EMAIL_PW,
         },
     })
-    let body = `New email from landing page: <br/><br/>
+    const body = `New email from landing page: <br/><br/>
     Name: ${formData.fname}.<br/>
     Email: ${formData.email}. <br/>
-    Message: ${formData.message}`
+    Message: ${formData.message} `
     // setup email data with unicode symbols
     let mailOptions = {
-        from: '"AppCo Landing Page" <joseph@appreciateco.com>', // sender address
-        to: '"Joseph Plaugher" <joseph@appreciateco.com>', // list of receivers
+        from: '"Appreciate Corporation" <joseph@appreciateco.com>', // sender address
+        to: `"${formData.fname}" <${formData.email}>`, // recipient
         subject: `New email from landing page:`, // Subject line
         text: body, // plain text body
         html: '<p>' + body + '</p>', // html body
@@ -26,7 +27,9 @@ const Email = formData => {
     // send mail with defined transport object
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error(error, 'email.js')
+            Log.error({ message: error.stack })
+        } else {
+            Log.info({ message: info })
         }
     })
 }

@@ -1,5 +1,6 @@
 import BaseClass from 'ServerUtil/BaseClass'
 import dbConn from 'ServerUtil/postgres'
+import Log from 'ServerUtil/Log'
 import Email from './Email'
 
 class RequestConsult extends BaseClass {
@@ -13,17 +14,16 @@ class RequestConsult extends BaseClass {
     logRequest = () => {
         const r = this.req.body
         const query = {
-            text: `INSERT INTO webpageinquiries
-                (fname, email, lead_source) 
-                VALUES ($1,$2,$3)`,
+            text: `INSERT INTO webpageinquiries (fname, email, lead_source) VALUES ($1,$2,$3)`,
             values: [r.fname, r.email, r.message],
         }
         dbConn
             .query(query)
-            .then(() => {
+            .then(row => {
+                Log.info({ message: query })
                 this.emailRequester()
             })
-            .catch(e => console.error(e.stack))
+            .catch(error => Log.error({ message: error.stack }))
     }
 
     emailRequester = () => {

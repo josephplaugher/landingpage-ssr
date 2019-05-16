@@ -5,7 +5,7 @@ const Portfolio = () => (
         <h1 className="headline">Portfolio</h1>
         <p className="text">
             We predominantly develop software using JavaScript, though we have
-            experise in PHP as well. Below is a list of web applications we
+            expertise in PHP as well. Below is a list of web applications we
             built from the ground up. Typically our projects utilize an Express
             server with the EJS template engine. Usually there is a single
             script tag to include the React application bundled with Webpack. If
@@ -53,10 +53,13 @@ const Portfolio = () => (
         <ul>
             <li className="list">
                 <p>
-                    <a href="https://hash.appco.tech">
+                    <a href="https://hash.appco.tech" target="_blank">
                         Hash Check Strong Password Generator.{' '}
                     </a>
-                    <a href="https://github.com/josephplaugher/HashCheck">
+                    <a
+                        href="https://github.com/josephplaugher/HashCheck"
+                        target="_blank"
+                    >
                         GitHub
                     </a>
                     <br />
@@ -66,8 +69,13 @@ const Portfolio = () => (
             </li>
             <li className="list">
                 <p>
-                    <a href="https://blog.appco.tech">Blog Site. </a>
-                    <a href="https://github.com/josephplaugher/BlogSite">
+                    <a href="https://blog.appco.tech" target="_blank">
+                        Blog Site.{' '}
+                    </a>
+                    <a
+                        href="https://github.com/josephplaugher/BlogSite"
+                        target="_blank"
+                    >
                         GitHub
                     </a>
                     <br />
@@ -89,34 +97,19 @@ const Portfolio = () => (
 
             <li className="list">
                 <p>
-                    <a href="https://blogadmin.appco.tech">
+                    <a href="https://blogadmin.appco.tech" target="_blank">
                         Blog Administration Utility.{' '}
                     </a>
-                    <a href="https://github.com/josephplaugher/blog-admin-utility">
+                    <a
+                        href="https://github.com/josephplaugher/blog-admin-utility"
+                        target="_blank"
+                    >
                         GitHub
                     </a>
                     <br />
                     Technologies Used: React, Webpack and Babel, Express
                     backend; CRUD operations in response to API calls from the
                     client. PostgreSQL database.
-                </p>
-            </li>
-            <li className="list">
-                <p>
-                    <a href="https://pantry.appco.tech">
-                        Personal Pantry Management System. <a href="">GitHub</a>
-                    </a>
-                    <br />
-                    Technologies Used: React, Webpack and Babel, Express
-                    backend; CRUD operations in response to API calls from the
-                    client. PostgreSQL database.
-                    <br />
-                    Simple inventory management system for home use. Keeps a
-                    running inventory of food items and related supplies, adding
-                    as you shop, subtracting as you use things. Includes a
-                    shopping list tool that automatically builds a shopping list
-                    as you use items based on your preferences.
-                    <br />
                 </p>
             </li>
         </ul>
@@ -139,11 +132,17 @@ const Portfolio = () => (
                     Technologies used: React, Webpack and Babel.
                     <br />
                     <br />
-                    <a href="https://github.com/josephplaugher/ReactForm-AppCo">
+                    <a
+                        href="https://github.com/josephplaugher/ReactForm-AppCo"
+                        target="_blank"
+                    >
                         GitHub
                     </a>{' '}
                     |{' '}
-                    <a href="https://www.npmjs.com/package/reactform-appco">
+                    <a
+                        href="https://www.npmjs.com/package/reactform-appco"
+                        target="_blank"
+                    >
                         NPM
                     </a>
                 </p>
@@ -159,11 +158,17 @@ const Portfolio = () => (
                     making your markup draggable.
                     <br />
                     <br />
-                    <a href="https://github.com/josephplaugher/lightbox-appco">
+                    <a
+                        href="https://github.com/josephplaugher/lightbox-appco"
+                        target="_blank"
+                    >
                         GitHub
                     </a>{' '}
                     |{' '}
-                    <a href="https://www.npmjs.com/package/lightbox-appco">
+                    <a
+                        href="https://www.npmjs.com/package/lightbox-appco"
+                        target="_blank"
+                    >
                         NPM
                     </a>
                 </p>
@@ -179,10 +184,19 @@ const Portfolio = () => (
                     making your markup draggable.
                     <br />
                     <br />
-                    <a href="https://github.com/josephplaugher/Menu-AppCo">
+                    <a
+                        href="https://github.com/josephplaugher/Menu-AppCo"
+                        target="_blank"
+                    >
                         GitHub
                     </a>{' '}
-                    | <a href="https://www.npmjs.com/package/menu-appco">NPM</a>
+                    |{' '}
+                    <a
+                        href="https://www.npmjs.com/package/menu-appco"
+                        target="_blank"
+                    >
+                        NPM
+                    </a>
                 </p>
             </li>
         </ul>

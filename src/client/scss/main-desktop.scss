@@ -4,7 +4,8 @@
 // only on desktop
 @media screen and (min-width: 701px) {
     .nav-mobile,
-    #image-header-mobile {
+    #image-header-mobile,
+    #nav-container-mobile {
         display: none;
     }
 
@@ -12,6 +13,12 @@
         display: grid;
         grid-template-columns: 15% 15% auto 15% 15%;
         grid-template-rows: 5% 30% auto 5%;
+    }
+
+    #image-header-desktop {
+        background-color: rgb(34, 34, 34);
+        grid-column-start: 1;
+        grid-column-end: 6;
     }
 
     #nav-container {

@@ -8,6 +8,12 @@
         display: none;
     }
 
+    #image-header-mobile {
+        background-color: rgb(34, 34, 34);
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+
     .nav-mobile {
         color: white;
         font-size: 20px;

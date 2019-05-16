@@ -105,8 +105,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mainmenu_Nav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mainmenu/Nav */ "./src/client/mainmenu/Nav.js");
 /* harmony import */ var _mainmenu_NavMobile__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./mainmenu/NavMobile */ "./src/client/mainmenu/NavMobile.js");
 /* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Routes */ "./src/client/Routes.js");
-/* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./logo.png */ "./src/client/logo.png");
-/* harmony import */ var _logo_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_logo_png__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _Logo_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Logo.png */ "./src/client/Logo.png");
+/* harmony import */ var _Logo_png__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_Logo_png__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! scss/logo.scss */ "./src/client/scss/logo.scss");
 /* harmony import */ var scss_logo_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(scss_logo_scss__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var scss_main_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! scss/main.scss */ "./src/client/scss/main.scss");
@@ -171,7 +171,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "image-header-mobile"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _logo_png__WEBPACK_IMPORTED_MODULE_7___default.a,
+        src: _Logo_png__WEBPACK_IMPORTED_MODULE_7___default.a,
         alt: "Appreciate Logo",
         id: "image-mobile"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -182,7 +182,7 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_mainmenu_NavMobile__WEBPACK_IMPORTED_MODULE_5__["default"], null))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "image-header-desktop"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _logo_png__WEBPACK_IMPORTED_MODULE_7___default.a,
+        src: _Logo_png__WEBPACK_IMPORTED_MODULE_7___default.a,
         alt: "Appreciate Logo",
         id: "image-desktop"
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Util_EB__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -219,6 +219,17 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/client/Logo.png":
+/*!*****************************!*\
+  !*** ./src/client/Logo.png ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "5ac52a1e3117f9709b836857c86d3a82.png";
 
 /***/ }),
 
@@ -438,17 +449,6 @@ var SetUrl = function SetUrl() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SetUrl);
-
-/***/ }),
-
-/***/ "./src/client/logo.png":
-/*!*****************************!*\
-  !*** ./src/client/logo.png ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "d548f7415e09d9c8c7d306c40641ec2d.png";
 
 /***/ }),
 
@@ -966,7 +966,7 @@ var Portfolio = function Portfolio() {
     className: "headline"
   }, "Portfolio"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "We predominantly develop software using JavaScript, though we have experise in PHP as well. Below is a list of web applications we built from the ground up. Typically our projects utilize an Express server with the EJS template engine. Usually there is a single script tag to include the React application bundled with Webpack. If the project is very simple, such as the strong password generator below, which still utilizes Webpack for transpilation and bundling, there is no framework (i.e. React). It is comprised of a couple of event handlers and functions interacting directly with the DOM.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Some of our projects use traditional prototype-based \"classes\" on the server side, some use ES6 syntax, including classes. Most of the time we do not transpile the server side, except when both Search Engine Optimization (SEO) and user interactivity are important, such as on the website you're reading now. On this site, the client and server sides are transpiled from ES6 syntax and all markup is rendered on the server (until you click the navigation buttons) for SEO purposes.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, "We predominantly develop software using JavaScript, though we have expertise in PHP as well. Below is a list of web applications we built from the ground up. Typically our projects utilize an Express server with the EJS template engine. Usually there is a single script tag to include the React application bundled with Webpack. If the project is very simple, such as the strong password generator below, which still utilizes Webpack for transpilation and bundling, there is no framework (i.e. React). It is comprised of a couple of event handlers and functions interacting directly with the DOM.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Some of our projects use traditional prototype-based \"classes\" on the server side, some use ES6 syntax, including classes. Most of the time we do not transpile the server side, except when both Search Engine Optimization (SEO) and user interactivity are important, such as on the website you're reading now. On this site, the client and server sides are transpiled from ES6 syntax and all markup is rendered on the server (until you click the navigation buttons) for SEO purposes.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "Enterprise Applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
@@ -977,47 +977,53 @@ var Portfolio = function Portfolio() {
   }, "Open Source Applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://hash.appco.tech"
+    href: "https://hash.appco.tech",
+    target: "_blank"
   }, "Hash Check Strong Password Generator.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://github.com/josephplaugher/HashCheck"
+    href: "https://github.com/josephplaugher/HashCheck",
+    target: "_blank"
   }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: Raw JavaScript with Webpack and Babel, bcrypt password hashing and salting library. Express.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://blog.appco.tech"
-  }, "Blog Site. "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://github.com/josephplaugher/BlogSite"
+    href: "https://blog.appco.tech",
+    target: "_blank"
+  }, "Blog Site.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/josephplaugher/BlogSite",
+    target: "_blank"
   }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: Combination raw JavaScript and React, with Webpack and Babel. Express; CRUD operations in response to API calls from the client. PostgreSQL database.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "On this project, upon first visit, the latest blog post will be displayed along with a menu of all the other available posts. This is all rendered server side for SEO purposes. Upon selecting other blog posts, they are placed into the reading pane asynchronously. This is all done with raw JavaScript. The user authenication system (which allows users to create an account so they can leave comments) and the comments area itself are both written in React.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://blogadmin.appco.tech"
+    href: "https://blogadmin.appco.tech",
+    target: "_blank"
   }, "Blog Administration Utility.", ' '), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://github.com/josephplaugher/blog-admin-utility"
-  }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "list"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://pantry.appco.tech"
-  }, "Personal Pantry Management System. ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: ""
-  }, "GitHub")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Simple inventory management system for home use. Keeps a running inventory of food items and related supplies, adding as you shop, subtracting as you use things. Includes a shopping list tool that automatically builds a shopping list as you use items based on your preferences.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null)))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    href: "https://github.com/josephplaugher/blog-admin-utility",
+    target: "_blank"
+  }, "GitHub"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies Used: React, Webpack and Babel, Express backend; CRUD operations in response to API calls from the client. PostgreSQL database."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "subheadline"
   }, "NPM Modules"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "ReactForm-AppCo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A powerful, flexible forms and inputs module for React. Includes \"live search\" that can be used similarly to a select or dropdown menu, except the list of options change with user input. The Form class does not render anything to the UI. It simply attaches logic to your existing form to automate processing and submission using React state and Ajax. There is an optional Inputs component which does render an html input element, but it is not required for use with the Form class.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: React, Webpack and Babel.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://github.com/josephplaugher/ReactForm-AppCo"
+    href: "https://github.com/josephplaugher/ReactForm-AppCo",
+    target: "_blank"
   }, "GitHub"), ' ', "|", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://www.npmjs.com/package/reactform-appco"
+    href: "https://www.npmjs.com/package/reactform-appco",
+    target: "_blank"
   }, "NPM"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "LightBox-AppCo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "A fully styleable and customizable \"popup\" window component for React.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: React, Webpack and Babel. A module for making your markup draggable.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://github.com/josephplaugher/lightbox-appco"
+    href: "https://github.com/josephplaugher/lightbox-appco",
+    target: "_blank"
   }, "GitHub"), ' ', "|", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://www.npmjs.com/package/lightbox-appco"
+    href: "https://www.npmjs.com/package/lightbox-appco",
+    target: "_blank"
   }, "NPM"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Menu-AppCo"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, ' ', "A closeable menu component for React.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "Technologies used: React, Webpack and Babel. A module for making your markup draggable.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://github.com/josephplaugher/Menu-AppCo"
-  }, "GitHub"), ' ', "| ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://www.npmjs.com/package/menu-appco"
+    href: "https://github.com/josephplaugher/Menu-AppCo",
+    target: "_blank"
+  }, "GitHub"), ' ', "|", ' ', react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.npmjs.com/package/menu-appco",
+    target: "_blank"
   }, "NPM")))));
 };
 
@@ -1238,6 +1244,49 @@ var BaseClass = function BaseClass() {
 
 /***/ }),
 
+/***/ "./src/server/ServerUtil/Log.js":
+/*!**************************************!*\
+  !*** ./src/server/ServerUtil/Log.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var winston__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! winston */ "winston");
+/* harmony import */ var winston__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(winston__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! util */ "util");
+/* harmony import */ var util__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(util__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var HOST = function HOST() {
+  if (false) {} else {
+    return 'localhost';
+  }
+};
+
+var HttpOptions = {
+  host: HOST(),
+  port: 3026,
+  path: '/logError',
+  ssl: "development" === 'production'
+};
+var Log = winston__WEBPACK_IMPORTED_MODULE_0___default.a.createLogger({
+  format: winston__WEBPACK_IMPORTED_MODULE_0___default.a.format.json(),
+  transports: [new winston__WEBPACK_IMPORTED_MODULE_0___default.a.transports.Http(HttpOptions)]
+});
+
+if (true) {
+  Log.add(new winston__WEBPACK_IMPORTED_MODULE_0___default.a.transports.Console({
+    format: winston__WEBPACK_IMPORTED_MODULE_0___default.a.format.json()
+  }));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Log);
+
+/***/ }),
+
 /***/ "./src/server/ServerUtil/SetUrl.js":
 /*!*****************************************!*\
   !*** ./src/server/ServerUtil/SetUrl.js ***!
@@ -1328,6 +1377,8 @@ routes.post('/requestConsult', function (req, res) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var nodemailer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! nodemailer */ "nodemailer");
 /* harmony import */ var nodemailer__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(nodemailer__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var ServerUtil_Log__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ServerUtil/Log */ "./src/server/ServerUtil/Log.js");
+
 
 
 var Email = function Email(formData) {
@@ -1341,13 +1392,13 @@ var Email = function Email(formData) {
       pass: "Tesla0328$%"
     }
   });
-  var body = "New email from landing page: <br/><br/>\n    Name: ".concat(formData.fname, ".<br/>\n    Email: ").concat(formData.email, ". <br/>\n    Message: ").concat(formData.message); // setup email data with unicode symbols
+  var body = "New email from landing page: <br/><br/>\n    Name: ".concat(formData.fname, ".<br/>\n    Email: ").concat(formData.email, ". <br/>\n    Message: ").concat(formData.message, " "); // setup email data with unicode symbols
 
   var mailOptions = {
-    from: '"AppCo Landing Page" <joseph@appreciateco.com>',
+    from: '"Appreciate Corporation" <joseph@appreciateco.com>',
     // sender address
-    to: '"Joseph Plaugher" <joseph@appreciateco.com>',
-    // list of receivers
+    to: "\"".concat(formData.fname, "\" <").concat(formData.email, ">"),
+    // recipient
     subject: "New email from landing page:",
     // Subject line
     text: body,
@@ -1358,7 +1409,13 @@ var Email = function Email(formData) {
   };
   transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
-      console.error(error, 'email.js');
+      ServerUtil_Log__WEBPACK_IMPORTED_MODULE_1__["default"].error({
+        message: error.stack
+      });
+    } else {
+      ServerUtil_Log__WEBPACK_IMPORTED_MODULE_1__["default"].info({
+        message: info
+      });
     }
   });
 };
@@ -1378,7 +1435,8 @@ var Email = function Email(formData) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ServerUtil_BaseClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ServerUtil/BaseClass */ "./src/server/ServerUtil/BaseClass.mjs");
 /* harmony import */ var ServerUtil_postgres__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ServerUtil/postgres */ "./src/server/ServerUtil/postgres.js");
-/* harmony import */ var _Email__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Email */ "./src/server/model/Inquiry/Email.js");
+/* harmony import */ var ServerUtil_Log__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ServerUtil/Log */ "./src/server/ServerUtil/Log.js");
+/* harmony import */ var _Email__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Email */ "./src/server/model/Inquiry/Email.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1399,6 +1457,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 var RequestConsult =
 /*#__PURE__*/
 function (_BaseClass) {
@@ -1414,18 +1473,24 @@ function (_BaseClass) {
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "logRequest", function () {
       var r = _this.req.body;
       var query = {
-        text: "INSERT INTO webpageinquiries\n                (fname, email, lead_source) \n                VALUES ($1,$2,$3)",
+        text: "INSERT INTO webpageinquiries (fname, email, lead_source) VALUES ($1,$2,$3)",
         values: [r.fname, r.email, r.message]
       };
-      ServerUtil_postgres__WEBPACK_IMPORTED_MODULE_1__["default"].query(query).then(function () {
+      ServerUtil_postgres__WEBPACK_IMPORTED_MODULE_1__["default"].query(query).then(function (row) {
+        ServerUtil_Log__WEBPACK_IMPORTED_MODULE_2__["default"].info({
+          message: query
+        });
+
         _this.emailRequester();
-      }).catch(function (e) {
-        return console.error(e.stack);
+      }).catch(function (error) {
+        return ServerUtil_Log__WEBPACK_IMPORTED_MODULE_2__["default"].error({
+          message: error.stack
+        });
       });
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "emailRequester", function () {
-      Object(_Email__WEBPACK_IMPORTED_MODULE_2__["default"])(_this.inputs);
+      Object(_Email__WEBPACK_IMPORTED_MODULE_3__["default"])(_this.inputs);
 
       _this.respond(_this.res, {
         message: 'emailed requester'
@@ -1543,6 +1608,28 @@ module.exports = require("react-router-dom");
 /***/ (function(module, exports) {
 
 module.exports = require("reactform-appco");
+
+/***/ }),
+
+/***/ "util":
+/*!***********************!*\
+  !*** external "util" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("util");
+
+/***/ }),
+
+/***/ "winston":
+/*!**************************!*\
+  !*** external "winston" ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("winston");
 
 /***/ })
 
