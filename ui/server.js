@@ -245,7 +245,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mainmenu_endpoints_Home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mainmenu/endpoints/Home */ "./src/client/mainmenu/endpoints/Home.js");
 /* harmony import */ var _mainmenu_endpoints_About__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mainmenu/endpoints/About */ "./src/client/mainmenu/endpoints/About.js");
 /* harmony import */ var _mainmenu_endpoints_Consulting__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mainmenu/endpoints/Consulting */ "./src/client/mainmenu/endpoints/Consulting.js");
-/* harmony import */ var _mainmenu_endpoints_SpecDev__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mainmenu/endpoints/SpecDev */ "./src/client/mainmenu/endpoints/SpecDev.js");
+/* harmony import */ var _mainmenu_endpoints_Services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./mainmenu/endpoints/Services */ "./src/client/mainmenu/endpoints/Services.js");
 /* harmony import */ var _mainmenu_endpoints_Portfolio__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./mainmenu/endpoints/Portfolio */ "./src/client/mainmenu/endpoints/Portfolio.js");
 
 
@@ -268,9 +268,9 @@ var Routes = [{
   component: _mainmenu_endpoints_Consulting__WEBPACK_IMPORTED_MODULE_2__["default"],
   name: 'Consulting'
 }, {
-  path: '/specdev',
-  component: _mainmenu_endpoints_SpecDev__WEBPACK_IMPORTED_MODULE_3__["default"],
-  name: 'Spec Dev'
+  path: '/services',
+  component: _mainmenu_endpoints_Services__WEBPACK_IMPORTED_MODULE_3__["default"],
+  name: 'Services'
 }, {
   path: '/portfolio',
   component: _mainmenu_endpoints_Portfolio__WEBPACK_IMPORTED_MODULE_4__["default"],
@@ -895,9 +895,9 @@ var Consulting = function Consulting() {
     className: "headline"
   }, "Consulting"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "We seek to understand your pain point - the part of your business process that is ineffficient, expensive, or just a hassle - and we will work to alleviate the \"pain\" and automate it using software."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Maybe you're not sure how or if software can benefit you and your business. We seek to understand your pain point - the part of your business process that is ineffficient, expensive, or just a hassle - and we will work to alleviate the \"pain\" and automate or streamline it using software. If you feel your business already runs pretty smoothly, we may still be able to improve upon your existing systems."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Sometimes a desktop application is appropriate if only a couple of people need access to the application and only when at work. If more than a couple of people need access or there is shared data involved, a web-based application is usually a great option. We can do either one!"));
+  }, "We offer a free consultation to discuss what we can do for your business. Get in touch with us today!"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Consulting);
@@ -1031,10 +1031,10 @@ var Portfolio = function Portfolio() {
 
 /***/ }),
 
-/***/ "./src/client/mainmenu/endpoints/SpecDev.js":
-/*!**************************************************!*\
-  !*** ./src/client/mainmenu/endpoints/SpecDev.js ***!
-  \**************************************************/
+/***/ "./src/client/mainmenu/endpoints/Services.js":
+/*!***************************************************!*\
+  !*** ./src/client/mainmenu/endpoints/Services.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1044,25 +1044,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
-var SpecDev = function SpecDev() {
+var Services = function Services() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "headline"
-  }, "Specification Development"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Services We Offer"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Do you already know what software you need built; what it should do and what the user experience should be? We can make it happen for you."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text"
-  }, "We have expertise in the following technologies:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Do you already know what software or website you need built; what it should do and what the user experience should be? We can make it happen for you."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, "Vanilla JavaScript - for simple applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Custom web-based applications."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, "React - for dynamic, interactive, user-friendly applications"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "SEO-Friendly websites that are still interactive. This means your website will be indexable by Google and other search engines so it is included in searches and still interactive to the user."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "list"
-  }, "Node - from simple to complex server-side business logic"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "list"
-  }, "Electron - for building desktop applications")));
+  }, "Web-based accounting, customer payment portal, and other productively tools for managing your business.")));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (SpecDev);
+/* harmony default export */ __webpack_exports__["default"] = (Services);
 
 /***/ }),
 

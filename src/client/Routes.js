@@ -1,7 +1,7 @@
 import Home from './mainmenu/endpoints/Home'
 import About from './mainmenu/endpoints/About'
 import Consulting from './mainmenu/endpoints/Consulting'
-import SpecDev from './mainmenu/endpoints/SpecDev'
+import Services from './mainmenu/endpoints/Services'
 import Portfolio from './mainmenu/endpoints/Portfolio'
 
 const Routes = [
@@ -22,9 +22,9 @@ const Routes = [
         name: 'Consulting',
     },
     {
-        path: '/specdev',
-        component: SpecDev,
-        name: 'Spec Dev',
+        path: '/services',
+        component: Services,
+        name: 'Services',
     },
     {
         path: '/portfolio',

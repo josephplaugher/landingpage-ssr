@@ -60,7 +60,7 @@
     grid-template-columns: 15% 15% auto 15% 15%;
     grid-template-rows: 5% 30% auto 5%; }
   #image-header-desktop {
-    background-color: #bcbdbd;
+    background-color: white;
     grid-column-start: 1;
     grid-column-end: 6; }
   #nav-container {

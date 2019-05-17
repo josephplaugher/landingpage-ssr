@@ -4,16 +4,17 @@ const Consulting = () => (
     <>
         <h1 className="headline">Consulting</h1>
         <p className="text">
-            We seek to understand your pain point - the part of your business
-            process that is ineffficient, expensive, or just a hassle - and we
-            will work to alleviate the "pain" and automate it using software.
+            Maybe you're not sure how or if software can benefit you and your
+            business. We seek to understand your pain point - the part of your
+            business process that is ineffficient, expensive, or just a hassle -
+            and we will work to alleviate the "pain" and automate or streamline
+            it using software. If you feel your business already runs pretty
+            smoothly, we may still be able to improve upon your existing
+            systems.
         </p>
         <p className="text">
-            Sometimes a desktop application is appropriate if only a couple of
-            people need access to the application and only when at work. If more
-            than a couple of people need access or there is shared data
-            involved, a web-based application is usually a great option. We can
-            do either one!
+            We offer a free consultation to discuss what we can do for your
+            business. Get in touch with us today!
         </p>
     </>
 )
