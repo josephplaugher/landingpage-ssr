@@ -42,13 +42,10 @@
 .rfa_input-error {
     color: red;
     font-size: 12px;
-    margin-left: 50px;
+    margin-left: 25px;
+    width: 220px;
     position: absolute;
-}
-
-.rfa_textarea-error {
-    color: red;
-    font-size: 12px;
+    word-wrap: break-word;
 }
 
 .rfa_submit {

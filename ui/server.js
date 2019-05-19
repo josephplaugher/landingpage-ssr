@@ -892,7 +892,7 @@ var Consulting = function Consulting() {
     className: "headline"
   }, "Consulting"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
-  }, "Maybe you're not sure how or if software can benefit you and your business. We seek to understand your pain point - the part of your business process that is ineffficient, expensive, or just a hassle - and we will work to alleviate the \"pain\" and automate or streamline it using software. If you feel your business already runs pretty smoothly, we may still be able to improve upon your existing systems."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Maybe you're not sure how or if software can benefit you and your business. We will seek to understand your pain point - the part of your business process that is inefficient, expensive, or just a hassle - and we will work to alleviate the \"pain\" and automate or streamline it using software. If you feel your business already runs pretty smoothly, we may still be able to improve upon your existing systems."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "text"
   }, "We offer a free consultation to discuss what we can do for your business. Get in touch with us today!"));
 };
