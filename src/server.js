@@ -14,6 +14,7 @@ export default function() {
     app.use(express.static('public'))
     app.set('view engine', 'ejs')
     app.set('views', './src/views')
+    app.disable('view cache')
 
     let port = process.env.PORT
     app.listen(port, function() {
