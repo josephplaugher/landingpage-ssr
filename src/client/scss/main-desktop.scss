@@ -21,6 +21,10 @@
         grid-column-end: 6;
     }
 
+    img {
+        width: 30%;
+    }
+
     #nav-container {
         @include center(row);
         grid-column-start: 1;
