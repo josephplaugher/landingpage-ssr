@@ -71,6 +71,8 @@ body,
     background-color: white;
     grid-column-start: 1;
     grid-column-end: 6; }
+  img {
+    width: 30%; }
   #nav-container {
     align-items: center;
     display: flex;
@@ -136,6 +138,8 @@ body,
     background-color: #222222;
     grid-column-start: 1;
     grid-column-end: 6; }
+  img {
+    width: 100%; }
   .nav-mobile {
     color: white;
     font-size: 20px;
@@ -264,14 +268,6 @@ body,
 
 .userNotify-success {
   color: green; }
-
-@media screen and (min-width: 701px) {
-  img {
-    width: 30%; } }
-
-@media screen and (max-width: 700px) {
-  img {
-    width: 100%; } }
 
 
 /*# sourceMappingURL=style.css.map*/
