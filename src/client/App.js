@@ -5,7 +5,7 @@ import Request from './mainmenu/Request'
 import Nav from './mainmenu/Nav'
 import NavMobile from './mainmenu/NavMobile'
 import Routes from './Routes'
-import logo from './Logo.png'
+import Logo from './Logo.png'
 import 'scss/logo.scss'
 import 'scss/main.scss'
 import 'scss/main-desktop.scss'
@@ -20,16 +20,15 @@ class App extends React.Component {
         return (
             <div id="container">
                 <div id="image-header-mobile">
-                    <img src={logo} alt="Appreciate Logo" id="image-mobile" />
+                    <img src={Logo} alt="Appreciate Logo" id="image-mobile" />
                 </div>
                 <EB comp="Nave in App.js">
                     <div className="nav-mobile" id="nav-container-mobile">
                         <NavMobile />
                     </div>
                 </EB>
-
                 <div id="image-header-desktop">
-                    <img src={logo} alt="Appreciate Logo" id="image-desktop" />
+                    <img src={Logo} alt="Appreciate Logo" id="image-desktop" />
                 </div>
                 <EB comp="Nave in App.js">
                     <div id="nav-container">
