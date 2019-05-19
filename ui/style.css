@@ -1,3 +1,11 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #9aa0a5; }
+
 #container {
   background-color: #9aa0a5;
   width: 100%; }
