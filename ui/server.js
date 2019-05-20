@@ -627,9 +627,10 @@ function (_React$Component) {
         showMenu: this.state.showMenu,
         closeHandler: this.toggleMenu,
         style: {
-          backgroundColor: '#2665C4',
+          backgroundColor: '#007fbf',
           height: 'auto',
-          width: '85%'
+          width: '95%',
+          margin: '0px 0px 0px 0px'
         },
         closeStyle: {
           color: 'white',

@@ -135,7 +135,7 @@ body,
   #image-header-desktop {
     display: none; }
   #image-header-mobile {
-    background-color: #222222;
+    background-color: white;
     grid-column-start: 1;
     grid-column-end: 6; }
   img {
