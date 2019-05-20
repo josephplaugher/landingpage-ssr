@@ -9,8 +9,8 @@
         "build-webpack-server": "webpack --watch --config './webpack.config.server.dev.js' --colors --display-error-details",
         "build-webpack-client": "webpack --watch --config './webpack.config.client.dev.js' --colors --display-error-details",
         "start-server:dev": "nodemon './src/start-server.js' --watch './ui/server.js' ",
-        "build-webpack-server:prod": "NODE_ENV=production webpack --config './webpack.config.server.prod.js' --colors --display-error-details",
-        "build-webpack-client:prod": "NODE_ENV=production webpack --config './webpack.config.client.prod.js' --colors --display-error-details",
+        "build-webpack-server:prod": "webpack -p --config './webpack.config.server.prod.js' --colors --display-error-details",
+        "build-webpack-client:prod": "webpack -p --config './webpack.config.client.prod.js' --colors --display-error-details",
         "start-server:prod": "NODE_ENV=production forever -o ./forever-out.log -e ./forever-error.log start forever-config.json "
     },
     "dependencies": {
