@@ -36,7 +36,7 @@
         "react-dom": "^16.4.2",
         "react-router": "^4.3.1",
         "react-router-dom": "^4.3.1",
-        "reactform-appco": "^1.0.12",
+        "reactform-appco": "^1.0.13",
         "router-express": "^1.5.2",
         "universal-webpack": "^0.6.6",
         "winston": "^3.2.1"
