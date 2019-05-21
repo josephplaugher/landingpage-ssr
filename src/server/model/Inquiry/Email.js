@@ -18,7 +18,7 @@ const Email = formData => {
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"Appreciate Landing Page" <joseph@appreciateco.com>', // sender address
-        to: '"Appreciate Corporation" <joseph@appreciateco.com>', // recipient
+        to: '"Joseph Plaugher" <joseph@appreciateco.com>', // recipient
         subject: `New email from landing page:`, // Subject line
         text: body, // plain text body
         html: '<p>' + body + '</p>', // html body
